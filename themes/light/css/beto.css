@@ -39,10 +39,13 @@
 body {
     margin: 0;
     background-image: url('/themes/light/img/carlaybeto/background.png');
-    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+      text-align: center;
     font-family: 'Quicksand', sans-serif !important;
     font-size: 24px;
-    overflow-x: hidden;}
+    overflow-x: hidden;
+}
 
 div#slider {
     overflow: hidden;
@@ -73,6 +76,9 @@ div#slider figure img {}
     font-family: 'Quicksand', sans-serif !important;
     margin-top: 75px;
     font-size: 28px;
+}
+.imagen_separadora{
+    background-color: rgba(255, 255, 255, 0.41);
 }
 
 .titulo_nombres {
@@ -138,19 +144,24 @@ div#slider figure img {}
 
 .btn-como-llegar {
     background: none !important;
-    border-color: #551f81 !important;
-    color: #551f81 !important;
+    border-color: #8B7D62 !important;
+    color: #8B7D62 !important;
     border-radius: 30px !important;
     border-width: 2px !important;
     font-size: 20px !important;
     padding: 5px 40px !important;
     font-weight: 500 !important;
 }
-
+/*
+background-color: #C7B38A;
+background-color: #FFE8B2;
+background-color: #8B7D62;
+*/
 .btn-como-llegar:hover {
-    color: #ffffff !important;
-    background-color: #551f81 !important;
-    border-color: #551f81 !important;
+    /*color: #ffffff !important;*/
+    color: #000000 !important;
+    background-color: #C7B38A !important;
+    border-color: #C7B38A !important;
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
     -webkit-transition: all 0.3s ease-in-out !important;
     ;
@@ -164,7 +175,7 @@ div#slider figure img {}
     margin-right: 10px;
     padding: 10px;
     font-size: 25px;
-    
+
 }
 
 .wrap_dress_code {
@@ -178,8 +189,11 @@ div#slider figure img {}
 }
 
 .wrap_testigos_padrinos {
-    background-color: aquamarine;
-    background-color: rgb(248, 248, 250);
+    background-color: rgba(255, 255, 255, 0.41);
+    /*background-color: rgb(248, 248, 250);
+    background-color: #C7B38A;
+    background-color: #FFE8B2;
+    background-color: #8B7D62;*/
     padding: 40px 15%;
 }
 
@@ -216,4 +230,10 @@ div#slider figure img {}
 }
 .wrap_card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item_regalo{
+    font-size: 26px;
+}
+.texto_padrinos{
+    font-size: 18px;
 }

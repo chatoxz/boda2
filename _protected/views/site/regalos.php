@@ -9,39 +9,44 @@
 
 <?php  $this->registerJsFile('@themes/js/buscar_regalo.js',['depends' => [\yii\web\JqueryAsset::className()]]);?>
 
-<div class="" style="text-align: center;font-family: textoIntermedioTitPpalFont;padding: 15px">
-    <div class="titulo_2_black" style="padding-bottom: 0px;margin-bottom: 20px"> Podes depositarnos en esta cuenta</div>
-    <h2>Banco Santander Rio</h2>
-    <div class="item_regalo">
+<div class="" style="text-align: center;padding: 15px;">
+    <div class="titulo_nombres" style="padding-bottom: 0px;margin-bottom: 20px;font-size:42px ">
+        Podes depositarnos en esta cuenta
+    </div>
+    <div class="nos_casamos" style="font-size: 30px;font-weight:bold">
+        Banco Frances
+    </div>
+    <!--<div class="item_regalo">
         <img src="/themes/light/img/death_star.png" width="30" height="30">
         <span> N° de Cuenta </span>
         <span> 462-321144/9</span>
         </span>
-    </div>
+    </div>-->
     <div class="item_regalo">
-        <img src="/themes/light/img/death_star.png" width="30" height="30">
+        <!--<img src="/themes/light/img/.png" width="30" height="30">-->
         <span> N° de CBU </span>
-        <span> 0720462788000032114490</span>
+        <span> 0170215840000011796846</span>
     </div>
-    <div class="item_regalo">
-        <img src="/themes/light/img/death_star.png" width="30" height="30">
+    <!--<div class="item_regalo">
+        <img src="/themes/light/img/.png" width="30" height="30">
         <span> Alias </span>
         <span> CARRERAS.SEBASTIAN </span>
-    </div>
+    </div>-->
     <div class="item_regalo">
-        <img src="/themes/light/img/death_star.png" width="30" height="30">
+        <!--<img src="/themes/light/img/.png" width="30" height="30">-->
         <span> Titular</span>
-        <span> SEBASTIAN CARRERAS</span>
+        <span> VARELA SILVIA FLAVIA</span>
     </div>
-    <div class="item_regalo">
-        <img src="/themes/light/img/death_star.png" width="30" height="30">
+    <!--<div class="item_regalo">
+        <img src="/themes/light/img/.png" width="30" height="30">
         <span> CUIL/CUIT </span>
         <span> 23-31254260-9 </span>
+    </div>-->
+    <div style="padding-bottom: 0px;margin-bottom: 20px;font-size:26px">
+        * Podes llevar la plata el dia del casamiento tendremos lista una urna.
     </div>
 </div>
-<div>
-    <div class="titulo_2_black" style="padding-bottom: 0px;margin-bottom: 20px"> Podes llevar la plata el dia del casamiento tendremos lista una urna.</div>
-</div>
+<!--
 <div>
     <div class="titulo_2_black" style="padding-bottom: 0px;margin-bottom: 0px"> Mercado pago</div>
     <div class="" style="font-size: 18px;font-family: textoIntermedioTitPpalFont;padding: 15px;">
@@ -602,3 +607,4 @@
 
     </div>
 </div>
+-->

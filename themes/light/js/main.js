@@ -15,7 +15,8 @@ $(document).on("ready",function () {
         if(typeof $(this).attr("confirm") !== typeof undefined && $(this).attr("confirm") !== false){
             confirmar = confirm("Esta seguro que borrar el item?");
         }
-        $(".modal-header > h1, .modal-header > h2, .modal-header > h3").html($(this).attr("title"));
+        //setea el titulo del modal
+        $(".modal-header > h1, .modal-header > h2, .modal-header > h3, .modal-header > div").html($(this).attr("title"));
         $("#modal").modal("show");
         //alert($(this).attr("value"));
         //carga en el modalContent la pagina.
@@ -79,8 +80,6 @@ $(document).on("ready",function () {
                     //Si esta seteado el id del gridview lo recarga con el pjax
                     if ( typeof $("#id_gridview").html() !== "undefined"  )
                         $.pjax.reload({container:"#id_gridview"});
-
-                    if(window.location.pathname == "/partido/fixture"){ window.location.reload(); }
                 }, 2000);
             }
             else{
@@ -120,7 +119,7 @@ $(document).on("ready",function () {
                     if ( typeof $("#id_gridview").html() !== "undefined"  )
                         $.pjax.reload({container:"#id_gridview"});
                     //if(window.location.pathname == "/partido/fixture"){ window.location.reload(); }
-                }, 2000);
+                }, 20000);
             }
             else{
                 $(".resultado").html("<span class='glyphicon glyphicon-ok-sign' aria-hidden='true' style='padding-right: 10px'></span>"+response).css({"width":"90  %","text-align":"center"});
@@ -161,6 +160,3 @@ function setBtnModal(){
         $(this).attr('value',$(this).attr('href')).addClass('modalButton');
     });
 }
-
-
-

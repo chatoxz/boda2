@@ -193,7 +193,7 @@ class MesaController extends Controller
             $model = $this->findModel($id, $id_boda);
         }
 
-        $model->id_boda = 1;
+        $model->id_boda = Yii::$app->user->id;
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['index']);
         } else {
@@ -237,7 +237,7 @@ class MesaController extends Controller
         if (Yii::$app->request->post('_asnew') != '1') {
             $model = $this->findModel($id, $id_boda);
         }
-        $model->id_boda = 1;
+        $model->id_boda = Yii::$app->user->id;
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id, 'id_boda' => $model->id_boda]);
         } else {

@@ -43,7 +43,7 @@ class Invitado extends \yii\db\ActiveRecord
         return [
             [['id', 'id_boda', 'nombre'], 'required'],
             [['id', 'id_boda', 'id_confirmacion'], 'integer'],
-            [['id', 'message'=>'Invitado ya usado.']],
+            //[['id', 'message'=>'Invitado ya usado.']],
             [['mensaje'], 'string'],
             [['nombre'], 'string', 'max' => 255]
         ];

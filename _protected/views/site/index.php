@@ -64,8 +64,8 @@ $carpeta = '/themes/light/img/carlaybeto/';
     </div>
 </div>
 <!-- ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS ANILLOS -->
-<div class="seccion animatedParent">
-    <img class="anillos slowest  animated bounceInDown" src="<?= $carpeta ?>anillos.png" width="100%" alt="">
+<div class="seccion animatedParent imagen_separadora">
+    <img class="anillos slowest  animated bounceInDown" src="<?= $carpeta ?>ceremonia.png" height="133" width="" alt="">
 </div>
 <!-- IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA IGLESIA -->
 <div class="seccion animatedParent">
@@ -83,9 +83,8 @@ $carpeta = '/themes/light/img/carlaybeto/';
         </button>
     </a>
 </div>
-<!--  -->
-
-<div class="seccion animatedParent">
+<!-- brindis brindis brindis brindis brindis brindis brindis brindis brindis brindis brindis brindis brindis brindis -->
+<div class="seccion animatedParent imagen_separadora">
     <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>brindis.png" width="" height="133" alt="">
 </div>
 <!-- SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON SALON -->
@@ -93,22 +92,25 @@ $carpeta = '/themes/light/img/carlaybeto/';
     <div class="titulo_nombres slowest  animated bounceInDown">Fiesta</div>
     <div class="texto_nos_casamos slowest  animated bounceInDown width_70">
         Te esperamos luego de la ceremonia religiosa en el Salón Narcizo Eventos, lules, de 22hr a 05.30 hs
+        <p>Trafic:</p>
+        <p>Salida Av. Alem 595 a 20:30 hs hacia iglesia lules luego a salón Narcizo </p>
+        <p>Regreso 05:30 a San miguel de Tucuman, a cada domicilio (opcional)</p>
     </div>
     <!-- DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE -->
     <div class="texto_nos_casamos slowest  animated bounceInDown wrap_dress_code">
-        <img src="<?= $carpeta ?>dress-code.png" alt="" width="100">
+        <img src="<?= $carpeta ?>dresscode.png" alt="" width="100">
         <div> Dresscode:<br> Formal </div>
     </div>
 </div>
 <!-- COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL  -->
 <div class="seccion animatedParent">
     <a href="https://goo.gl/maps/TFRkMRvT3EM2" target="_blank">
-
         <button class="btn btn-como-llegar slowest  animated bounceInDown">
             <i class="fas fa-map-marked-alt"></i><span> Como llegar</span>
         </button>
     </a>
 </div>
+<!-- -->
 <div class="wrap_testigos_padrinos seccion">
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown">Los Testigos</div>
@@ -117,26 +119,43 @@ $carpeta = '/themes/light/img/carlaybeto/';
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown" style="font-size: 70px">Iglesia</div>
     </div>
+    <!-- PADRINOS DE LA NOVIA  PADRINOS DE LA NOVIA  PADRINOS DE LA NOVIA  PADRINOS DE LA NOVIA  PADRINOS DE LA NOVIA  PADRINOS DE LA NOVIA -->
     <div class="wrap_imagenes_padrinos animatedParent">
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo.jpg" width="338" alt="">
+        <div class="" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/edith.jpeg" width="338" alt="" style="left: 0px; !important">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
         </div>
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo2.jpg" width="338" alt="">
+        <div style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/carlos.jpeg" width="338" alt="">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
     </div>
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown" style="font-size: 70px">Civil</div>
     </div>
+    <!-- TESTIGOS DE LA NOVIA TESTIGOS DE LA NOVIA TESTIGOS DE LA NOVIA TESTIGOS DE LA NOVIA TESTIGOS DE LA NOVIA TESTIGOS DE LA NOVIA -->
     <div class="wrap_imagenes_padrinos animatedParent">
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo.jpg" width="338" alt="">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/silvana.jpeg" width="338" alt="" style="top: -22%;">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Silvana <br> Hermana</div>
         </div>
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo2.jpg" width="338" alt="">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/grisel.jpeg" width="338" alt="" style="left: -38px;">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Grisel <br> Hermana</div>
         </div>
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo.jpg" width="338" alt="">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/magali.jpeg" width="338" alt="">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Magalí  <br> Hermana</div>
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -145,46 +164,68 @@ $carpeta = '/themes/light/img/carlaybeto/';
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown" style="font-size: 70px">Iglesia</div>
     </div>
+    <!-- PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO -->
     <div class="wrap_imagenes_padrinos animatedParent">
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo.jpg" width="338" alt="">
+        <div class="" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/edith.jpeg" width="338" alt="" style="left: 0px; !important">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
         </div>
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo2.jpg" width="338" alt="">
+        <div style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/carlos.jpeg" width="338" alt="">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
     </div>
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown" style="font-size: 70px">Civil</div>
     </div>
+    <!-- TESTIGOS DEL NOVIO TESTIGOS DEL NOVIO TESTIGOS DEL NOVIO TESTIGOS DEL NOVIO TESTIGOS DEL NOVIO TESTIGOS DEL NOVIO TESTIGOS DEL NOVIO -->
     <div class="wrap_imagenes_padrinos animatedParent">
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo.jpg" width="338" alt="">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/testigo.jpg" width="338" alt="">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo2.jpg" width="338" alt="">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/testigo2.jpg" width="338" alt="">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
-        <div class="div_foto_padrinx slowest  animated bounceInDown">
-            <img src="<?= $carpeta ?>testigo.jpg" width="338" alt="">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/testigo.jpg" width="338" alt="">
+            </div>
+            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
     </div>
 </div>
-<div class="seccion animatedParent">
-    <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>regalos.png" width="100%" alt="">
+<!-- IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO -->
+<div class="seccion animatedParent imagen_separadora">
+    <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>regalo.png" height="133" width="%" alt="">
 </div>
-<div class="seccion animatedParent">
+<!-- ¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?-->
+<div class="seccion animatedParent width_70">
     <div class="titulo_nombres slowest  animated bounceInDown">¿Pensaste en regalos?</div>
-    <div class=" slowest  animated bounceInDown">Realmente somos afortunados y no necesitamos nada. Pero...
+    <div class=" slowest  animated bounceInDown ">Realmente somos afortunados y no necesitamos nada. Pero...
         nos podes ayudar con nuestra Luna de Miel</div>
 </div>
+<!-- BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS -->
 <div class="seccion animatedParent">
-    <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" title="Regalo!" value="regalos">
+    <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" title="Regalos!" value="regalos">
         <i class="fas fa-gifts"></i><span> Regalar!</span>
     </button>
 </div>
+<!-- ¡Te esperamos para compartir!¡Te esperamos para compartir!¡Te esperamos para compartir!¡Te esperamos para compartir!-->
 <div class="seccion seccion_background_gray animatedParent">
     <div class="slowest  animated bounceInDown">
-        <div>¡Te esperamos para compartir!</div>
-        <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" title="Angel y Carla" value="confirmar">
+        <div class="titulo_nombres" style="font-size:60px">¡Te esperamos para compartir!</div>
+        <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" style="margin-top: 30px;" title="Angel y Carla"
+            value="confirmar">
             <i class="fas fa-star"></i><span> Confirmar asistencia</span>
         </button>
     </div>

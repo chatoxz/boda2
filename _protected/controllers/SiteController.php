@@ -111,11 +111,12 @@ class SiteController extends Controller
      */
     public function actionConfirmar()
     {
+        $id_boda = 2;
         $request = Yii::$app->request;
         $model = new Invitado();
         $model->id = 0;
-        $model->id_boda = 1;
-        $invitados = ArrayHelper::map(Invitado::find()->where(['id_boda' => 1])->all(), 'id', 'nombre');
+        $model->id_boda = $id_boda;
+        $invitados = ArrayHelper::map(Invitado::find()->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
 
         //var_dump($model);
         if ($request->isGet) {
@@ -124,7 +125,7 @@ class SiteController extends Controller
             if ($model->load(Yii::$app->request->post())) {
                 $invitado = Invitado::findOne(['id' => $model->id ]);
                 $invitado->mensaje = $model->mensaje;
-                $invitado->confirmacion = $model->confirmacion;
+                $invitado->id_confirmacion = $model->id_confirmacion;
                 $invitado->save();
                 echo "Gracias por tu respuesta!";
             }
