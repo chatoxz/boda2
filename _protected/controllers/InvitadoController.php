@@ -78,7 +78,7 @@ class InvitadoController extends Controller
     public function actionCreate()
     {
         $model = new Invitado();
-        $id_boda = 1;
+        $id_boda = Yii::$app->user->id;;
         if ($model->loadAll(Yii::$app->request->post())) {
             $model->saveAll();
         //return $this->redirect(['index']);
