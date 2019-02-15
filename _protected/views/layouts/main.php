@@ -29,13 +29,8 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?>
     </title>
     <?php
-    $actual_link = trim("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
-    var_dump($actual_link);
-    var_dump("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
-    var_dump($actual_link);
-    var_dump(trim("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"));
-
-    if ($actual_link != "http://www.angelycarla.appe.com.ar/" || !Yii::$app->user->isGuest) {
+    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    if ($actual_link != "http://www.angelycarla.appe.com.ar/" && !Yii::$app->user->isGuest) {
         echo "<link href='/themes/light/css/backend.css' rel='stylesheet'>";
         //echo '<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">';
         echo '<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">';
