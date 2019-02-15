@@ -41,11 +41,13 @@ body {
     background-image: url('/themes/light/img/carlaybeto/background.png');
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    /*background-size: auto 100vh;*/
     text-align: center;
     font-family: 'Quicksand', sans-serif !important;
     font-size: 24px;
     overflow-x: hidden;
-    max-width: 100vh !important;
+   /* max-width: 100vh !important;*/
 
 }
 

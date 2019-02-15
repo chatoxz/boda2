@@ -29,7 +29,6 @@ $carpeta = '/themes/light/img/carlaybeto/';
         mágica historia que abrirá un nuevo capítulo...
     </div>
 </div>
-</div>
 <div class="seccion animatedParent">
     <!-- RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ RELOJ -->
     <div class="container countdown slowest  animated bounceInDown" style="text-align: center">
