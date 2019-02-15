@@ -91,12 +91,12 @@ AppAsset::register($this);
         </div>
     </div>
 
-    <footer class="footer" style="color: #3899ea;font-size: 16px">
+    <footer class="footer">
         <div class="container" style="display: flex;justify-content: space-around">
             <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?>
                 <?= date('Y') ?>
             </p>
-            <p class=""><a style="color: #3899ea;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe
+            <p class=""><a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe
                     Studio</a> </p>
             <!--<p class="pull-right"><?= Yii::powered() ?>
             </p>-->
