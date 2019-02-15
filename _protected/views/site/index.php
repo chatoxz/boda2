@@ -90,7 +90,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
 <div class="seccion animatedParent">
     <div class="titulo_nombres slowest  animated bounceInDown">Fiesta</div>
     <div class="texto_nos_casamos slowest  animated bounceInDown width_70">
-        Te esperamos luego de la ceremonia religiosa en el Salón Narcizo Eventos, lules, de 22hr a 05.30 hs
+        <p>Te esperamos luego de la ceremonia religiosa en el Salón Narcizo Eventos, lules, de 22hr a 05.30 hs</p>
         <p>Trafic:</p>
         <p>Salida Av. Alem 595 a 20:30 hs hacia iglesia lules luego a salón Narcizo </p>
         <p>Regreso 05:30 a San miguel de Tucuman, a cada domicilio (opcional)</p>
