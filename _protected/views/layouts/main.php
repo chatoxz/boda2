@@ -34,7 +34,7 @@ AppAsset::register($this);
     var_dump($actual_link != "http://www.angelycarla.appe.com.ar/");
     var_dump($actual_link != "http://www.angelycarla.appe.com.ar/");
     var_dump($actual_link != "http://www.angelycarla.appe.com.ar/");
-    if ($actual_link != "http://www.angelycarla.appe.com.ar/" || !Yii::$app->user->isGuest) {
+    if ($actual_link != "http://www.angelycarla.appe.com.ar/ " || !Yii::$app->user->isGuest) {
         echo "<link href='/themes/light/css/backend.css' rel='stylesheet'>";
         //echo '<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">';
         echo '<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">';
