@@ -80,7 +80,10 @@ AppAsset::register($this);
         $this->registerCss(".modal-body { color: black !important; }");
         //$this->registerJs('$($(".big_container div")[0]).css("color","black").css("margin","30px");',View::POS_LOAD,"id_script");
     } ?>
-
+<?php
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+echo $actual_link;
+?>
         <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
         <div class="">
             <?php echo Breadcrumbs::widget([
