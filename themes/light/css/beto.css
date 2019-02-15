@@ -80,6 +80,7 @@ div#slider figure img {}
     font-family: 'Quicksand', sans-serif !important;
     margin-top: 75px;
     font-size: 28px;
+    overflow: hidden;
 }
 
 .imagen_separadora {

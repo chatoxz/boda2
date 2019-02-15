@@ -20,7 +20,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
         <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
     </figure>
 </div>
-<div class="seccion animatedParent width_70" >
+<div class="seccion animatedParent width_70">
     <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel</div>
     <div class="nos_casamos slowest  animated bounceInDown">Nos Casamos</div>
     <div class="texto_nos_casamos slowest  animated bounceInDown">
@@ -154,7 +154,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/magali.jpeg" width="338" alt="">
             </div>
-            <div class=" texto_padrinx slowest animated bounceInDown">Magalí  <br> Hermana</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Magalí <br> Hermana</div>
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -223,8 +223,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
 <div class="seccion seccion_background_gray animatedParent">
     <div class="slowest  animated bounceInDown">
         <div class="titulo_nombres" style="font-size:60px">¡Te esperamos para compartir!</div>
-        <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" style="margin-top: 30px;" title="Angel y Carla"
-            value="confirmar">
+        <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title="Angel y Carla" value="confirmar">
             <i class="fas fa-star"></i><span> Confirmar asistencia</span>
         </button>
     </div>
