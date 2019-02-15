@@ -29,16 +29,17 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?>
     </title>
     <?php
-    if (!Yii::$app->user->isGuest) {
+    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    if ($actual_link != "http://www.angelycarla.appe.com.ar/" || !Yii::$app->user->isGuest) {
         echo "<link href='/themes/light/css/backend.css' rel='stylesheet'>";
         //echo '<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">';
         echo '<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">';
-    } else {
+    }else{
         echo "<link href='/themes/light/css/beto.css' rel='stylesheet' rel='stylesheet' type='text/css'>"; ?>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500|Rubik" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-            crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500|Rubik" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+                crossorigin="anonymous">
     <?php
     } ?>
     <?php $this->head() ?>
@@ -81,8 +82,7 @@ AppAsset::register($this);
         //$this->registerJs('$($(".big_container div")[0]).css("color","black").css("margin","30px");',View::POS_LOAD,"id_script");
     } ?>
 <?php
-$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-echo $actual_link;
+
 ?>
         <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
         <div class="">
