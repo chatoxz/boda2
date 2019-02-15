@@ -45,6 +45,8 @@ body {
     font-family: 'Quicksand', sans-serif !important;
     font-size: 24px;
     overflow-x: hidden;
+    max-width: 100vh !important;
+
 }
 
 div#slider {
