@@ -20,7 +20,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
         <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
     </figure>
 </div>
-<div class="seccion animatedParent" style="width: 50%">
+<div class="seccion animatedParent width_70" >
     <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel</div>
     <div class="nos_casamos slowest  animated bounceInDown">Nos Casamos</div>
     <div class="texto_nos_casamos slowest  animated bounceInDown">
@@ -125,13 +125,13 @@ $carpeta = '/themes/light/img/carlaybeto/';
             <div class="div_foto_padrinx slowest animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/edith.jpeg" width="338" alt="" style="left: 0px; !important">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
+            <div class="texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
         </div>
         <div style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/carlos.jpeg" width="338" alt="">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -143,19 +143,19 @@ $carpeta = '/themes/light/img/carlaybeto/';
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/silvana.jpeg" width="338" alt="" style="top: -22%;">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Silvana <br> Hermana</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Silvana <br> Hermana</div>
         </div>
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/grisel.jpeg" width="338" alt="" style="left: -38px;">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Grisel <br> Hermana</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Grisel <br> Hermana</div>
         </div>
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/magali.jpeg" width="338" alt="">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Magalí  <br> Hermana</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Magalí  <br> Hermana</div>
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -170,13 +170,13 @@ $carpeta = '/themes/light/img/carlaybeto/';
             <div class="div_foto_padrinx slowest animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/edith.jpeg" width="338" alt="" style="left: 0px; !important">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
         </div>
         <div style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/carlos.jpeg" width="338" alt="">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -188,24 +188,24 @@ $carpeta = '/themes/light/img/carlaybeto/';
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/testigo.jpg" width="338" alt="">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/testigo2.jpg" width="338" alt="">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
                 <img src="<?= $carpeta ?>testigos/testigo.jpg" width="338" alt="">
             </div>
-            <div class="texto_1_black texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
         </div>
     </div>
 </div>
 <!-- IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO -->
-<div class="seccion animatedParent imagen_separadora">
+<div class="seccion animatedParent imagen_separadora" style="margin-top: 50px;">
     <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>regalo.png" height="133" width="%" alt="">
 </div>
 <!-- ¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?-->

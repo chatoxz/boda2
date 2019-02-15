@@ -41,7 +41,7 @@ body {
     background-image: url('/themes/light/img/carlaybeto/background.png');
     background-attachment: fixed;
     background-position: center;
-      text-align: center;
+    text-align: center;
     font-family: 'Quicksand', sans-serif !important;
     font-size: 24px;
     overflow-x: hidden;
@@ -77,7 +77,8 @@ div#slider figure img {}
     margin-top: 75px;
     font-size: 28px;
 }
-.imagen_separadora{
+
+.imagen_separadora {
     background-color: rgba(255, 255, 255, 0.41);
 }
 
@@ -152,6 +153,7 @@ div#slider figure img {}
     padding: 5px 40px !important;
     font-weight: 500 !important;
 }
+
 /*
 background-color: #C7B38A;
 background-color: #FFE8B2;
@@ -222,18 +224,62 @@ background-color: #8B7D62;
     padding-bottom: 90px;
     background-color: #efefef;
 }
-.wrap_card{
+
+.wrap_card {
     width: 50%;
     margin: auto;
     /*padding: 40px;*/
     line-height: 0px;
 }
+
 .wrap_card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.item_regalo{
+
+.item_regalo {
     font-size: 26px;
 }
-.texto_padrinos{
+
+.texto_padrinos {
     font-size: 18px;
+}
+
+/* mobile version mobile version mobile version mobile version mobile version mobile version mobile version mobile version mobile version */
+
+@media only screen and (max-width: 400px) {
+    body{
+        background-size: auto 520px !important;
+    }
+    .titulo_nombres {
+        font-size: 60px !important;
+    }
+
+    .nos_casamos {
+        font-size: 40px !important;
+    }
+
+    .seccion {
+        font-size: 20px !important;
+    }
+    .width_70{
+        width: 95% !important;
+    }
+    .number-wrap{
+        width: 100% !important;
+    }
+    .separador-number-wrap{
+        display: none !important;
+    }
+    .texto_padrinx {
+        margin: 20px 0px !important;
+        font-size: 30px !important;
+    }
+    .btn-como-llegar{
+        max-width: 315px !important;
+        display: flex !important;
+        align-items: baseline !important;
+        justify-content: space-evenly !important;
+        margin: auto !important;
+    }
+
 }

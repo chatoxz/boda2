@@ -39,7 +39,7 @@ echo TabularForm::widget([
             'value' => function ($model, $key) {
                 return
                     Html::hiddenInput('Children[' . $key . '][id]', (!empty($model['id'])) ? $model['id'] : "") .
-                    Html::a('<i class="glyphicon glyphicon-trash"></i>', '#', ['title' =>  'Delete', 'onClick' => 'delRowMesaInvitado(' . $key . '); return false;', 'id' => 'mesa-invitado-del-btn']);
+                    Html::a('<i class="glyphicon glyphicon-trash"></i>', '#', ['title' =>  'Borrar', 'onClick' => 'delRowMesaInvitado(' . $key . '); return false;', 'id' => 'mesa-invitado-del-btn']);
             },
         ],
     ],
@@ -49,7 +49,7 @@ echo TabularForm::widget([
             'type' => GridView::TYPE_DEFAULT,
             'before' => false,
             'footer' => false,
-            'after' => Html::button('<i class="glyphicon glyphicon-plus"></i>' . 'Add Mesa Invitado', ['type' => 'button', 'class' => 'btn btn-success kv-batch-create', 'onClick' => 'addRowMesaInvitado()']),
+            'after' => Html::button('<i class="glyphicon glyphicon-plus"></i>' . 'Agregar Invitado', ['type' => 'button', 'class' => 'btn btn-success kv-batch-create', 'onClick' => 'addRowMesaInvitado()']),
         ]
     ]
 ]);

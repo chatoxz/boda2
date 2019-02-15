@@ -17,22 +17,22 @@ use kartik\grid\GridView;
     </div>
 
     <div class="row">
-<?php 
+<?php
     $gridColumn = [
         ['attribute' => 'id', 'visible' => false],
         [
-            'attribute' => 'mesa.id',
-            'label' => 'Id Mesa',
+            'attribute' => 'mesa.nombre',
+            'label' => 'Mesa',
         ],
         [
-            'attribute' => 'invitado.id',
-            'label' => 'Id Invitado',
+            'attribute' => 'invitado.nombre',
+            'label' => 'Invitado',
         ],
     ];
     echo DetailView::widget([
         'model' => $model,
         'attributes' => $gridColumn
-    ]); 
+    ]);
 ?>
     </div>
 </div>

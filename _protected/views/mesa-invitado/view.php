@@ -18,9 +18,9 @@ $this->params['breadcrumbs'][] = $this->title;
             </h2>
         </div>
         <div class="col-sm-4" style="margin-top: 15px">
-            <?= Html::a('Save As New', ['save-as-new', 'id' => $model->id], ['class' => 'btn btn-info']) ?>
-            <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-            <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+            <!--<?= Html::a('Guardar como nuevo', ['save-as-new', 'id' => $model->id], ['class' => 'btn btn-info']) ?>-->
+            <?= Html::a('Actualizar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+            <?= Html::a('Borrar', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
                 'data' => [
                     'confirm' => '¿Está seguro de eliminar este elemento?',
@@ -36,31 +36,31 @@ $this->params['breadcrumbs'][] = $this->title;
     $gridColumn = [
         ['attribute' => 'id', 'visible' => false],
         [
-            'attribute' => 'mesa.id',
-            'label' => 'Id Mesa',
+            'attribute' => 'mesa.nombre',
+            'label' => ' Mesa',
         ],
         [
-            'attribute' => 'invitado.id',
-            'label' => 'Id Invitado',
+            'attribute' => 'invitado.nombre',
+            'label' => ' Invitado',
         ],
     ];
     echo DetailView::widget([
         'model' => $model,
         'attributes' => $gridColumn
-    ]);
-?>
+    ]); ?>
+    <?php /*
     </div>
     <div class="row">
-        <h4>Invitado<?= ' '. Html::encode($this->title) ?>
+        <h4>Invitado
         </h4>
     </div>
     <?php
     $gridColumnInvitado = [
         [
         'attribute' => 'id', 'visible' => false],
-        'id_boda',
+        //'id_boda',
         'nombre',
-        'id_confirmacion',
+        'confirmacion.nombre',
         'mensaje',
     ];
     echo DetailView::widget([
@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => $gridColumnInvitado    ]);
     ?>
     <div class="row">
-        <h4>Mesa<?= ' '. Html::encode($this->title) ?>
+        <h4>Mesa
         </h4>
     </div>
     <?php
@@ -83,3 +83,4 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => $gridColumnMesa    ]);
     ?>
 </div>
+      */ ?>
