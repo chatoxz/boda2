@@ -30,6 +30,11 @@ AppAsset::register($this);
     </title>
     <?php
     $actual_link = trim("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+    var_dump($actual_link);
+    var_dump("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+    var_dump($actual_link);
+    var_dump(trim("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"));
+
     if ($actual_link != "http://www.angelycarla.appe.com.ar/" || !Yii::$app->user->isGuest) {
         echo "<link href='/themes/light/css/backend.css' rel='stylesheet'>";
         //echo '<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">';
