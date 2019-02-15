@@ -13,19 +13,19 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(['id' => 'form-user']); ?>
 
         <?= $form->field($user, 'username')->textInput(
-                ['placeholder' => Yii::t('app', 'Create username'), 'autofocus' => true]) ?>
-        
+                ['placeholder' => Yii::t('app', 'Crear username'), 'autofocus' => true]) ?>
+
         <?= $form->field($user, 'email')->input('email', ['placeholder' => Yii::t('app', 'Enter e-mail')]) ?>
 
         <?php if ($user->scenario === 'create'): ?>
 
-            <?= $form->field($user, 'password')->widget(PasswordInput::classname(), 
-                ['options' => ['placeholder' => Yii::t('app', 'Create password')]]) ?>
+            <?= $form->field($user, 'password')->widget(PasswordInput::classname(),
+                ['options' => ['placeholder' => Yii::t('app', 'Crear password')]]) ?>
 
         <?php else: ?>
 
             <?= $form->field($user, 'password')->widget(PasswordInput::classname(),
-                     ['options' => ['placeholder' => Yii::t('app', 'Change password ( if you want )')]]) ?> 
+                     ['options' => ['placeholder' => Yii::t('app', 'Change password ( if you want )')]]) ?>
 
         <?php endif ?>
 
@@ -42,14 +42,14 @@ use yii\widgets\ActiveForm;
     </div>
     </div>
 
-    <div class="form-group">     
-        <?= Html::submitButton($user->isNewRecord ? Yii::t('app', 'Create') 
-            : Yii::t('app', 'Update'), ['class' => $user->isNewRecord 
+    <div class="form-group">
+        <?= Html::submitButton($user->isNewRecord ? Yii::t('app', 'Create')
+            : Yii::t('app', 'Update'), ['class' => $user->isNewRecord
             ? 'btn btn-success' : 'btn btn-primary']) ?>
 
         <?= Html::a(Yii::t('app', 'Cancel'), ['user/index'], ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
- 
+
 </div>

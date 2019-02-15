@@ -32,9 +32,10 @@ html,
 body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    height: 100%;
-    background-color: black;
-    color: white;
+    padding: 15px !important;
+    /*height: 100%;*/
+    /*background-color: black;
+    color: white;*/
    /* background-image: url(/themes/light/img/fondo01.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;*/

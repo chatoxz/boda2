@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>
         <?= Html::encode($this->title) ?>
         <span class="pull-right">
-            <?= Html::a(Yii::t('app', 'Create User'), ['create'], ['class' => 'btn btn-success']) ?>
-        </span>         
+            <?= Html::a(Yii::t('app', 'Crear User'), ['create'], ['class' => 'btn btn-success']) ?>
+        </span>
     </h1>
 
     <?= GridView::widget([
@@ -62,8 +62,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         return Html::a('', $url, ['title'=>'Manage user', 'class'=>'glyphicon glyphicon-user']);
                     },
                     'delete' => function ($url, $model, $key) {
-                        return Html::a('', $url, 
-                        ['title'=>'Delete user', 
+                        return Html::a('', $url,
+                        ['title'=>'Delete user',
                             'class'=>'glyphicon glyphicon-trash',
                             'data' => [
                                 'confirm' => Yii::t('app', 'Are you sure you want to delete this user?'),

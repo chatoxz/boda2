@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Mesa */
 
-$this->title = 'Create Mesa';
+$this->title = 'Crear Mesa';
 $this->params['breadcrumbs'][] = ['label' => 'Mesa', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

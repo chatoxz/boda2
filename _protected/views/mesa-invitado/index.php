@@ -22,13 +22,13 @@ $this->registerJs($search);
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Mesa Invitado', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Mesa Invitado', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Advance Search', '#', ['class' => 'btn btn-info search-button']) ?>
     </p>
     <div class="search-form" style="display:none">
         <?=  $this->render('_search', ['model' => $searchModel]); ?>
     </div>
-    <?php 
+    <?php
     $gridColumn = [
         ['class' => 'yii\grid\SerialColumn'],
         [
@@ -47,8 +47,8 @@ $this->registerJs($search);
         [
                 'attribute' => 'id_mesa',
                 'label' => 'Id Mesa',
-                'value' => function($model){                   
-                    return $model->mesa->id;                   
+                'value' => function($model){
+                    return $model->mesa->id;
                 },
                 'filterType' => GridView::FILTER_SELECT2,
                 'filter' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()->asArray()->all(), 'id', 'id'),
@@ -60,8 +60,8 @@ $this->registerJs($search);
         [
                 'attribute' => 'id_invitado',
                 'label' => 'Id Invitado',
-                'value' => function($model){                   
-                    return $model->invitado->id;                   
+                'value' => function($model){
+                    return $model->invitado->id;
                 },
                 'filterType' => GridView::FILTER_SELECT2,
                 'filter' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->asArray()->all(), 'id', 'id'),
@@ -79,7 +79,7 @@ $this->registerJs($search);
                 },
             ],
         ],
-    ]; 
+    ];
     ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
