@@ -75,9 +75,9 @@ AppAsset::register($this);
             'items' => $menuItems,
         ]);
         NavBar::end();
-        //$this->registerCss(".wrap { background: white !important; }");
-        //$this->registerCss(".navbar-default { height: 50px; background: white !important; }");
-        //$this->registerCss(".navbar-collapse { height: auto; background: white !important; }");
+        $this->registerCss(".wrap { background: white !important; }");
+        $this->registerCss(".navbar-default { height: 50px; background: white !important; }");
+        $this->registerCss(".navbar-collapse { height: auto; background: white !important; }");
         //$this->registerCss(".modal-body { color: black !important; }");
         //$this->registerJs('$($(".big_container div")[0]).css("color","black").css("margin","30px");',View::POS_LOAD,"id_script");
     } ?>

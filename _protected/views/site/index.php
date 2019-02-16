@@ -11,14 +11,17 @@ use yii\helpers\Url;
 $this->title = Yii::t('app', Yii::$app->name);
 $carpeta = '/themes/light/img/carlaybeto/';
 ?>
-<div id="slider">
-    <figure>
-        <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
-        <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
-        <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
-        <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
-        <img src="<?= $carpeta ?>silviayjuan.jpg" alt>
-    </figure>
+<div id="wrap_slider">
+    <div id="slider">
+        <figure>
+            <img src="<?= $carpeta ?>/slider/slider.jpeg" alt>
+            <img src="<?= $carpeta ?>/slider/slider2.jpeg" alt>
+            <img src="<?= $carpeta ?>/slider/slider3.jpeg" alt>
+            <img src="<?= $carpeta ?>/slider/slider4.jpeg" alt>
+            <img src="<?= $carpeta ?>/slider/slider6.jpeg" alt>
+
+        </figure>
+    </div>
 </div>
 <div class="seccion animatedParent width_70">
     <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel</div>
@@ -165,18 +168,18 @@ $carpeta = '/themes/light/img/carlaybeto/';
     </div>
     <!-- PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO PADRINOS DEL NOVIO -->
     <div class="wrap_imagenes_padrinos animatedParent">
-        <div class="" style="display: flex;flex-direction: column">
-            <div class="div_foto_padrinx slowest animated bounceInDown">
-                <img src="<?= $carpeta ?>testigos/edith.jpeg" width="338" alt="" style="left: 0px; !important">
-            </div>
-            <div class=" texto_padrinx slowest animated bounceInDown">Edith <br> Mamá</div>
-        </div>
-        <div style="display: flex;flex-direction: column">
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
-                <img src="<?= $carpeta ?>testigos/carlos.jpeg" width="338" alt="">
+                <img src="<?= $carpeta ?>testigos/silvia.jpeg" width="338" alt="" style="left: 0px">
             </div>
-            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Silvia <br> Mamá</div>
         </div>
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/martin.jpeg" width="450" alt="" style="left: -111px;top: 0%;">
+            </div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Martin <br> Tío</div>
+        </div>        
     </div>
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown" style="font-size: 70px">Civil</div>
@@ -185,21 +188,27 @@ $carpeta = '/themes/light/img/carlaybeto/';
     <div class="wrap_imagenes_padrinos animatedParent">
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
-                <img src="<?= $carpeta ?>testigos/testigo.jpg" width="338" alt="">
+                <img src="<?= $carpeta ?>testigos/franco.jpeg" width="238" alt="" style="left: -15px;">
             </div>
-            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Franco <br> Hermano</div>
         </div>
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
-                <img src="<?= $carpeta ?>testigos/testigo2.jpg" width="338" alt="">
+                <img src="<?= $carpeta ?>testigos/flavia.jpeg" width="300" alt="" style=" left: -69px;top: -45%;">
             </div>
-            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Flavia <br> Hermana</div>
+        </div>       
+        <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
+            <div class="div_foto_padrinx slowest  animated bounceInDown">
+                <img src="<?= $carpeta ?>testigos/roberto.jpeg" width="338" alt="">
+            </div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Roberto <br> Amigo</div>
         </div>
         <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
             <div class="div_foto_padrinx slowest  animated bounceInDown">
-                <img src="<?= $carpeta ?>testigos/testigo.jpg" width="338" alt="">
+                <img src="<?= $carpeta ?>testigos/gustavo.jpeg" width="400" alt="" style="left: -0px;top: 0%;">
             </div>
-            <div class=" texto_padrinx slowest animated bounceInDown">Carlos <br> Papá</div>
+            <div class=" texto_padrinx slowest animated bounceInDown">Gustavo <br> Amigo</div>
         </div>
     </div>
 </div>
