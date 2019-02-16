@@ -38,7 +38,8 @@
 
 body {
     margin: 0;
-    background-image: url('/themes/light/img/carlaybeto/background.png');
+    background-image: url('/themes/light/img/carlaybeto/background.png') !important;
+    background-color: transparent !important;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
