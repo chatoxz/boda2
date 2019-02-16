@@ -11,20 +11,46 @@ use yii\helpers\Url;
 $this->title = Yii::t('app', Yii::$app->name);
 $carpeta = '/themes/light/img/carlaybeto/';
 ?>
-<div id="wrap_slider">
-    <div id="slider">
-        <figure>
-            <img src="<?= $carpeta ?>/slider/slider.jpeg" alt>
-            <img src="<?= $carpeta ?>/slider/slider2.jpeg" alt>
-            <img src="<?= $carpeta ?>/slider/slider3.jpeg" alt>
-            <img src="<?= $carpeta ?>/slider/slider4.jpeg" alt>
-            <img src="<?= $carpeta ?>/slider/slider6.jpeg" alt>
 
-        </figure>
+<div style="background-color: rgba(255, 255, 255, 0.41); width: 100%">
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="<?= $carpeta ?>/slider/slider.jpeg"" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="<?= $carpeta ?>/slider/slider2_1.jpeg"" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="<?= $carpeta ?>/slider/slider3.jpeg"" alt="New york" style="width:100%;">
+      </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 </div>
 <div class="seccion animatedParent width_70">
-    <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel</div>
+    <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel &ensp; </div>
     <div class="nos_casamos slowest  animated bounceInDown">Nos Casamos</div>
     <div class="texto_nos_casamos slowest  animated bounceInDown">
         Porque desde la primera vez que nos vimos soñamos

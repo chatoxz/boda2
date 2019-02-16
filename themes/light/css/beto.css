@@ -1,41 +1,3 @@
-@keyframes slidy {
-    0% {
-        left: 0%;
-    }
-
-    20% {
-        left: 0%;
-    }
-
-    25% {
-        left: -100%;
-    }
-
-    45% {
-        left: -100%;
-    }
-
-    50% {
-        left: -200%;
-    }
-
-    70% {
-        left: -200%;
-    }
-
-    75% {
-        left: -300%;
-    }
-
-    95% {
-        left: -300%;
-    }
-
-    100% {
-        left: -400%;
-    }
-}
-
 body {
     margin: 0;
     background-image: url('/themes/light/img/carlaybeto/background.png') !important;
@@ -53,39 +15,6 @@ body {
    /* max-width: 100vh !important;*/
 
 }
-#wrap_slider{
-    background-color: rgba(255, 255, 255, 0.41);
-    width: 100%;
-    height: auto;
-    max-height: 720px;
-    margin: auto;
-}
-div#slider {
-    overflow: hidden;
-    max-width: 1280px;
-    max-height: 720px;
-    margin: auto;
-}
-
-div#slider figure img {
-    width: 20%;
-    float: left;
-    height: 100%;
-    overflow-y: hidden;
-}
-
-div#slider figure {
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    text-align: left;
-    font-size: 0;
-    animation: 20s slidy infinite;
-}
-
-div#slider figure img {}
-
 
 .seccion {
     display: block;

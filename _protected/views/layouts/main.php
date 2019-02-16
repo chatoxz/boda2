@@ -46,7 +46,7 @@ AppAsset::register($this);
 </head>
 <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
 
-<body id="id_body">
+<body id="id_body" style="background-color: transparent !important;">
     <?php $this->beginBody() ?>
     <div class="wrap" style="">
         <?php
