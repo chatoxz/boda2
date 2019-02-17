@@ -128,6 +128,14 @@ $config = [
                     'basePath' => 'translations',
                     'sourceLanguage' => 'en'
                 ],
+                'mtrelt' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => 'translations',
+                ],
+                'rbac-admin' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => 'translations',
+                ],
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),

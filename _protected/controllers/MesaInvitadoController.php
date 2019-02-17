@@ -120,7 +120,7 @@ class MesaInvitadoController extends Controller
         }
 
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
-            return $this->redirect(['/mesa/index']);
+            //return $this->redirect(['/mesa/index']);
         } else {
             if (Yii::$app->request->isAjax) {
                 return $this->renderAjax('update', [
@@ -142,7 +142,7 @@ class MesaInvitadoController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->deleteWithRelated();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['/mesa/index']);
     }
