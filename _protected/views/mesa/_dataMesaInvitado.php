@@ -26,8 +26,9 @@ $gridColumns = [
     ],
     [
         'class' => 'yii\grid\ActionColumn',
-        'controller' => 'mesa-invitado'
-    ],
+        'controller' => 'mesa-invitado',
+        'template' => '{update} {delete}',
+ ],
 ];
 
 echo GridView::widget([
