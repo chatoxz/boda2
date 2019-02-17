@@ -15,11 +15,23 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_trafic')->textInput(['placeholder' => 'Id Trafic']) ?>
+    <?= $form->field($model, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
 
-    <?= $form->field($model, 'id_boda')->textInput(['placeholder' => 'Id Boda']) ?>
+    <?= $form->field($model, 'id_boda')->widget(\kartik\widgets\Select2::classname(), [
+        'data' => \yii\helpers\ArrayHelper::map(\app\models\Boda::find()->orderBy('id')->asArray()->all(), 'id', 'id'),
+        'options' => ['placeholder' => Yii::t('app', 'Choose Boda')],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
-    <?= $form->field($model, 'id_invitado')->textInput(['maxlength' => true, 'placeholder' => 'Id Invitado']) ?>
+    <?= $form->field($model, 'id_invitado')->widget(\kartik\widgets\Select2::classname(), [
+        'data' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->orderBy('id')->asArray()->all(), 'id', 'nombre'),
+        'options' => ['placeholder' => Yii::t('app', 'Choose Invitado')],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true, 'placeholder' => 'Telefono']) ?>
 

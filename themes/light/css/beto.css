@@ -209,6 +209,12 @@ background-color: #8B7D62;
 }
 
 @media only screen and (max-width: 400px) {
+    body{
+        background-color: transparent !important;
+    }
+    .container_carrousel{
+        ;width: 100% !important;
+    }
     .titulo_nombres {
         font-size: 50px !important;
     }
@@ -243,5 +249,10 @@ background-color: #8B7D62;
     .footer{
         font-size: 14px !important;
 
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .container_carrousel{
+        ;width: 100% !important;
     }
 }

@@ -78,8 +78,9 @@ $(document).on("ready",function () {
                     $("#modal").modal("hide");
                     $(".resultado").html("").addClass("hidden");
                     //Si esta seteado el id del gridview lo recarga con el pjax
-                    if ( typeof $("#id_gridview").html() !== "undefined"  )
+                    if ( typeof $("#id_gridview").html() !== "undefined"  ){
                         $.pjax.reload({container:"#id_gridview"});
+                    }
                 }, 2000);
             }
             else{
@@ -139,8 +140,8 @@ $(document).on("ready",function () {
     setBtnModal();
 })
 
-$(document).on('pjax:success', function() {
-    setBtnModal()
+$(document).on("pjax:success", function() {
+    setBtnModal();
 });
 
 function setBtnModal(){

@@ -65,6 +65,7 @@ AppAsset::register($this);
     if (!Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => Yii::t('app', 'Invitados'), 'url' => ['/invitado/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Mesas'), 'url' => ['/mesa/index']];
+        $menuItems[] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['/trafic/index']];
         $menuItems[] = [
             'label' => Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],

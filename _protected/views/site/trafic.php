@@ -42,6 +42,7 @@ use kartik\select2\Select2;
             <?php //echo $form->field($model, 'id_confirmacion')->label('Confirmar Asistencia')->dropDownList(['1' => 'Alli estare!', '2' => 'No podre...']); ?>
         </div>-->
         <div style="padding: 0px !important;">
+            <!-- http://demos.krajee.com/widget-details/active-field#option-autoPlaceholder => esta es laposta ['autoPlaceholder' => false ] -->
             <?= $form->field($model, 'mensaje',['autoPlaceholder' => false ])->textInput(['placeholder' => 'Dejanos tu Telefono!']); ?>
         </div>
         <div style="padding: 0px !important;">

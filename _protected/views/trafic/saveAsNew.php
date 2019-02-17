@@ -8,9 +8,9 @@ use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'Save As New {modelClass}: ', [
     'modelClass' => 'Trafic',
-]). ' ' . $model->id_trafic;
+]). ' ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id_trafic, 'url' => ['view', 'id' => $model->id_trafic]];
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Save As New');
 ?>
 <div class="trafic-create">
