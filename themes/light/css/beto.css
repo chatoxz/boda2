@@ -199,6 +199,14 @@ background-color: #8B7D62;
    color: black !important;
 }
 /* mobile version mobile version mobile version mobile version mobile version mobile version mobile version mobile version mobile version */
+/*result;ado del modal*/
+.resultado{
+    margin: 10px 30px;
+    color: #8B7D62 !important;
+    background-color: transparent !important;
+    border-color: #8B7D62; !important;
+    margin-top: 30px !important;
+}
 
 @media only screen and (max-width: 400px) {
     .titulo_nombres {
