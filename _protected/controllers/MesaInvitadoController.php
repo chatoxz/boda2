@@ -119,8 +119,8 @@ class MesaInvitadoController extends Controller
             $model = $this->findModel($id);
         }
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
-            //return $this->redirect(['/mesa/index']);
+        if ($model->loadAll(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['/mesa/index']);
         } else {
             if (Yii::$app->request->isAjax) {
                 return $this->renderAjax('update', [

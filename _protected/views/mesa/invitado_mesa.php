@@ -7,6 +7,7 @@
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
+use yii\helpers\Url;
 
 $this->title = 'Invitados sin mesa';
 ?>
@@ -60,7 +61,29 @@ $this->title = 'Invitados sin mesa';
         ],
         [
             'class' => 'yii\grid\ActionColumn',
-            'template' => '{view} {update} {delete}',
+            'controller' => 'mesa-invitado',
+            'template' => '{update} {delete}',
+            'buttons' => [
+                'update' => function ($model,$key,$index) {
+                    $url = Url::toRoute(['/mesa-invitado/update','id' => $key->mesaInvitado->id]);
+                    return Html::a(
+                        '<span style="padding-right: 10px;" class="glyphicon glyphicon-pencil" title="Actualizar invitado"></span>','#',
+                        $options = [
+                            'class' => 'modalButton',
+                            'value' => $url,
+                            'title' => 'Actualizar alumno',
+                        ]);
+                },
+                'delete' => function ($model,$key,$index) {
+                    $url = Url::toRoute(['/mesa-invitado/delete','id' => $key->mesaInvitado->id]);
+                    //$url = $column->createUrl($model, $key, $index, 'delete');
+                    return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                        'title' => Yii::t('yii', 'Delete'),
+                        'data-confirm' => Yii::t('yii', '¿Está segur@ que desea sacar de la mesa al invitado?'),
+                        'data-method' => 'post',
+                    ]);
+                },
+            ],
         ],
 
     ];

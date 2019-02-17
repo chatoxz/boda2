@@ -85,9 +85,7 @@ class MesaController extends Controller
     {
         $id_boda = Yii::$app->user->id;
         $searchModel = new MesaInvitado();
-
         $query = Invitado::find();
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
@@ -98,7 +96,6 @@ class MesaController extends Controller
         $query->leftJoin('mesa', 'mesa.id = mesa_invitado.id_mesa');
         $query->andFilterWhere(['id' => $searchModel->id,'invitado.id_boda' => $id_boda,]);
         $query->andFilterWhere(['<=', 'invitado.id_confirmacion', 1]);
-        $query->andFilterWhere(['invitado.id_boda' => $id_boda ]);
         if ($tipo == 0) {
             $query->andWhere(['mesa_invitado.id_mesa' => null]);
             $titulo = 'Invitados sin Mesa';
@@ -113,7 +110,6 @@ class MesaController extends Controller
             ->leftJoin('mesa', 'mesa.id = mesa_invitado.id_mesa')
             ->andFilterWhere([ 'id' => $searchModel->id, 'invitado.id_boda' => $id_boda, ])
             ->andFilterWhere(['<=', 'invitado.id_confirmacion', 1])
-            ->andFilterWhere(['invitado.id_boda' => $id_boda ])
             ->andWhere(['mesa_invitado.id_mesa' => null])
             ->count();
 
@@ -121,7 +117,6 @@ class MesaController extends Controller
             ->leftJoin('mesa', 'mesa.id = mesa_invitado.id_mesa')
             ->andFilterWhere([ 'id' => $searchModel->id, 'invitado.id_boda' => $id_boda, ])
             ->andFilterWhere(['<=', 'invitado.id_confirmacion', 1])
-            ->andFilterWhere(['invitado.id_boda' => $id_boda ])
             ->andWhere(['not', ['mesa_invitado.id_mesa' => null]])
             ->count();
 

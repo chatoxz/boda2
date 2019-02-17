@@ -93,6 +93,7 @@ $this->title = 'Invitado';
         'mensaje:ntext',
         [
             'class' => 'yii\grid\ActionColumn',
+            'template' => '{update} {delete}',
         ],
     ];
     ?>
