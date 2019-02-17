@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\MesaInvitado */
 
-$this->title = 'Actualizar Mesa Invitado: ' . ' ' . $model->nombre;
+$this->title = 'Actualizar Mesa del Invitado ';
 $this->params['breadcrumbs'][] = ['label' => 'Mesa Invitado', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
