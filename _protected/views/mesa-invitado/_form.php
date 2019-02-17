@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
 
     <?= $form->field($model, 'id_mesa')->widget(\kartik\widgets\Select2::classname(), [
-        'data' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()->orderBy('id')->asArray()->all(), 'id', 'nombre'),
+        'data' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()->where(['id_boda' => Yii::$app->user->id])->orderBy('id')->asArray()->all(), 'id', 'nombre'),
         'options' => ['placeholder' => 'Mesa'],
         'pluginOptions' => [
             'allowClear' => true
@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
     ])->label('Mesa'); ?>
 
     <?= $form->field($model, 'id_invitado')->widget(\kartik\widgets\Select2::classname(), [
-        'data' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->orderBy('id')->asArray()->all(), 'id', 'nombre'),
+        'data' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->where(['id_boda' => Yii::$app->user->id])->orderBy('id')->asArray()->all(), 'id', 'nombre'),
         'options' => ['placeholder' => 'Invitado'],
         'pluginOptions' => [
             'allowClear' => true
