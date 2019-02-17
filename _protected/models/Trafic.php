@@ -18,8 +18,8 @@ class Trafic extends BaseTrafic
         return array_replace_recursive(parent::rules(),
 	    [
             [['id_boda', 'id_invitado', 'telefono'], 'required'],
-            [['id_boda'], 'integer'],
-            [['id_invitado', 'telefono'], 'string', 'max' => 45]
+            [['id_boda', 'id_invitado'], 'integer'],
+            [['telefono'], 'string', 'max' => 45]
         ]);
     }
 	

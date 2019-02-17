@@ -45,7 +45,9 @@ class TraficController extends Controller
      */
     public function actionIndex()
     {
+        $id_boda = Yii::$app->user->id;
         $searchModel = new TraficSearch();
+        $searchModel->id_boda = $id_boda;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -75,9 +77,11 @@ class TraficController extends Controller
     public function actionCreate()
     {
         $model = new Trafic();
+        $id_boda = Yii::$app->user->id;
+        $model->id_boda = $id_boda;
 
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
-            return $this->redirect(['view', 'id' => $model->id_trafic]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -98,9 +102,8 @@ class TraficController extends Controller
         }else{
             $model = $this->findModel($id);
         }
-
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
-            return $this->redirect(['view', 'id' => $model->id_trafic]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -137,7 +140,7 @@ class TraficController extends Controller
         }
     
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
-            return $this->redirect(['view', 'id' => $model->id_trafic]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('saveAsNew', [
                 'model' => $model,

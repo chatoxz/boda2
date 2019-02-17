@@ -7,10 +7,13 @@ use Yii;
 /**
  * This is the base model class for table "trafic".
  *
- * @property integer $id_trafic
+ * @property integer $id
  * @property integer $id_boda
- * @property string $id_invitado
+ * @property integer $id_invitado
  * @property string $telefono
+ *
+ * @property \app\models\Boda $boda
+ * @property \app\models\Invitado $invitado
  */
 class Trafic extends \yii\db\ActiveRecord
 {
@@ -24,7 +27,8 @@ class Trafic extends \yii\db\ActiveRecord
     public function relationNames()
     {
         return [
-            ''
+            'boda',
+            'invitado'
         ];
     }
 
@@ -35,8 +39,8 @@ class Trafic extends \yii\db\ActiveRecord
     {
         return [
             [['id_boda', 'id_invitado', 'telefono'], 'required'],
-            [['id_boda'], 'integer'],
-            [['id_invitado', 'telefono'], 'string', 'max' => 45]
+            [['id_boda', 'id_invitado'], 'integer'],
+            [['telefono'], 'string', 'max' => 45]
         ];
     }
 
@@ -54,13 +58,29 @@ class Trafic extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_trafic' => Yii::t('app', 'Id Trafic'),
+            'id' => Yii::t('app', 'ID'),
             'id_boda' => Yii::t('app', 'Id Boda'),
             'id_invitado' => Yii::t('app', 'Id Invitado'),
             'telefono' => Yii::t('app', 'Telefono'),
         ];
     }
-
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBoda()
+    {
+        return $this->hasOne(\app\models\Boda::className(), ['id' => 'id_boda']);
+    }
+        
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getInvitado()
+    {
+        return $this->hasOne(\app\models\Invitado::className(), ['id' => 'id_invitado']);
+    }
+    
 
     /**
      * @inheritdoc

@@ -18,8 +18,8 @@ use app\models\Trafic;
     public function rules()
     {
         return [
-            [['id_trafic', 'id_boda'], 'integer'],
-            [['id_invitado', 'telefono'], 'safe'],
+            [['id', 'id_boda', 'id_invitado'], 'integer'],
+            [['telefono'], 'safe'],
         ];
     }
 
@@ -56,12 +56,12 @@ use app\models\Trafic;
         }
 
         $query->andFilterWhere([
-            'id_trafic' => $this->id_trafic,
+            'id' => $this->id,
             'id_boda' => $this->id_boda,
+            'id_invitado' => $this->id_invitado,
         ]);
 
-        $query->andFilterWhere(['like', 'id_invitado', $this->id_invitado])
-            ->andFilterWhere(['like', 'telefono', $this->telefono]);
+        $query->andFilterWhere(['like', 'telefono', $this->telefono]);
 
         return $dataProvider;
     }
