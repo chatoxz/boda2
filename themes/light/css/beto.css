@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url('/themes/light/img/carlaybeto/background2_1.png') !important;
+    /*background-image: url('/themes/light/img/carlaybeto/background2_1.png') !important;*/
     background-color: transparent !important;
     background-attachment: fixed;
     background-position: center;
@@ -207,11 +207,22 @@ background-color: #8B7D62;
     border-color: #8B7D62; !important;
     margin-top: 30px !important;
 }
-
-@media only screen and (max-width: 500px) {
+@media  (max-width: 1400px) {
+    .container_carrousel{
+        width: 100% !important;
+    }
+}
+@media (min-width: 501px) {
     body{
-        background-color: transparent !important;
-        background-image: url('/themes/light/img/carlaybeto/background2_1_mobile.jpg') !important;
+        background-image: url('/themes/light/img/carlaybeto/background2_1.jpg');
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    body{
+        background-image: url('/themes/light/img/carlaybeto/background2_1_mobile.jpg');
     }
     .container_carrousel{
         width: 100% !important;
@@ -250,8 +261,7 @@ background-color: #8B7D62;
 
     }
 }
-
-@media only screen and (max-width: 680px) {
+@media  (max-width: 680px) {
     .separador-number-wrap{
         display: none !important;
     }
@@ -260,8 +270,5 @@ background-color: #8B7D62;
     }
 }
 
-@media only screen and (max-width: 1400px) {
-    .container_carrousel{
-        width: 100% !important;
-    }
-}
+
+
