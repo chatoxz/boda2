@@ -53,7 +53,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
         <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel &ensp; </div>
         <div class="nos_casamos slowest  animated bounceInDown">Nos Casamos</div>
         <div class="texto_nos_casamos slowest  animated bounceInDown">
-            Comenzamos siendo Amigos, pero afortunadamente no funcionó, porque nos gustamos tanto que decidimos ser Novios.
+            Comenzamos siendo Amigos, pero afortunadamente no funcionó, porque nos gustamos tanto que decidimos ser novios.
             Hoy luego de una hermosa relación y gracias al amor que nos une, lo decidimos ¡NOS CASAMOS!
             Nos gustaría compartir Este Momento UNICO con las personas que queremos.
         </div>
