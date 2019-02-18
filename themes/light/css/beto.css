@@ -4,8 +4,8 @@ body {
     background-color: transparent !important;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
-    /*background-size: auto 100vh;*/
+    background-repeat: repeat;
+    background-size: auto 110%;
     text-align: center;
     font-family: 'Quicksand', sans-serif !important;
     font-size: 24px;
@@ -211,7 +211,7 @@ background-color: #8B7D62;
 @media only screen and (max-width: 500px) {
     body{
         background-color: transparent !important;
-        background-image: url('/themes/light/img/carlaybeto/background2_mobile.png') !important;
+        background-image: url('/themes/light/img/carlaybeto/background2_1_mobile.jpg') !important;
     }
     .container_carrousel{
         width: 100% !important;
