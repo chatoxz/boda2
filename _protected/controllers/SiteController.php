@@ -34,6 +34,14 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
+            [
+                'class' => 'yii\filters\PageCache',
+                'only' => ['index'],
+                'duration' => 20,
+                'variations' => [
+                    \Yii::$app->language,
+                ],
+            ],
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
@@ -89,6 +97,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
         return $this->render('index');
     }
 
