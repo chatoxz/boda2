@@ -53,9 +53,9 @@ $carpeta = '/themes/light/img/carlaybeto/';
         <div class="titulo_nombres slowest  animated bounceInDown">Carla & Angel &ensp; </div>
         <div class="nos_casamos slowest  animated bounceInDown">Nos Casamos</div>
         <div class="texto_nos_casamos slowest  animated bounceInDown">
-            Porque desde la primera vez que nos vimos soñamos
-            con este momento, queremos que formes parte de nuestra
-            mágica historia que abrirá un nuevo capítulo...
+            Comenzamos siendo Amigos, pero afortunadamente no funcionó, porque nos gustamos tanto que decidimos ser Novios.
+            Hoy luego de una hermosa relación y gracias al amor que nos une, lo decidimos ¡NOS CASAMOS!
+            Nos gustaría compartir Este Momento UNICO con las personas que queremos.
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -260,8 +260,9 @@ $carpeta = '/themes/light/img/carlaybeto/';
     <!-- ¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?-->
     <div class="seccion animatedParent width_70">
         <div class="titulo_nombres slowest  animated bounceInDown">¿Pensaste en regalos?</div>
-        <div class=" slowest  animated bounceInDown ">Realmente somos afortunados y no necesitamos nada. Pero...
-            nos podes ayudar con nuestra Luna de Miel</div>
+        <div class=" slowest  animated bounceInDown ">
+            Si desean hacernos un regalo, éste puede ser en 💵, ya que contamos con todo lo necesario para nuestro hogar.
+        </div>
     </div>
     <!-- BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS -->
     <div class="seccion animatedParent">
