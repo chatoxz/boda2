@@ -211,6 +211,7 @@ background-color: #8B7D62;
 @media only screen and (max-width: 500px) {
     body{
         background-color: transparent !important;
+        background-image: url('/themes/light/img/carlaybeto/background2_mobile.png') !important;
     }
     .container_carrousel{
         width: 100% !important;

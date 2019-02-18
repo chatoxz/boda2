@@ -13,7 +13,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
 ?>
 
     <div style="background-color: rgba(255, 255, 255, 0.41); width: 100%">
-        <div class="container container_carrousel" style="background-image: url('/themes/light/img/carlaybeto/background.png') !important;margin: auto !important; padding: 0px !important;width: 80%;">
+        <div class="container container_carrousel" style="margin: auto !important; padding: 0px !important;width: 80%;">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
