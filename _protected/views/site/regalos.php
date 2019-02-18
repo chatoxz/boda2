@@ -59,27 +59,27 @@
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $500</span>
         </a>
-        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-9028f272-5383-453b-8e79-2f8b2d597437" class="wrap_regalo hidden" target="_blank" value="500">
+        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-9028f272-5383-453b-8e79-2f8b2d597437" class="wrap_regalo hidden" target="_blank" value="1000">
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $1000</span>
         </a>
-        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-e94c684f-26bf-487f-9375-0865b6b12695" class="wrap_regalo hidden" target="_blank" value="500">
+        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-e94c684f-26bf-487f-9375-0865b6b12695" class="wrap_regalo hidden" target="_blank" value="2000">
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $2000</span>
         </a>
-        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-e5e93b8c-e3bf-4854-8d56-6c97da5e6267" class="wrap_regalo hidden" target="_blank" value="500">
+        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-e5e93b8c-e3bf-4854-8d56-6c97da5e6267" class="wrap_regalo hidden" target="_blank" value="5000">
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $5000</span>
         </a>
-        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-4daff4cf-c6c7-4024-b601-31c89fe40a36" class="wrap_regalo hidden" target="_blank" value="500">
+        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-4daff4cf-c6c7-4024-b601-31c89fe40a36" class="wrap_regalo hidden" target="_blank" value="10000">
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $10000</span>
         </a>
-        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-ef4a1006-e4a0-4098-92b0-8c7620f275b7" class="wrap_regalo hidden" target="_blank" value="500">
+        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-ef4a1006-e4a0-4098-92b0-8c7620f275b7" class="wrap_regalo hidden" target="_blank" value="15000">
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $15000</span>
         </a>
-        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-0cf558a3-6e7d-43ec-a91e-199dedb644b7" class="wrap_regalo hidden" target="_blank" value="500">
+        <a href="https://www.mercadopago.com/mla/checkout/start?pref_id=170257691-0cf558a3-6e7d-43ec-a91e-199dedb644b7" class="wrap_regalo hidden" target="_blank" value="20000">
             <img src="/themes/light/img/carlaybeto/regalo.png" alt="" width="150">
             <span>Regalar $20000</span>
         </a>
