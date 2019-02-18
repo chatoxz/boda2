@@ -241,7 +241,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
             </div>
             <div class="slowest  animated bounceInDown" style="display: flex;flex-direction: column">
                 <div class="div_foto_padrinx slowest  animated bounceInDown">
-                    <img src="<?= $carpeta ?>testigos/roberto.jpeg" width="338" alt="">
+                    <img src="<?= $carpeta ?>testigos/roberto.jpg" width="338" alt="">
                 </div>
                 <div class=" texto_padrinx slowest animated bounceInDown">Roberto <br> Amigo</div>
             </div>
