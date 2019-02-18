@@ -221,7 +221,7 @@ background-color: #8B7D62;
 @media (max-width: 600px) {
     body{
         background-image: url('/themes/light/img/carlaybeto/background2_2_mobile.jpg');
-        background-size: auto 100vh;
+        background-size: auto 110vh;
         background-position: top;
     }
 }
