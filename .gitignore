@@ -9,4 +9,6 @@ _protected/vendor/*
 .idea/*
 .history
 _protected/vendor.rar
+_protected/config/db.php
+
 
