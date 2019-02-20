@@ -17,6 +17,17 @@ class InvitadoController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'view', 'update', 'create','delete'],
+                'rules' => [
+                    [
+                        'actions' => ['index', 'view', 'update', 'create','delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
