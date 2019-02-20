@@ -48,9 +48,7 @@ AppAsset::register($this);
 
 <body id="id_body">
     <?php $this->beginBody() ?>
-    <div class="wrap" style="">
         <?php
-    $nav_sin_log = "";
     if (!Yii::$app->user->isGuest) {
         NavBar::begin([
             'brandLabel' => Yii::t('app', Yii::$app->name),
@@ -66,10 +64,16 @@ AppAsset::register($this);
         $menuItems[] = ['label' => Yii::t('app', 'Invitados'), 'url' => ['/invitado/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Mesas'), 'url' => ['/mesa/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['/trafic/index']];
-        $menuItems[] = [
+        $subMenuItemsUsuario[] = [
             'label' => Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
             'linkOptions' => ['data-method' => 'post']
+        ];
+        $subMenuItemsUsuario[] = ['label' => 'Cambiar contraseña', 'url' => ['/user/update', 'id' => Yii::$app->user->id]];
+        $menuItems[] = [
+            'class' => '',
+            'label' => 'Usuario',
+            'items' => $subMenuItemsUsuario
         ];
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'],
@@ -82,19 +86,23 @@ AppAsset::register($this);
         //$this->registerCss(".modal-body { color: black !important; }");
         //$this->registerJs('$($(".big_container div")[0]).css("color","black").css("margin","30px");',View::POS_LOAD,"id_script");
     } ?>
-<?php
 
-?>
-        <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
-        <div class="">
-            <?php echo Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-            <?= Alert::widget() ?>
+
+    <?php//contenido de la pagina?>
+    <?php if ($actual_link != "http://www.angelycarla.appe.com.ar/" && !Yii::$app->user->isGuest) { ?>
+        <div class="container">
+            <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
+            <?php //Alert::widget() ?>
             <?= $content ?>
         </div>
-    </div>
-
+    <?php }else{ ?>
+        <div class="">
+            <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
+            <?php //Alert::widget() ?>
+            <?= $content ?>
+        </div>
+    <?php } ?>
+    <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
     <footer class="footer">
         <div class="container" style="display: flex;justify-content: space-around">
             <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?>
