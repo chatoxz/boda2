@@ -34,20 +34,20 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            [
+            /*[
                 'class' => 'yii\filters\PageCache',
                 'only' => ['index'],
                 'duration' => 345600,
                 'variations' => [
                     \Yii::$app->language,
                 ],
-            ],
+            ],*/
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
+                        'actions' => [''],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
