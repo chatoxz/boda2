@@ -25,15 +25,15 @@ $carpeta = '/themes/light/img/carlaybeto/';
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="<?= $carpeta ?>/slider/slider.jpeg"" alt="Los Angeles" style="width:100%;">
+                        <img src="<?= $carpeta ?>/slider/slider.jpeg"" alt="" style="width:100%;">
                     </div>
 
                     <div class="item">
-                        <img src="<?= $carpeta ?>/slider/slider2_1.jpeg"" alt="Chicago" style="width:100%;">
+                        <img src="<?= $carpeta ?>/slider/slider2_1.jpeg"" alt="" style="width:100%;">
                     </div>
 
                     <div class="item">
-                        <img src="<?= $carpeta ?>/slider/slider3.jpeg"" alt="New york" style="width:100%;">
+                        <img src="<?= $carpeta ?>/slider/slider3.jpeg"" alt="" style="width:100%;">
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
         <div class="titulo_nombres slowest  animated bounceInDown">Trafic</div>
         <div class="texto_nos_casamos slowest  animated bounceInDown width_70">
             <p>Salida Av. Alem 595 a 20:30 hs hacia iglesia lules luego a salón Narcizo </p>
-            <p>Regreso 05:30 a San miguel de Tucuman, a cada domicilio (opcional)</p>
+            <p>Regreso 05:30 a San miguel de Tucuman, a cada domicilio (opcional). Valor $200. </p>
         </div>
     </div>
     <!-- COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL  -->

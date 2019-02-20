@@ -9,9 +9,9 @@ use yii\bootstrap\ActiveForm;
 $this->title = Yii::t('app', 'Login');
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
+<div class="site-login" style="">
 
-    <div class="col-md-5 well bs-component  white_opacity_not_animation alert">
+    <div class="" style="max-width: 350px;margin: auto;">
         <h2><?= Html::encode($this->title) ?></h2>
 
         <p><?= Yii::t('app', 'Please fill out the following fields to login:') ?></p>
