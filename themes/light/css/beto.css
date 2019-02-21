@@ -183,9 +183,15 @@ background-color: #8B7D62;
 .wrap_card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.item_regalo {
+.item_regalo{
     font-size: 26px;
+}
+.wrap_regalo{
+    display: block;
+    font-size: 26px;
+}
+.wrap_regalo:focus, .wrap_regalo:active,  .wrap_regalo:hover{
+    text-decoration: none;
 }
 
 .texto_padrinos {
