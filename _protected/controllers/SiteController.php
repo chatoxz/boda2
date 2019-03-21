@@ -107,7 +107,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionAngelycarla()
     {
 
         $this->layout = 'angelycarla';
