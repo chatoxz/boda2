@@ -1,6 +1,15 @@
+/*
+colores
+#C7B38A
+#FFE8B2
+#8B7D62
+*/
+
+.loader_muy_grande {
+    border-top-color: yellow;
+}
 body {
     margin: 0;
-    /*background-image: url('/themes/light/img/carlaybeto/background2_1.png') !important;*/
     background-color: transparent !important;
     background-attachment: fixed;
     background-position: center;
@@ -12,8 +21,6 @@ body {
     overflow-x: hidden !important;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-   /* max-width: 100vh !important;*/
-
 }
 
 .seccion {
@@ -102,21 +109,14 @@ body {
     font-weight: 500 !important;
 }
 
-/*
-background-color: #C7B38A;
-background-color: #FFE8B2;
-background-color: #8B7D62;
-*/
+
 .btn-como-llegar:hover {
-    /*color: #ffffff !important;*/
     color: #000000 !important;
     background-color: #C7B38A !important;
     border-color: #C7B38A !important;
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
     -webkit-transition: all 0.3s ease-in-out !important;
-    ;
     -moz-transition: all 0.3s ease-in-out !important;
-    ;
     transition: all 0.3s ease-in-out !important;
 }
 
@@ -210,6 +210,8 @@ background-color: #8B7D62;
 .footer{
     font-family: 'Parisienne', cursive;
 }
+
+
 @media  (max-width: 1400px) {
     .container_carrousel{
         width: 100% !important;
@@ -277,6 +279,3 @@ background-color: #8B7D62;
         width: 40% !important;
     }
 }
-
-
-

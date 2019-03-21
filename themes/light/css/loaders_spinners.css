@@ -9,7 +9,18 @@
 }
 
 
-.loader_negro_muy_grande {
+.loader_muy_grande {
+    margin: auto;
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.loader_negro_muy_grande{
+    margin: auto;
     border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid black;
@@ -18,7 +29,8 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_gris_muy_grande {
+.loader_gris_muy_grande{
+    margin: auto;
     border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid grey;
@@ -27,8 +39,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_azul_muy_grande {
-    border: 16px solid #f3f3f3;
+.loader_azul_muy_grande{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid #3498db;
     width: 120px;
@@ -36,8 +49,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_rojo_muy_grande {
-    border: 16px solid #f3f3f3;
+.loader_rojo_muy_grande{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid red;
     width: 120px;
@@ -45,8 +59,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_verde_muy_grande {
-    border: 16px solid #f3f3f3;
+.loader_verde_muy_grande{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid green;
     width: 120px;
@@ -54,20 +69,31 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_tricolor_muy_grande {
+.loader_tricolor_muy_grande{
+    margin: auto;
     border-radius: 50%;
     border-top: 16px solid blue;
     border-right: 16px solid green;
     border-bottom: 16px solid red;
-    border-left: 16px solid #f3f3f3;
+    border-left: 16px solid white;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
 
-
-.loader_negro_grande {
+.loader_grande{
+    margin: auto;
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.loader_negro_grande{
+    margin: auto;
     border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid black;
@@ -76,7 +102,8 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_gris_grande {
+.loader_gris_grande{
+    margin: auto;
     border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid grey;
@@ -85,8 +112,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_azul_grande {
-    border: 16px solid #f3f3f3;
+.loader_azul_grande{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid #3498db;
     width: 80px;
@@ -94,8 +122,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_rojo_grande {
-    border: 16px solid #f3f3f3;
+.loader_rojo_grande{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid red;
     width: 80px;
@@ -103,8 +132,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_verde_grande {
-    border: 16px solid #f3f3f3;
+.loader_verde_grande{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid green;
     width: 80px;
@@ -112,20 +142,31 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_tricolor_grande {
+.loader_tricolor_grande{
+    margin: auto;
     border-radius: 50%;
     border-top: 16px solid blue;
     border-right: 16px solid green;
     border-bottom: 16px solid red;
-    border-left: 16px solid #f3f3f3;
+    border-left: 16px solid white;
     width: 80px;
     height: 80px;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
 
-
-.loader_negro {
+.loader{
+    margin: auto;
+    border: 16px solid white;
+    border-radius: 50%;
+    border-top: 16px solid;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.loader_negro{
+    margin: auto;
     border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid black;
@@ -134,7 +175,8 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_gris {
+.loader_gris{
+    margin: auto;
     border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid grey;
@@ -143,8 +185,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_azul {
-    border: 16px solid #f3f3f3;
+.loader_azul{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid #3498db;
     width: 50px;
@@ -152,8 +195,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_rojo {
-    border: 16px solid #f3f3f3;
+.loader_rojo{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid red;
     width: 50px;
@@ -161,8 +205,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_verde {
-    border: 16px solid #f3f3f3;
+.loader_verde{
+    margin: auto;
+    border: 16px solid white;
     border-radius: 50%;
     border-top: 16px solid green;
     width: 50px;
@@ -170,12 +215,13 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_tricolor {
+.loader_tricolor{
+    margin: auto;
     border-radius: 50%;
     border-top: 16px solid blue;
     border-right: 16px solid green;
     border-bottom: 16px solid red;
-    border-left: 16px solid #f3f3f3;
+    border-left: 16px solid white;
     width: 50px;
     height: 50px;
     -webkit-animation: spin 2s linear infinite;
@@ -183,7 +229,18 @@
 }
 
 
-.loader_negro_chico {
+.loader_chico{
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 50%;
+    border-top: 5px solid;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.loader_negro_chico{
+    margin: auto;
     border: 5px solid white;
     border-radius: 50%;
     border-top: 5px solid black;
@@ -192,7 +249,8 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_gris_chico {
+.loader_gris_chico{
+    margin: auto;
     border: 5px solid white;
     border-radius: 50%;
     border-top: 5px solid grey;
@@ -201,8 +259,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_azul_chico {
-    border: 5px solid #f3f3f3;
+.loader_azul_chico{
+    margin: auto;
+    border: 5px solid white;
     border-radius: 50%;
     border-top: 5px solid #3498db;
     width: 30px;
@@ -210,8 +269,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_rojo_chico {
-    border: 5px solid #f3f3f3;
+.loader_rojo_chico{
+    margin: auto;
+    border: 5px solid white;
     border-radius: 50%;
     border-top: 5px solid red;
     width: 30px;
@@ -219,8 +279,9 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-.loader_verde_chico {
-    border: 5px solid #f3f3f3;
+.loader_verde_chico{
+    margin: auto;
+    border: 5px solid white;
     border-radius: 50%;
     border-top: 5px solid green;
     width: 30px;
@@ -228,13 +289,13 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-
-.loader_tricolor_chico {
+.loader_tricolor_chico{
+    margin: auto;
     border-radius: 50%;
     border-top: 5px solid blue;
     border-right: 5px solid green;
     border-bottom: 5px solid red;
-    border-left: 5px solid #f3f3f3;
+    border-left: 5px solid white;
     width: 30px;
     height: 30px;
     -webkit-animation: spin 2s linear infinite;

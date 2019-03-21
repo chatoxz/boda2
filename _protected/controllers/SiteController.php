@@ -95,9 +95,22 @@ class SiteController extends Controller
      *
      * @return string
      */
+    public function actionBelenysergio()
+    {
+        $this->layout = 'belenysergio';
+        return $this->render('belenysergio');
+    }
+
+ /**
+     * Displays the index (home) page.
+     * Use it in case your home page contains static content.
+     *
+     * @return string
+     */
     public function actionIndex()
     {
 
+        $this->layout = 'angelycarla';
         return $this->render('index');
     }
 

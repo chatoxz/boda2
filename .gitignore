@@ -10,5 +10,5 @@ _protected/vendor/*
 .history
 _protected/vendor.rar
 _protected/config/db.php
-
+themes/light/img/*
 

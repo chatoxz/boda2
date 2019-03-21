@@ -30,12 +30,14 @@ body {
     font-size: 20px;
 }
 
-
-
 .footer {
-    border: 1px solid #e5e5e5;
-    padding-top: 20px;
-    color: #5cabee;
+    font-family: Ubuntu,"Times New Roman",Times,serif;
+    width: 100%;
+    margin-top: 50px;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
 }
 .footer .container{
     margin-bottom: 0px !important;
@@ -158,4 +160,9 @@ div.required label:after {
 /* Ajust the size so it fits nicely */
 .kv-meter-container {
     width: 105px;
+}
+
+.navbar-default {
+    height: 50px;
+    background: white !important;
 }

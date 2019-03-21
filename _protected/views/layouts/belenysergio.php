@@ -6,11 +6,14 @@ use app\assets\AppAsset;
 use app\models\Instancia;
 use app\models\InstanciaUser;
 use app\models\Torneo;
+use app\widgets\Alert;
 use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Url;
+use yii\web\View;
+use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
 ?>
@@ -23,24 +26,31 @@ AppAsset::register($this);
         <link rel="shortcut icon" href="/themes/light/img/favicon.png" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
+        <title><?= Html::encode($this->title) ?>
+        </title>
         <link href='/themes/light/css/common.css' rel='stylesheet'>
-        <link href='/themes/light/css/backend.css' rel='stylesheet'>
+        <link href='/themes/light/css/belenysergio.css' rel='stylesheet' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500|Rubik" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+              crossorigin="anonymous">
         <?php $this->head() ?>
     </head>
-    <!-- favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon -->
     <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
+
     <body id="id_body">
     <?php $this->beginBody() ?>
-    <!-- Contenido del Menu Contenido del Menu Contenido del Menu Contenido del Menu Contenido del Menu Contenido del Menu -->
     <?php
     if (!Yii::$app->user->isGuest) {
         NavBar::begin([
             'brandLabel' => Yii::t('app', Yii::$app->name),
+            //'brandLabel' => '<!--<img src="/themes/light/img/copa_mundo.jpg" />--> ProdeMaster Mundial!',
+            //'brandUrl' => '/site/login',
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top ',
             ],
         ]);
+
         $menuItems[] = ['label' => Yii::t('app', 'Invitados'), 'url' => ['/invitado/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Mesas'), 'url' => ['/mesa/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['/trafic/index']];
@@ -60,22 +70,30 @@ AppAsset::register($this);
             'items' => $menuItems,
         ]);
         NavBar::end();
+        //$this->registerCss(".wrap { background: white !important; }");
+        $this->registerCss(".navbar-default { height: 50px; background: white !important; }");
+        //$this->registerCss(".navbar-collapse { height: auto; background: white !important; }");
+        //$this->registerCss(".modal-body { color: black !important; }");
+        //$this->registerJs('$($(".big_container div")[0]).css("color","black").css("margin","30px");',View::POS_LOAD,"id_script");
     } ?>
 
-    <!-- contenido de la pagina contenido de la pagina contenido de la pagina contenido de la pagina contenido de la pagina -->
-    <div class="container wrap_contenido_pagina">
+
+    <?php//contenido de la pagina?>
+    <div class="wrap_contenido_pagina">
+        <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
+        <?php //Alert::widget() ?>
         <?= $content ?>
     </div>
-
     <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
     <footer class="footer">
-        <div class="container" style="display: flex;justify-content: space-around">
-            <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?> <?= date('Y') ?>
+        <div class="container" style="">
+            <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?>
+                <?= date('Y') ?>
             </p>
-            <p class="">
-                <a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe Estudio</a>
-            </p>
-            <!--<p class="pull-right"><?= Yii::powered() ?></p>-->
+            <p class=""><a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe
+                    Studio</a> </p>
+            <!--<p class="pull-right"><?= Yii::powered() ?>
+            </p>-->
         </div>
     </footer>
 
