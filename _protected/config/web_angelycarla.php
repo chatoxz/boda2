@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params_belenysergio.php');
 
 $config = [
     'id' => 'basic',
-    'name' => 'Belen y Sergio',
+    'name' => '',
     'language' => 'es',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\Aliases'],
@@ -140,6 +140,7 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
+    'layout' => 'angelycarla',
     'params' => $params,
     'defaultRoute' => 'site/angelycarla',
 ];

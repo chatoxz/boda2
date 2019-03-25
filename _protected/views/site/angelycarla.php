@@ -119,7 +119,7 @@ $carpeta = '/themes/light/img/carlaybeto/';
     <div class="seccion animatedParent">
         <div class="titulo_nombres slowest  animated bounceInDown">Fiesta</div>
         <div class="texto_nos_casamos slowest  animated bounceInDown width_70">
-            <p>Te esperamos luego de la ceremonia religiosa en el Salón Narcizo Eventos, lules, de 22hr a 05.30 hs</p>
+            <p>Te esperamos luego de la ceremonia religiosa en el Salón Narcizo Eventos, lules, de 22 hs a 05.30 hs</p>
         </div>
         <!-- DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE DRESSCODE -->
         <div class="texto_nos_casamos slowest  animated bounceInDown wrap_dress_code">

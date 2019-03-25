@@ -1,12 +1,12 @@
-/*
-colores
-#C7B38A
-#FFE8B2
-#8B7D62
-*/
+
+colores {
+    color: #2E9093;
+    color: #A0DCE1;
+    color: #FFFFFF;
+}
 
 .loader_muy_grande {
-    border-top-color: yellow;
+    border-top-color: #A0DCE1;
 }
 body {
     margin: 0;
@@ -21,6 +21,18 @@ body {
     overflow-x: hidden !important;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+}
+
+.container_carrousel{
+    margin: auto !important;
+    padding: 0px !important;
+    width: 80%;
+    height: 800px;
+    overflow-y: hidden;
+}
+/*flechas del slider, las saco xq no son imagenes del mismo tamaño */
+.glyphicon-chevron-right, .glyphicon-chevron-left{
+    display: none !important;
 }
 
 .seccion {
@@ -209,6 +221,12 @@ body {
 }
 .footer{
     font-family: 'Parisienne', cursive;
+    padding-top: 15px;
+    font-size: 24px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #C7B38A !important;
 }
 
 
@@ -217,9 +235,15 @@ body {
         width: 100% !important;
     }
 }
+@media  (max-width: 800px) {
+    .container_carrousel{
+        max-height: 500px;
+        height: auto !important;
+    }
+}
 @media (min-width: 601px) {
     body{
-        background-image: url('/themes/light/img/carlaybeto/background2_1.jpg');
+        background-image: url('/themes/light/img/belenysergio/background.png');
     }
 }
 
@@ -267,7 +291,6 @@ body {
     }
     .footer{
         font-size: 14px !important;
-        background-color: #C7B38A;
         color: black !important;
     }
 }

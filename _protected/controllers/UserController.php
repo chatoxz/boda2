@@ -25,6 +25,9 @@ class UserController extends AppController
      */
     public function actionIndex()
     {
+        if(Yii::$app->user->id != 1){
+            return $this->redirect('/invitado/index');
+        }
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $this->_pageSize);
 
@@ -44,6 +47,10 @@ class UserController extends AppController
      */
     public function actionView($id)
     {
+        //control para que no se borren usuarios
+        if(Yii::$app->user->id != 1){
+            return $this->redirect('/invitado/index');
+        }
         return $this->render('view', ['model' => $this->findModel($id)]);
     }
 
@@ -55,6 +62,9 @@ class UserController extends AppController
      */
     public function actionCreate()
     {
+        if(Yii::$app->user->id != 1){
+            return $this->redirect('/invitado/index');
+        }
         $user = new User(['scenario' => 'create']);
 
         if (!$user->load(Yii::$app->request->post())) {
@@ -90,6 +100,10 @@ class UserController extends AppController
      */
     public function actionUpdate($id)
     {
+        //control para que no le cambie la contraseña a otro usuario
+        if(Yii::$app->user->id != $id){
+            return $this->redirect('/user/update?id='.Yii::$app->user->id);
+        }
         // load user data
         $user = $this->findModel($id);
 
@@ -98,7 +112,7 @@ class UserController extends AppController
         // get user role if he has one  
         if ($roles = $auth->getRolesByUser($id)) {
             // it's enough for us the get first assigned role name
-            $role = array_keys($roles)[0]; 
+            $role = array_keys($roles)[0];
         }
 
         // if user has role, set oldRole to that role name, else offer 'member' as sensitive default
@@ -119,7 +133,7 @@ class UserController extends AppController
         // if admin is activating user manually we want to remove account activation token
         if ($user->status == User::STATUS_ACTIVE && $user->account_activation_token != null) {
             $user->removeAccountActivationToken();
-        }         
+        }
 
         if (!$user->save()) {
             return $this->render('update', ['user' => $user, 'role' => $user->item_name]);
@@ -129,7 +143,7 @@ class UserController extends AppController
         $newRole = $auth->getRole($user->item_name);
         // get user id too
         $userId = $user->getId();
-        
+
         // we have to revoke the old role first and then assign the new one
         // this will happen if user actually had something to revoke
         if ($auth->revoke($oldRole, $userId)) {
@@ -159,6 +173,10 @@ class UserController extends AppController
      */
     public function actionDelete($id)
     {
+        //control para que no se borren usuarios
+        if(Yii::$app->user->id != 1){
+            return $this->redirect('/invitado/index');
+        }
         // delete user or throw exception if could not
         if (!$this->findModel($id)->delete()) {
             throw new ServerErrorHttpException(Yii::t('app', 'We could not delete this user.'));
@@ -170,7 +188,7 @@ class UserController extends AppController
         // get user role if he has one  
         if ($roles = $auth->getRolesByUser($id)) {
             // it's enough for us the get first assigned role name
-            $role = array_keys($roles)[0]; 
+            $role = array_keys($roles)[0];
         }
 
         // remove role if user had it
@@ -184,7 +202,7 @@ class UserController extends AppController
         }
 
         Yii::$app->session->setFlash('success', Yii::t('app', 'You have successfuly deleted user and his role.'));
-        
+
         return $this->redirect(['index']);
     }
 
@@ -203,7 +221,7 @@ class UserController extends AppController
 
         if (is_null($model)) {
             throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
-        } 
+        }
 
         return $model;
     }

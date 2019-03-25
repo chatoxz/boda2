@@ -6,11 +6,14 @@ use app\assets\AppAsset;
 use app\models\Instancia;
 use app\models\InstanciaUser;
 use app\models\Torneo;
+use app\widgets\Alert;
 use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Url;
+use yii\web\View;
+use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
 ?>
@@ -18,6 +21,16 @@ AppAsset::register($this);
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
 
+
+<?php
+
+//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
+//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
+//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
+//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
+//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
+
+?>
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
         <link rel="shortcut icon" href="/themes/light/img/favicon.png" type="image/png">
@@ -26,21 +39,24 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <link href='/themes/light/css/common.css' rel='stylesheet'>
         <link href='/themes/light/css/backend.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">
         <?php $this->head() ?>
     </head>
-    <!-- favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon favicon -->
     <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
+
     <body id="id_body">
     <?php $this->beginBody() ?>
-    <!-- Contenido del Menu Contenido del Menu Contenido del Menu Contenido del Menu Contenido del Menu Contenido del Menu -->
     <?php
     if (!Yii::$app->user->isGuest) {
         NavBar::begin([
             'brandLabel' => Yii::t('app', Yii::$app->name),
+            //'brandLabel' => '<!--<img src="/themes/light/img/copa_mundo.jpg" />--> ProdeMaster Mundial!',
+            'brandUrl' => '/invitado/index',
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top ',
             ],
         ]);
+
         $menuItems[] = ['label' => Yii::t('app', 'Invitados'), 'url' => ['/invitado/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Mesas'), 'url' => ['/mesa/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['/trafic/index']];
@@ -60,22 +76,28 @@ AppAsset::register($this);
             'items' => $menuItems,
         ]);
         NavBar::end();
+        //$this->registerCss(".wrap { background: white !important; }");
+        $this->registerCss(".navbar-default { height: 50px; background: white !important; }");
+
     } ?>
 
-    <!-- contenido de la pagina contenido de la pagina contenido de la pagina contenido de la pagina contenido de la pagina -->
-    <div class="container wrap_contenido_pagina">
+
+    <?php//contenido de la pagina?>
+    <div class="wrap_contenido_pagina">
+        <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
+        <?php //Alert::widget() ?>
         <?= $content ?>
     </div>
-
     <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
     <footer class="footer">
         <div class="container" style="display: flex;justify-content: space-around">
-            <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?> <?= date('Y') ?>
+            <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?>
+                <?= date('Y') ?>
             </p>
-            <p class="">
-                <a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe Estudio</a>
-            </p>
-            <!--<p class="pull-right"><?= Yii::powered() ?></p>-->
+            <p class=""><a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe
+                    Studio</a> </p>
+            <!--<p class="pull-right"><?= Yii::powered() ?>
+            </p>-->
         </div>
     </footer>
 
