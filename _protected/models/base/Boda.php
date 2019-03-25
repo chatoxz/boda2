@@ -17,6 +17,7 @@ use Yii;
  * @property \app\models\ContactoInvitado[] $contactoInvitados
  * @property \app\models\Foto[] $fotos
  * @property \app\models\Invitado[] $invitados
+ * @property \app\models\Mesa[] $mesas
  * @property \app\models\Regalo[] $regalos
  */
 class Boda extends \yii\db\ActiveRecord
@@ -37,6 +38,7 @@ class Boda extends \yii\db\ActiveRecord
             'contactoInvitados',
             'fotos',
             'invitados',
+            'mesas',
             'regalos'
         ];
     }
@@ -123,8 +125,26 @@ class Boda extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getMesas()
+    {
+        return $this->hasMany(\app\models\Mesa::className(), ['id_boda' => 'id']);
+    }
+        
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getRegalos()
     {
         return $this->hasMany(\app\models\Regalo::className(), ['id_boda' => 'id']);
     }
+    
+
+    /**
+     * @inheritdoc
+     * @return \app\models\BodaQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new \app\models\BodaQuery(get_called_class());
     }
+}

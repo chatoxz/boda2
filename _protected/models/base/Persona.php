@@ -94,4 +94,14 @@ class Persona extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\app\models\RedSocial::className(), ['id_persona' => 'id']);
     }
+    
+
+    /**
+     * @inheritdoc
+     * @return \app\models\PersonaQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new \app\models\PersonaQuery(get_called_class());
     }
+}
