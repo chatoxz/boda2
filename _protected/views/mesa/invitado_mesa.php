@@ -59,7 +59,7 @@ $this->title = 'Invitados sin mesa';
             'attribute' => 'mesaInvitado.mesa.numero',
             'width' => '20%',
         ],
-        [
+        /*[
             'class' => 'yii\grid\ActionColumn',
             'controller' => 'mesa-invitado',
             'template' => '{update} {delete}',
@@ -84,7 +84,7 @@ $this->title = 'Invitados sin mesa';
                     ]);
                 },
             ],
-        ],
+        ],*/
 
     ];
     ?>

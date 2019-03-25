@@ -97,13 +97,14 @@ class MesaController extends Controller
         $query->andFilterWhere(['id' => $searchModel->id,'invitado.id_boda' => $id_boda,]);
         $query->andFilterWhere(['<=', 'invitado.id_confirmacion', 1]);
         if ($tipo == 0) {
-            $query->andWhere(['mesa_invitado.id_mesa' => null]);
-            $titulo = 'Invitados sin Mesa';
+            $query->andWhere(['is', 'mesa_invitado.id_mesa' , null]);
             $query->orderBy(['nombre' => SORT_ASC]);
+            //var_dump( $query->createCommand()->getRawSql());
+            $titulo = 'Invitados sin Mesa';
         } else {
             $query->andWhere(['not', ['mesa_invitado.id_mesa' => null]]);
-            $titulo = 'Invitados con Mesa';
             $query->orderBy(['id_mesa' => SORT_ASC]);
+            $titulo = 'Invitados con Mesa';
         }
 
         $cant_sin_mesa =  Invitado::find()->leftJoin('mesa_invitado', 'invitado.id = mesa_invitado.id_invitado')
@@ -126,6 +127,7 @@ class MesaController extends Controller
             'titulo' => $titulo,
             'cant_sin_mesa' => $cant_sin_mesa,
             'cant_con_mesa' => $cant_con_mesa,
+            'tipo' => $tipo,
         ]);
     }
 

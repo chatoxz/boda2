@@ -31,7 +31,7 @@ AppAsset::register($this);
         <link href='/themes/light/css/common.css' rel='stylesheet'>
         <link href='/themes/light/css/belenysergio.css' rel='stylesheet' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500|Rubik" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
               crossorigin="anonymous">
         <?php $this->head() ?>

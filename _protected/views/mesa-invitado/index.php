@@ -45,31 +45,31 @@ $this->registerJs($search);
         ],
         ['attribute' => 'id', 'visible' => false],
         [
-                'attribute' => 'id_mesa',
-                'label' => 'Id Mesa',
-                'value' => function($model){
-                    return $model->mesa->id;
-                },
-                'filterType' => GridView::FILTER_SELECT2,
-                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()->asArray()->all(), 'id', 'id'),
-                'filterWidgetOptions' => [
-                    'pluginOptions' => ['allowClear' => true],
-                ],
-                'filterInputOptions' => ['placeholder' => 'Mesa', 'id' => 'grid-mesa-invitado-search-id_mesa']
+            'attribute' => 'id_mesa',
+            'label' => 'Id Mesa',
+            'value' => function($model){
+                return $model->mesa->id;
+            },
+            'filterType' => GridView::FILTER_SELECT2,
+            'filter' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()->asArray()->all(), 'id', 'id'),
+            'filterWidgetOptions' => [
+                'pluginOptions' => ['allowClear' => true],
             ],
+            'filterInputOptions' => ['placeholder' => 'Mesa', 'id' => 'grid-mesa-invitado-search-id_mesa']
+        ],
         [
-                'attribute' => 'id_invitado',
-                'label' => 'Id Invitado',
-                'value' => function($model){
-                    return $model->invitado->id;
-                },
-                'filterType' => GridView::FILTER_SELECT2,
-                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->asArray()->all(), 'id', 'id'),
-                'filterWidgetOptions' => [
-                    'pluginOptions' => ['allowClear' => true],
-                ],
-                'filterInputOptions' => ['placeholder' => 'Invitado', 'id' => 'grid-mesa-invitado-search-id_invitado']
+            'attribute' => 'id_invitado',
+            'label' => 'Id Invitado',
+            'value' => function($model){
+                return $model->invitado->id;
+            },
+            'filterType' => GridView::FILTER_SELECT2,
+            'filter' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->asArray()->all(), 'id', 'id'),
+            'filterWidgetOptions' => [
+                'pluginOptions' => ['allowClear' => true],
             ],
+            'filterInputOptions' => ['placeholder' => 'Invitado', 'id' => 'grid-mesa-invitado-search-id_invitado']
+        ],
         [
             'class' => 'yii\grid\ActionColumn',
             'template' => '{save-as-new} {view} {update} {delete}',
