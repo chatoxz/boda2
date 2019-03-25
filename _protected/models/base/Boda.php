@@ -13,7 +13,6 @@ use Yii;
  *
  * @property \app\models\Persona $novia
  * @property \app\models\Persona $novio
- * @property \app\models\Cliente[] $clientes
  * @property \app\models\ContactoInvitado[] $contactoInvitados
  * @property \app\models\Foto[] $fotos
  * @property \app\models\Invitado[] $invitados
@@ -34,7 +33,6 @@ class Boda extends \yii\db\ActiveRecord
         return [
             'novia',
             'novio',
-            'clientes',
             'contactoInvitados',
             'fotos',
             'invitados',
@@ -88,14 +86,6 @@ class Boda extends \yii\db\ActiveRecord
     public function getNovio()
     {
         return $this->hasOne(\app\models\Persona::className(), ['id' => 'id_novio']);
-    }
-        
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getClientes()
-    {
-        return $this->hasMany(\app\models\Cliente::className(), ['id_boda' => 'id']);
     }
         
     /**

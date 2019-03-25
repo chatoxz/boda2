@@ -10,7 +10,10 @@ use yii\data\ArrayDataProvider;
         ['class' => 'yii\grid\SerialColumn'],
         ['attribute' => 'id', 'visible' => false],
         'nombre',
-        'id_confirmacion',
+        [
+                'attribute' => 'confirmacion.nombre',
+                'label' => 'Id Confirmacion'
+            ],
         'mensaje:ntext',
         [
             'class' => 'yii\grid\ActionColumn',

@@ -28,7 +28,7 @@ class BodaController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-cliente', 'add-contacto-invitado', 'add-foto', 'add-invitado', 'add-mesa', 'add-regalo'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-contacto-invitado', 'add-foto', 'add-invitado', 'add-mesa', 'add-regalo'],
                         'roles' => ['@']
                     ],
                     [
@@ -62,9 +62,6 @@ class BodaController extends Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $providerCliente = new \yii\data\ArrayDataProvider([
-            'allModels' => $model->clientes,
-        ]);
         $providerContactoInvitado = new \yii\data\ArrayDataProvider([
             'allModels' => $model->contactoInvitados,
         ]);
@@ -82,7 +79,6 @@ class BodaController extends Controller
         ]);
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'providerCliente' => $providerCliente,
             'providerContactoInvitado' => $providerContactoInvitado,
             'providerFoto' => $providerFoto,
             'providerInvitado' => $providerInvitado,
@@ -180,26 +176,6 @@ class BodaController extends Controller
     {
         if (($model = Boda::findOne($id)) !== null) {
             return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-    
-    /**
-    * Action to load a tabular form grid
-    * for Cliente
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
-    public function actionAddCliente()
-    {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('Cliente');
-            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
-                $row[] = [];
-            return $this->renderAjax('_formCliente', ['row' => $row]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
