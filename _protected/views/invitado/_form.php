@@ -19,13 +19,7 @@ use kartik\widgets\ActiveForm;
     <div style="display: none">
         <?= $form->errorSummary($model); ?>
         <?= $form->field($model, 'id')->textInput() ?>
-        <?= $form->field($model, 'id_boda')->widget(\kartik\widgets\Select2::classname(), [
-            'data' => \yii\helpers\ArrayHelper::map(\app\models\Boda::find()->orderBy('id')->asArray()->all(), 'id', 'id'),
-            'options' => ['placeholder' => 'Choose Boda'],
-            'pluginOptions' => [
-                'allowClear' => true
-            ],
-        ]); ?>
+        <?= $form->field($model, 'id_boda')->textInput() ?>
     </div>
 
     <?= $form->field($model, 'nombre')->textInput(['maxlength' => true, 'placeholder' => 'Nombre']) ?>

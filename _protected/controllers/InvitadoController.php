@@ -91,11 +91,6 @@ class InvitadoController extends Controller
     {
         $model = new Invitado();
         $id_boda = Yii::$app->user->id;
-        var_dump($id_boda);
-        var_dump($id_boda);
-        var_dump($id_boda);
-        var_dump($id_boda);
-        var_dump($id_boda);
         if ($model->loadAll(Yii::$app->request->post())) {
             $model->saveAll();
         //return $this->redirect(['index']);
@@ -103,11 +98,6 @@ class InvitadoController extends Controller
             $last_id = Invitado::find()->orderBy(['id' => SORT_DESC])->one()->id + 1;
             $model->id = $last_id;
             $model->id_boda = $id_boda;
-            var_dump($model->id_boda);
-            var_dump($model->id_boda);
-            var_dump($model->id_boda);
-            var_dump($model->id_boda);
-            var_dump($model->id_boda);
             return $this->renderAjax('create', [
                 'model' => $model,
             ]);
