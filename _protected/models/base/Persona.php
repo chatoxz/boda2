@@ -16,7 +16,6 @@ use Yii;
  *
  * @property \app\models\Boda[] $bodas
  * @property \app\models\Padrino[] $padrinos
- * @property \app\models\RedSocial[] $redSocials
  */
 class Persona extends \yii\db\ActiveRecord
 {
@@ -31,8 +30,7 @@ class Persona extends \yii\db\ActiveRecord
     {
         return [
             'bodas',
-            'padrinos',
-            'redSocials'
+            'padrinos'
         ];
     }
 
@@ -42,8 +40,7 @@ class Persona extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
-            [['id', 'celular'], 'integer'],
+            [['celular'], 'integer'],
             [['nombre', 'apellido', 'email', 'pagina'], 'string', 'max' => 255]
         ];
     }
@@ -62,12 +59,12 @@ class Persona extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'nombre' => 'Nombre',
-            'apellido' => 'Apellido',
-            'celular' => 'Celular',
-            'email' => 'Email',
-            'pagina' => 'Pagina',
+            'id' => Yii::t('app', 'ID'),
+            'nombre' => Yii::t('app', 'Nombre'),
+            'apellido' => Yii::t('app', 'Apellido'),
+            'celular' => Yii::t('app', 'Celular'),
+            'email' => Yii::t('app', 'Email'),
+            'pagina' => Yii::t('app', 'Pagina'),
         ];
     }
     
@@ -76,7 +73,7 @@ class Persona extends \yii\db\ActiveRecord
      */
     public function getBodas()
     {
-        return $this->hasMany(\app\models\Boda::className(), ['id_novio' => 'id']);
+        return $this->hasMany(\app\models\Boda::className(), ['id_novia' => 'id']);
     }
         
     /**
@@ -85,14 +82,6 @@ class Persona extends \yii\db\ActiveRecord
     public function getPadrinos()
     {
         return $this->hasMany(\app\models\Padrino::className(), ['id_persona' => 'id']);
-    }
-        
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getRedSocials()
-    {
-        return $this->hasMany(\app\models\RedSocial::className(), ['id_persona' => 'id']);
     }
     
 

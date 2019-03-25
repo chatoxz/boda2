@@ -4,30 +4,23 @@ use kartik\tabs\TabsX;
 use yii\helpers\Url;
 $items = [
     [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Persona'),
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode(Yii::t('app', 'Persona')),
         'content' => $this->render('_detail', [
             'model' => $model,
         ]),
     ],
         [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Boda'),
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode(Yii::t('app', 'Boda')),
         'content' => $this->render('_dataBoda', [
             'model' => $model,
             'row' => $model->bodas,
         ]),
     ],
             [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Padrino'),
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode(Yii::t('app', 'Padrino')),
         'content' => $this->render('_dataPadrino', [
             'model' => $model,
             'row' => $model->padrinos,
-        ]),
-    ],
-            [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Red Social'),
-        'content' => $this->render('_dataRedSocial', [
-            'model' => $model,
-            'row' => $model->redSocials,
         ]),
     ],
     ];

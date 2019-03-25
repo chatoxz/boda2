@@ -76,7 +76,7 @@ class InvitadoController extends Controller
      */
     public function actionView($id)
     {
-        $model = $this->findModel($id);
+        //$model = $this->findModel($id);
         return $this->renderAjax('view', [
             'model' => $this->findModel($id),
         ]);

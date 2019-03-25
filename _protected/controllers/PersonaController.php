@@ -28,7 +28,7 @@ class PersonaController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-boda', 'add-padrino', 'add-red-social'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-boda', 'add-padrino'],
                         'roles' => ['@']
                     ],
                     [
@@ -68,14 +68,10 @@ class PersonaController extends Controller
         $providerPadrino = new \yii\data\ArrayDataProvider([
             'allModels' => $model->padrinos,
         ]);
-        $providerRedSocial = new \yii\data\ArrayDataProvider([
-            'allModels' => $model->redSocials,
-        ]);
         return $this->render('view', [
             'model' => $this->findModel($id),
             'providerBoda' => $providerBoda,
             'providerPadrino' => $providerPadrino,
-            'providerRedSocial' => $providerRedSocial,
         ]);
     }
 
@@ -87,6 +83,7 @@ class PersonaController extends Controller
     public function actionCreate()
     {
         $model = new Persona();
+
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -168,7 +165,7 @@ class PersonaController extends Controller
         if (($model = Persona::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         }
     }
     
@@ -188,7 +185,7 @@ class PersonaController extends Controller
                 $row[] = [];
             return $this->renderAjax('_formBoda', ['row' => $row]);
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         }
     }
     
@@ -208,27 +205,7 @@ class PersonaController extends Controller
                 $row[] = [];
             return $this->renderAjax('_formPadrino', ['row' => $row]);
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-    
-    /**
-    * Action to load a tabular form grid
-    * for RedSocial
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
-    public function actionAddRedSocial()
-    {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('RedSocial');
-            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
-                $row[] = [];
-            return $this->renderAjax('_formRedSocial', ['row' => $row]);
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
         }
     }
 }

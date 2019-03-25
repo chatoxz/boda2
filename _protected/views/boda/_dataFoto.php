@@ -9,10 +9,6 @@ use yii\data\ArrayDataProvider;
     $gridColumns = [
         ['class' => 'yii\grid\SerialColumn'],
         ['attribute' => 'id', 'visible' => false],
-        [
-                'attribute' => 'seccion.nombre',
-                'label' => 'Id Seccion'
-            ],
         'nombre',
         'carpeta',
         [

@@ -22,16 +22,6 @@ echo TabularForm::widget([
     ],
     'attributes' => [
         "id" => ['type' => TabularForm::INPUT_HIDDEN, 'columnOptions' => ['hidden'=>true]],
-        'id_seccion' => [
-            'label' => 'Foto',
-            'type' => TabularForm::INPUT_WIDGET,
-            'widgetClass' => \kartik\widgets\Select2::className(),
-            'options' => [
-                'data' => \yii\helpers\ArrayHelper::map(\app\models\Foto::find()->orderBy('nombre')->asArray()->all(), 'id', 'nombre'),
-                'options' => ['placeholder' => 'Choose Foto'],
-            ],
-            'columnOptions' => ['width' => '200px']
-        ],
         'nombre' => ['type' => TabularForm::INPUT_TEXT],
         'carpeta' => ['type' => TabularForm::INPUT_TEXT],
         'del' => [

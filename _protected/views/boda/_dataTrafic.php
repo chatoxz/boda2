@@ -3,19 +3,20 @@ use kartik\grid\GridView;
 use yii\data\ArrayDataProvider;
 
     $dataProvider = new ArrayDataProvider([
-        'allModels' => $model->mesas,
-        'key' => function($model){
-            return ['id' => $model->id, 'id_boda' => $model->id_boda];
-        }
+        'allModels' => $model->trafics,
+        'key' => 'id'
     ]);
     $gridColumns = [
         ['class' => 'yii\grid\SerialColumn'],
         ['attribute' => 'id', 'visible' => false],
-        'nombre',
-        'numero',
+        [
+                'attribute' => 'invitado.nombre',
+                'label' => 'Id Invitado'
+            ],
+        'telefono',
         [
             'class' => 'yii\grid\ActionColumn',
-            'controller' => 'mesa'
+            'controller' => 'trafic'
         ],
     ];
     

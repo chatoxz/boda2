@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'pagina',
     ];
     echo DetailView::widget([
-        'model' => $model->novia,
+        'model' => $model->novio,
         'attributes' => $gridColumnPersona    ]);
     ?>
     <div class="row">
@@ -79,36 +79,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'pagina',
     ];
     echo DetailView::widget([
-        'model' => $model->novio,
+        'model' => $model->novia,
         'attributes' => $gridColumnPersona    ]);
     ?>
-    
-    <div class="row">
-<?php
-if($providerContactoInvitado->totalCount){
-    $gridColumnContactoInvitado = [
-        ['class' => 'yii\grid\SerialColumn'],
-            ['attribute' => 'id', 'visible' => false],
-                        'mensaje:ntext',
-            'nombre',
-            'email:email',
-            'titulo',
-    ];
-    echo Gridview::widget([
-        'dataProvider' => $providerContactoInvitado,
-        'pjax' => true,
-        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-contacto-invitado']],
-        'panel' => [
-            'type' => GridView::TYPE_PRIMARY,
-            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Contacto Invitado'),
-        ],
-        'export' => false,
-        'columns' => $gridColumnContactoInvitado
-    ]);
-}
-?>
-
-    </div>
     
     <div class="row">
 <?php
@@ -116,11 +89,7 @@ if($providerFoto->totalCount){
     $gridColumnFoto = [
         ['class' => 'yii\grid\SerialColumn'],
             ['attribute' => 'id', 'visible' => false],
-                        [
-                'attribute' => 'seccion.nombre',
-                'label' => 'Id Seccion'
-            ],
-            'nombre',
+                        'nombre',
             'carpeta',
     ];
     echo Gridview::widget([
@@ -214,6 +183,34 @@ if($providerRegalo->totalCount){
         ],
         'export' => false,
         'columns' => $gridColumnRegalo
+    ]);
+}
+?>
+
+    </div>
+    
+    <div class="row">
+<?php
+if($providerTrafic->totalCount){
+    $gridColumnTrafic = [
+        ['class' => 'yii\grid\SerialColumn'],
+            ['attribute' => 'id', 'visible' => false],
+                        [
+                'attribute' => 'invitado.nombre',
+                'label' => 'Id Invitado'
+            ],
+            'telefono',
+    ];
+    echo Gridview::widget([
+        'dataProvider' => $providerTrafic,
+        'pjax' => true,
+        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-trafic']],
+        'panel' => [
+            'type' => GridView::TYPE_PRIMARY,
+            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Trafic'),
+        ],
+        'export' => false,
+        'columns' => $gridColumnTrafic
     ]);
 }
 ?>

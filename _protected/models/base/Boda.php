@@ -11,13 +11,13 @@ use Yii;
  * @property integer $id_novio
  * @property integer $id_novia
  *
- * @property \app\models\Persona $novia
  * @property \app\models\Persona $novio
- * @property \app\models\ContactoInvitado[] $contactoInvitados
+ * @property \app\models\Persona $novia
  * @property \app\models\Foto[] $fotos
  * @property \app\models\Invitado[] $invitados
  * @property \app\models\Mesa[] $mesas
  * @property \app\models\Regalo[] $regalos
+ * @property \app\models\Trafic[] $trafics
  */
 class Boda extends \yii\db\ActiveRecord
 {
@@ -31,13 +31,13 @@ class Boda extends \yii\db\ActiveRecord
     public function relationNames()
     {
         return [
-            'novia',
             'novio',
-            'contactoInvitados',
+            'novia',
             'fotos',
             'invitados',
             'mesas',
-            'regalos'
+            'regalos',
+            'trafics'
         ];
     }
 
@@ -47,8 +47,8 @@ class Boda extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'id_novio', 'id_novia'], 'required'],
-            [['id', 'id_novio', 'id_novia'], 'integer']
+            [['id_novio', 'id_novia'], 'required'],
+            [['id_novio', 'id_novia'], 'integer']
         ];
     }
 
@@ -75,14 +75,6 @@ class Boda extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getNovia()
-    {
-        return $this->hasOne(\app\models\Persona::className(), ['id' => 'id_novia']);
-    }
-        
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getNovio()
     {
         return $this->hasOne(\app\models\Persona::className(), ['id' => 'id_novio']);
@@ -91,9 +83,9 @@ class Boda extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getContactoInvitados()
+    public function getNovia()
     {
-        return $this->hasMany(\app\models\ContactoInvitado::className(), ['id_boda' => 'id']);
+        return $this->hasOne(\app\models\Persona::className(), ['id' => 'id_novia']);
     }
         
     /**
@@ -126,6 +118,14 @@ class Boda extends \yii\db\ActiveRecord
     public function getRegalos()
     {
         return $this->hasMany(\app\models\Regalo::className(), ['id_boda' => 'id']);
+    }
+        
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTrafics()
+    {
+        return $this->hasMany(\app\models\Trafic::className(), ['id_boda' => 'id']);
     }
     
 
