@@ -259,7 +259,7 @@ body {
 
 @media (max-width: 600px) {
     body{
-        /*background-image: url('/themes/light/img/carlaybeto/background');*/
+        background-image: url('/themes/light/img/belenysergio/background.png');
         background-size: auto 110vh;
         background-position: top;
     }
