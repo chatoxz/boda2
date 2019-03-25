@@ -4,7 +4,7 @@ $(document).on("ready",function () {
         event.stopPropagation();
         event.preventDefault();
         $(".resultado").html("").addClass("hidden");
-        $("#modalContent").html("<div class='loader_azul_muy_grande' style='margin: auto;display: block'></div>");
+        $("#modalContent").html("<div class='loader_muy_grande' style='margin: auto;display: block'></div>");
         //setea el tamaño del modal
         $(".modal-dialog").removeClass("modal-sm modal-lg").addClass($(this).attr("size"));
         if(typeof $(this).attr("size") !== typeof undefined && $(this).attr("size") !== false){
@@ -63,7 +63,7 @@ $(document).on("ready",function () {
     //FUNCIONAMIENTO DEL formulario con AJAX
     $("body").on("beforeSubmit", "form#id_form", function () {
         var form = $(this);
-        $(".resultado").removeClass("hidden").html("<div class='loader_tricolor_chico' style='margin: auto;display: block'></div>");
+        $(".resultado").removeClass("hidden").html("<div class='loader_chico' style='margin: auto;display: block'></div>");
 
         $.ajax({
             url: form.attr("action"),
@@ -102,7 +102,7 @@ $(document).on("ready",function () {
     //FUNCIONAMIENTO DEL formulario con AJAX PARA LA CONFIRMACION DE LA ASISTENCIA
     $("body").on("beforeSubmit", "form#id_form_confirmar", function () {
         var form = $(this);
-        $(".resultado").show().removeClass("hidden").html("<div class='loader_tricolor_chico' style='margin: auto;display: block'></div>");
+        $(".resultado").show().removeClass("hidden").html("<div class='loader_chico' style='margin: auto;display: block'></div>");
 
         $.ajax({
             url: form.attr("action"),

@@ -102,7 +102,7 @@ AppAsset::register($this);
     Modal::begin([ 'options' => [
         'id' => 'modal','style' => 'color:black',
         'tabindex' => false // important for Select2 to work properly
-    ], 'id' => 'modal', 'header' => '<div class="titulo_nombres">Boda</div>', 'size' => '']);
+    ], 'id' => 'modal', 'header' => '<div class="titulo_nombres titulo_modal">Boda</div>', 'size' => '']);
     echo '<div id="modalContent" ></div>';
     echo '<div class="alert alert-info resultado hidden" style=""></div>';
     Modal::end();

@@ -5,9 +5,14 @@ colores {
     color: #FFFFFF;
 }
 
-.loader_muy_grande {
-    border-top-color: #A0DCE1;
+.loader_muy_grande, .loader_chico, .loader {
+    border-top-color: #A0DCE1 !important;
 }
+
+.titulo_modal{
+    color: #2E9093!important;
+}
+
 body {
     margin: 0;
     background-color: transparent !important;
