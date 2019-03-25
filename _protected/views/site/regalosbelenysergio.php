@@ -19,11 +19,11 @@
 <?php  $this->registerJsFile('@themes/js/buscar_regalo.js',['depends' => [\yii\web\JqueryAsset::className()]]);?>
 
 <div class="" style="text-align: center;padding: 15px;">
-    <div class="titulo_nombres" style="padding-bottom: 0px;margin-bottom: 20px;font-size:42px ">
+    <div class="titulo_nombres" style="padding-bottom: 0px;margin-bottom: 20px;font-size:32px ">
         Podes depositarnos en esta cuenta
     </div>
     <div class="nos_casamos" style="font-size: 30px;font-weight:bold">
-        Banco Frances
+        Banco Nación
     </div>
     <!--<div class="item_regalo">
         <img src="/themes/light/img/death_star.png" width="30" height="30">

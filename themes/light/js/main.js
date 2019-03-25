@@ -4,7 +4,7 @@ $(document).on("ready",function () {
         event.stopPropagation();
         event.preventDefault();
         $(".resultado").html("").addClass("hidden");
-        $("#modalContent").html("<div class='loader_azul_muy_grande' style='margin: auto;display: block'></div>");
+        $("#modalContent").html("<div class='loader_muy_grande' style='margin: auto;display: block'></div>");
         //setea el tamaño del modal
         $(".modal-dialog").removeClass("modal-sm modal-lg").addClass($(this).attr("size"));
         if(typeof $(this).attr("size") !== typeof undefined && $(this).attr("size") !== false){

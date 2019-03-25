@@ -173,7 +173,7 @@ $id_boda = 4;
         <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>compromiso.png" height="133" width="%" alt="">
         <div class="slowest  animated bounceInDown">
             <div class="titulo_nombres" style="font-size:60px">¡Te esperamos para compartir!</div>
-            <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title=<?= $titulo ?> value="confirmar?id=<?= $id_boda?>">
+            <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title="<?= $titulo ?>" value="confirmar?id=<?= $id_boda?>">
                 <i class="fas fa-star"></i><span> Confirmar asistencia</span>
             </button>
         </div>
