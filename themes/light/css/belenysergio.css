@@ -259,7 +259,7 @@ body {
 
 @media (max-width: 600px) {
     body{
-        background-image: url('/themes/light/img/carlaybeto/background2_2_mobile.jpg');
+        /*background-image: url('/themes/light/img/carlaybeto/background');*/
         background-size: auto 110vh;
         background-position: top;
     }
