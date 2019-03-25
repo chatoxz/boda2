@@ -19,6 +19,7 @@ colores
 $this->title = Yii::t('app', Yii::$app->name);
 $carpeta = '/themes/light/img/belenysergio/';
 $titulo = 'Belen y Sergio';
+$id_boda = 4;
 ?>
 
     <div style="background-color: rgba(255, 255, 255, 0.41); width: 100%">
@@ -69,7 +70,7 @@ $titulo = 'Belen y Sergio';
         <div class="nos_casamos slowest animated bounceInDown">Nos Casamos</div>
         <div class="texto_nos_casamos slowest  animated bounceInDown">
             Hoy luego de una hermosa relación y gracias al amor que nos une, lo decidimos ¡NOS CASAMOS!
-            Nos gustaría compartir este momento UNICO con las personas que queremos.
+            Nos gustaría compartir este momento ÚNICO con las personas que queremos.
         </div>
     </div>
     <div class="seccion animatedParent">
@@ -163,7 +164,7 @@ $titulo = 'Belen y Sergio';
     </div>
     <!-- BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS -->
     <div class="seccion animatedParent">
-        <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" title="Regalos!" value="regalos">
+        <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" title="Regalos!" value="regalosbelenysergio">
             <i class="fas fa-gifts"></i><span> Regalar!</span>
         </button>
     </div>
@@ -172,7 +173,7 @@ $titulo = 'Belen y Sergio';
         <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>compromiso.png" height="133" width="%" alt="">
         <div class="slowest  animated bounceInDown">
             <div class="titulo_nombres" style="font-size:60px">¡Te esperamos para compartir!</div>
-            <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title=<?= $titulo ?> value="confirmar">
+            <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title=<?= $titulo ?> value="confirmar?id=<?= $id_boda?>">
                 <i class="fas fa-star"></i><span> Confirmar asistencia</span>
             </button>
         </div>

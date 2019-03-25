@@ -126,15 +126,25 @@ class SiteController extends Controller
     {
         return $this->renderAjax('regalos');
     }
+     /**
+     * Displays the regalos page.
+     * Use it in case your home page contains static content.
+     *
+     * @return string
+     */
+    public function actionRegalosbelenysergio()
+    {
+        return $this->renderAjax('regalosbelenysergio');
+    }
     /**
      * Displays the confirmar asistencia page.
      * Use it in case your home page contains static content.
      *
      * @return string
      */
-    public function actionConfirmar()
+    public function actionConfirmar($id = 2)
     {
-        $id_boda = 2;
+        $id_boda = $id;
         $request = Yii::$app->request;
         $model = new Invitado();
         $model->id = 0;

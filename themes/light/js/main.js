@@ -63,7 +63,7 @@ $(document).on("ready",function () {
     //FUNCIONAMIENTO DEL formulario con AJAX
     $("body").on("beforeSubmit", "form#id_form", function () {
         var form = $(this);
-        $(".resultado").removeClass("hidden").html("<div class='loader_tricolor_chico' style='margin: auto;display: block'></div>");
+        $(".resultado").removeClass("hidden").html("<div class='loader_chico' style='margin: auto;display: block'></div>");
 
         $.ajax({
             url: form.attr("action"),
@@ -102,7 +102,7 @@ $(document).on("ready",function () {
     //FUNCIONAMIENTO DEL formulario con AJAX PARA LA CONFIRMACION DE LA ASISTENCIA
     $("body").on("beforeSubmit", "form#id_form_confirmar", function () {
         var form = $(this);
-        $(".resultado").show().removeClass("hidden").html("<div class='loader_tricolor_chico' style='margin: auto;display: block'></div>");
+        $(".resultado").show().removeClass("hidden").html("<div class='loader_chico' style='margin: auto;display: block'></div>");
 
         $.ajax({
             url: form.attr("action"),
