@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'pagina')->textInput(['maxlength' => true, 'placeholder' => 'Pagina']) ?>
 
     <?php
-    $forms = [
+    /*$forms = [
         [
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode(Yii::t('app', 'Boda')),
             'content' => $this->render('_formBoda', [
@@ -67,7 +67,7 @@ use yii\widgets\ActiveForm;
             'sideways' => true,
             'enableCache' => false,
         ],
-    ]);
+    ]);*/
     ?>
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>
