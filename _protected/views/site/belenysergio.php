@@ -119,7 +119,7 @@ $titulo = 'Belen y Sergio';
     </div>
     <!-- COMO LLEGRAR IGLESIA COMO LLEGRAR IGLESIA COMO LLEGRAR IGLESIA COMO LLEGRAR IGLESIA COMO LLEGRAR IGLESIA COMO LLEGRAR-->
     <div class="seccion animatedParent">
-        <a href="https://goo.gl/maps/PSEZZhBbRzw" target="_blank">
+        <a href="https://goo.gl/maps/XpQ14QqxYBJ2" target="_blank">
             <button class="btn btn-como-llegar slowest animated bounceInDown">
                 <i class="fas fa-map-marked-alt"></i> <span> Como llegar</span>
             </button>
@@ -143,7 +143,7 @@ $titulo = 'Belen y Sergio';
     </div>
     <!-- COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL COMO LLEGRAR CIVIL  -->
     <div class="seccion animatedParent">
-        <a href="https://goo.gl/maps/TFRkMRvT3EM2" target="_blank">
+        <a href="https://goo.gl/maps/CoTriTqG9iF2" target="_blank">
             <button class="btn btn-como-llegar slowest  animated bounceInDown">
                 <i class="fas fa-map-marked-alt"></i><span> Como llegar</span>
             </button>
