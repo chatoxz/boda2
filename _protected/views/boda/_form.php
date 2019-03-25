@@ -74,7 +74,7 @@ use yii\widgets\ActiveForm;
     ]); ?>
 
     <?php
-    $forms = [
+    /*$forms = [
         [
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Foto'),
             'content' => $this->render('_formFoto', [
@@ -115,7 +115,7 @@ use yii\widgets\ActiveForm;
             'sideways' => true,
             'enableCache' => false,
         ],
-    ]);
+    ]);*/
     ?>
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>
