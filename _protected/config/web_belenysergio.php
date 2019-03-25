@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params_belenysergio.php');
 
 $config = [
     'id' => 'basic',
-    'name' => 'Belen y Sergio',
+    'name' => '',
     'language' => 'es',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\Aliases'],
@@ -45,6 +45,7 @@ $config = [
         ],
         // ESTA DESACTIVADO XQ DAN ERROR LOS GLYPH ICONS, PARA ACTIVARLO DE VUELTA DESCOMENTAR assetmanager QUE ESTA ABAJO
         'view' => [
+
             'theme' => [
                 'pathMap' => ['@app/views' => '@webroot/themes/light/views'],
                 'baseUrl' => '@web/themes/light',

@@ -1,7 +1,7 @@
 // Set the date we're counting down to
-//var countDownDate = new Date("Aug 18, 2018 11:00:00").getTime();
+//var countDownDate = new Date('Aug 18, 2018 11:00:00').getTime();
 var d = new Date();
-var countDownDate = new Date("Mar 16, "+d.getFullYear()+" 21:30:00").getTime();
+var countDownDate = new Date('May 04, '+d.getFullYear()+' 20:45:00').getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -18,18 +18,18 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result in the element with id="demo"
-    $(".timer_dia").html(days + "");
-    $(".timer_hora").html(hours + "");
-    $(".timer_min").html(minutes + "");
-    $(".timer_seg").html(seconds);
+    // Display the result in the element with id='demo'
+    $('.timer_dia').html(days + '');
+    $('.timer_hora').html(hours + '');
+    $('.timer_min').html(minutes + '');
+    $('.timer_seg').html(seconds);
 
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        $(".timer_dia").html(0 + "");
-        $(".timer_horas").html(0 + "");
-        $(".timer_min").html(0 + "");
-        $(".timer_seg").html(0) ;
+        $('.timer_dia').html(0 + '');
+        $('.timer_horas').html(0 + '');
+        $('.timer_min').html(0 + '');
+        $('.timer_seg').html(0) ;
     }
 }, 1000);

@@ -209,6 +209,7 @@ background-color: #8B7D62;
 }
 .footer{
     font-family: 'Parisienne', cursive;
+    background-color: #C7B38A !important;
 }
 @media  (max-width: 1400px) {
     .container_carrousel{
@@ -265,7 +266,6 @@ background-color: #8B7D62;
     }
     .footer{
         font-size: 14px !important;
-        background-color: #C7B38A;
         color: black !important;
     }
 }

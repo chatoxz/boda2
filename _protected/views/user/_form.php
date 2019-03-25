@@ -29,19 +29,21 @@ use yii\widgets\ActiveForm;
     <?php endif ?>
 
     <?php
-    if($user->getRole()->all()[0]['item_name'] == 'theCreator'){ ?>
-    <div class="row">
-        <div class="col-md-6">
+    $rol = \app\rbac\models\Role::findOne(['user_id' => Yii::$app->user->id]);
+    //if($user->getRole()->all()[0]['item_name'] == 'theCreator'){
+    if($rol->item_name == 'theCreator'){ ?>
+        <div class="row">
+            <div class="col-md-6">
 
-            <?= $form->field($user, 'status')->dropDownList($user->statusList) ?>
+                <?= $form->field($user, 'status')->dropDownList($user->statusList) ?>
 
-            <?php foreach (AuthItem::getRoles() as $item_name): ?>
-                <?php $roles[$item_name->name] = $item_name->name ?>
-            <?php endforeach ?>
-            <?= $form->field($user, 'item_name')->dropDownList($roles) ?>
+                <?php foreach (AuthItem::getRoles() as $item_name): ?>
+                    <?php $roles[$item_name->name] = $item_name->name ?>
+                <?php endforeach ?>
+                <?= $form->field($user, 'item_name')->dropDownList($roles) ?>
 
+            </div>
         </div>
-    </div>
     <?php } ?>
     <div class="form-group">
         <?= Html::submitButton($user->isNewRecord ? Yii::t('app', 'Create')
