@@ -10,13 +10,6 @@ $items = [
         ]),
     ],
                 [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Cliente'),
-        'content' => $this->render('_dataCliente', [
-            'model' => $model,
-            'row' => $model->clientes,
-        ]),
-    ],
-            [
         'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Contacto Invitado'),
         'content' => $this->render('_dataContactoInvitado', [
             'model' => $model,

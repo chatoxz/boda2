@@ -23,7 +23,16 @@ echo TabularForm::widget([
     'attributes' => [
         "id" => ['type' => TabularForm::INPUT_HIDDEN, 'columnOptions' => ['hidden'=>true]],
         'nombre' => ['type' => TabularForm::INPUT_TEXT],
-        'id_confirmacion' => ['type' => TabularForm::INPUT_TEXT],
+        'id_confirmacion' => [
+            'label' => 'Confirmacion',
+            'type' => TabularForm::INPUT_WIDGET,
+            'widgetClass' => \kartik\widgets\Select2::className(),
+            'options' => [
+                'data' => \yii\helpers\ArrayHelper::map(\app\models\Confirmacion::find()->orderBy('nombre')->asArray()->all(), 'id', 'nombre'),
+                'options' => ['placeholder' => 'Choose Confirmacion'],
+            ],
+            'columnOptions' => ['width' => '200px']
+        ],
         'mensaje' => ['type' => TabularForm::INPUT_TEXTAREA],
         'del' => [
             'type' => 'raw',

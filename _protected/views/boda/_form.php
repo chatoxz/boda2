@@ -9,14 +9,6 @@ use yii\widgets\ActiveForm;
 
 \mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
     'viewParams' => [
-        'class' => 'Cliente', 
-        'relID' => 'cliente', 
-        'value' => \yii\helpers\Json::encode($model->clientes),
-        'isNewRecord' => ($model->isNewRecord) ? 1 : 0
-    ]
-]);
-\mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
-    'viewParams' => [
         'class' => 'ContactoInvitado', 
         'relID' => 'contacto-invitado', 
         'value' => \yii\helpers\Json::encode($model->contactoInvitados),
@@ -83,12 +75,6 @@ use yii\widgets\ActiveForm;
 
     <?php
     $forms = [
-        [
-            'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Cliente'),
-            'content' => $this->render('_formCliente', [
-                'row' => \yii\helpers\ArrayHelper::toArray($model->clientes),
-            ]),
-        ],
         [
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('ContactoInvitado'),
             'content' => $this->render('_formContactoInvitado', [

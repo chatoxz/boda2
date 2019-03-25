@@ -85,36 +85,6 @@ $this->params['breadcrumbs'][] = $this->title;
     
     <div class="row">
 <?php
-if($providerCliente->totalCount){
-    $gridColumnCliente = [
-        ['class' => 'yii\grid\SerialColumn'],
-            ['attribute' => 'id', 'visible' => false],
-                        'nombre',
-            'telefono',
-            'telefono2',
-            'email:email',
-            'email2:email',
-            'direccion',
-            'documento',
-    ];
-    echo Gridview::widget([
-        'dataProvider' => $providerCliente,
-        'pjax' => true,
-        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-cliente']],
-        'panel' => [
-            'type' => GridView::TYPE_PRIMARY,
-            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Cliente'),
-        ],
-        'export' => false,
-        'columns' => $gridColumnCliente
-    ]);
-}
-?>
-
-    </div>
-    
-    <div class="row">
-<?php
 if($providerContactoInvitado->totalCount){
     $gridColumnContactoInvitado = [
         ['class' => 'yii\grid\SerialColumn'],
@@ -176,7 +146,10 @@ if($providerInvitado->totalCount){
         ['class' => 'yii\grid\SerialColumn'],
             ['attribute' => 'id', 'visible' => false],
                         'nombre',
-            'id_confirmacion',
+            [
+                'attribute' => 'confirmacion.nombre',
+                'label' => 'Id Confirmacion'
+            ],
             'mensaje:ntext',
     ];
     echo Gridview::widget([
