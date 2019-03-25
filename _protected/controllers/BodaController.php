@@ -28,7 +28,7 @@ class BodaController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-contacto-invitado', 'add-foto', 'add-invitado', 'add-mesa', 'add-regalo'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'save-as-new', 'add-foto', 'add-invitado', 'add-mesa', 'add-regalo', 'add-trafic'],
                         'roles' => ['@']
                     ],
                     [
@@ -62,9 +62,6 @@ class BodaController extends Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $providerContactoInvitado = new \yii\data\ArrayDataProvider([
-            'allModels' => $model->contactoInvitados,
-        ]);
         $providerFoto = new \yii\data\ArrayDataProvider([
             'allModels' => $model->fotos,
         ]);
@@ -77,13 +74,16 @@ class BodaController extends Controller
         $providerRegalo = new \yii\data\ArrayDataProvider([
             'allModels' => $model->regalos,
         ]);
+        $providerTrafic = new \yii\data\ArrayDataProvider([
+            'allModels' => $model->trafics,
+        ]);
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'providerContactoInvitado' => $providerContactoInvitado,
             'providerFoto' => $providerFoto,
             'providerInvitado' => $providerInvitado,
             'providerMesa' => $providerMesa,
             'providerRegalo' => $providerRegalo,
+            'providerTrafic' => $providerTrafic,
         ]);
     }
 
@@ -183,26 +183,6 @@ class BodaController extends Controller
     
     /**
     * Action to load a tabular form grid
-    * for ContactoInvitado
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
-    public function actionAddContactoInvitado()
-    {
-        if (Yii::$app->request->isAjax) {
-            $row = Yii::$app->request->post('ContactoInvitado');
-            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
-                $row[] = [];
-            return $this->renderAjax('_formContactoInvitado', ['row' => $row]);
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
-    
-    /**
-    * Action to load a tabular form grid
     * for Foto
     * @author Yohanes Candrajaya <moo.tensai@gmail.com>
     * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
@@ -276,6 +256,26 @@ class BodaController extends Controller
             if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
                 $row[] = [];
             return $this->renderAjax('_formRegalo', ['row' => $row]);
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+    
+    /**
+    * Action to load a tabular form grid
+    * for Trafic
+    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
+    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
+    *
+    * @return mixed
+    */
+    public function actionAddTrafic()
+    {
+        if (Yii::$app->request->isAjax) {
+            $row = Yii::$app->request->post('Trafic');
+            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
+                $row[] = [];
+            return $this->renderAjax('_formTrafic', ['row' => $row]);
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }

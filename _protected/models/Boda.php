@@ -17,8 +17,8 @@ class Boda extends BaseBoda
     {
         return array_replace_recursive(parent::rules(),
 	    [
-            [['id', 'id_novio', 'id_novia'], 'required'],
-            [['id', 'id_novio', 'id_novia'], 'integer']
+            [['id_novio', 'id_novia'], 'required'],
+            [['id_novio', 'id_novia'], 'integer']
         ]);
     }
 	

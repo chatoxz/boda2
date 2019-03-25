@@ -17,8 +17,7 @@ class Persona extends BasePersona
     {
         return array_replace_recursive(parent::rules(),
 	    [
-            [['id'], 'required'],
-            [['id', 'celular'], 'integer'],
+            [['celular'], 'integer'],
             [['nombre', 'apellido', 'email', 'pagina'], 'string', 'max' => 255]
         ]);
     }

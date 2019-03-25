@@ -9,14 +9,6 @@ use yii\widgets\ActiveForm;
 
 \mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
     'viewParams' => [
-        'class' => 'ContactoInvitado', 
-        'relID' => 'contacto-invitado', 
-        'value' => \yii\helpers\Json::encode($model->contactoInvitados),
-        'isNewRecord' => ($model->isNewRecord) ? 1 : 0
-    ]
-]);
-\mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
-    'viewParams' => [
         'class' => 'Foto', 
         'relID' => 'foto', 
         'value' => \yii\helpers\Json::encode($model->fotos),
@@ -44,6 +36,14 @@ use yii\widgets\ActiveForm;
         'class' => 'Regalo', 
         'relID' => 'regalo', 
         'value' => \yii\helpers\Json::encode($model->regalos),
+        'isNewRecord' => ($model->isNewRecord) ? 1 : 0
+    ]
+]);
+\mootensai\components\JsBlock::widget(['viewFile' => '_script', 'pos'=> \yii\web\View::POS_END, 
+    'viewParams' => [
+        'class' => 'Trafic', 
+        'relID' => 'trafic', 
+        'value' => \yii\helpers\Json::encode($model->trafics),
         'isNewRecord' => ($model->isNewRecord) ? 1 : 0
     ]
 ]);
@@ -76,12 +76,6 @@ use yii\widgets\ActiveForm;
     <?php
     $forms = [
         [
-            'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('ContactoInvitado'),
-            'content' => $this->render('_formContactoInvitado', [
-                'row' => \yii\helpers\ArrayHelper::toArray($model->contactoInvitados),
-            ]),
-        ],
-        [
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Foto'),
             'content' => $this->render('_formFoto', [
                 'row' => \yii\helpers\ArrayHelper::toArray($model->fotos),
@@ -103,6 +97,12 @@ use yii\widgets\ActiveForm;
             'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Regalo'),
             'content' => $this->render('_formRegalo', [
                 'row' => \yii\helpers\ArrayHelper::toArray($model->regalos),
+            ]),
+        ],
+        [
+            'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('Trafic'),
+            'content' => $this->render('_formTrafic', [
+                'row' => \yii\helpers\ArrayHelper::toArray($model->trafics),
             ]),
         ],
     ];

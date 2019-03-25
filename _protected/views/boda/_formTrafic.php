@@ -1,4 +1,4 @@
-<div class="form-group" id="add-boda">
+<div class="form-group" id="add-trafic">
 <?php
 use kartik\grid\GridView;
 use kartik\builder\TabularForm;
@@ -14,7 +14,7 @@ $dataProvider = new ArrayDataProvider([
 ]);
 echo TabularForm::widget([
     'dataProvider' => $dataProvider,
-    'formName' => 'Boda',
+    'formName' => 'Trafic',
     'checkboxColumn' => false,
     'actionColumn' => false,
     'attributeDefaults' => [
@@ -22,23 +22,24 @@ echo TabularForm::widget([
     ],
     'attributes' => [
         "id" => ['type' => TabularForm::INPUT_HIDDEN, 'columnOptions' => ['hidden'=>true]],
-        'id_novio' => [
-            'label' => 'Persona',
+        'id_invitado' => [
+            'label' => 'Invitado',
             'type' => TabularForm::INPUT_WIDGET,
             'widgetClass' => \kartik\widgets\Select2::className(),
             'options' => [
-                'data' => \yii\helpers\ArrayHelper::map(\app\models\Persona::find()->orderBy('nombre')->asArray()->all(), 'id', 'nombre'),
-                'options' => ['placeholder' => Yii::t('app', 'Choose Persona')],
+                'data' => \yii\helpers\ArrayHelper::map(\app\models\Invitado::find()->orderBy('nombre')->asArray()->all(), 'id', 'nombre'),
+                'options' => ['placeholder' => 'Choose Invitado'],
             ],
             'columnOptions' => ['width' => '200px']
         ],
+        'telefono' => ['type' => TabularForm::INPUT_TEXT],
         'del' => [
             'type' => 'raw',
             'label' => '',
             'value' => function($model, $key) {
                 return
                     Html::hiddenInput('Children[' . $key . '][id]', (!empty($model['id'])) ? $model['id'] : "") .
-                    Html::a('<i class="glyphicon glyphicon-trash"></i>', '#', ['title' =>  Yii::t('app', 'Delete'), 'onClick' => 'delRowBoda(' . $key . '); return false;', 'id' => 'boda-del-btn']);
+                    Html::a('<i class="glyphicon glyphicon-trash"></i>', '#', ['title' =>  'Delete', 'onClick' => 'delRowTrafic(' . $key . '); return false;', 'id' => 'trafic-del-btn']);
             },
         ],
     ],
@@ -48,7 +49,7 @@ echo TabularForm::widget([
             'type' => GridView::TYPE_DEFAULT,
             'before' => false,
             'footer' => false,
-            'after' => Html::button('<i class="glyphicon glyphicon-plus"></i>' . Yii::t('app', 'Add Boda'), ['type' => 'button', 'class' => 'btn btn-success kv-batch-create', 'onClick' => 'addRowBoda()']),
+            'after' => Html::button('<i class="glyphicon glyphicon-plus"></i>' . 'Add Trafic', ['type' => 'button', 'class' => 'btn btn-success kv-batch-create', 'onClick' => 'addRowTrafic()']),
         ]
     ]
 ]);

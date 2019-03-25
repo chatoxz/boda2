@@ -10,13 +10,6 @@ $items = [
         ]),
     ],
                 [
-        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Contacto Invitado'),
-        'content' => $this->render('_dataContactoInvitado', [
-            'model' => $model,
-            'row' => $model->contactoInvitados,
-        ]),
-    ],
-            [
         'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Foto'),
         'content' => $this->render('_dataFoto', [
             'model' => $model,
@@ -42,6 +35,13 @@ $items = [
         'content' => $this->render('_dataRegalo', [
             'model' => $model,
             'row' => $model->regalos,
+        ]),
+    ],
+            [
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Trafic'),
+        'content' => $this->render('_dataTrafic', [
+            'model' => $model,
+            'row' => $model->trafics,
         ]),
     ],
     ];
