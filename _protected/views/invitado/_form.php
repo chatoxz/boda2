@@ -26,6 +26,16 @@ use kartik\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_confirmacion')->label('Confirmacion')->dropDownList(['0' => 'Sin confirmar', '1' => 'Confirmar', '2' => 'No asistira']); ?>
 
+    <?= $form->field($model, 'despues_doce')->label('Despues de doce')->dropDownList(['0' => 'No', '1' => 'Si']); ?>
+
+    <?= $form->field($model->mesaInvitado, 'id_mesa')->widget(\kartik\widgets\Select2::classname(), [
+        'data' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()
+            ->where(['id_boda' => Yii::$app->user->id])->orderBy('id')->asArray()->all(), 'id', 'nombre'),
+        'options' => ['placeholder' => 'Mesa'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ])->label('Mesa'); ?>
     <?= $form->field($model, 'mensaje')->textarea(['rows' => 2]) ?>
 
     <div class="form-group">

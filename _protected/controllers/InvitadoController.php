@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\MesaInvitado;
 use Yii;
 use app\models\Invitado;
 use app\models\InvitadoSearch;
@@ -114,7 +115,12 @@ class InvitadoController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(Yii::$app->request->post()) && $model->save()) {
+            //actualizo la mesa del invitado en mesainvitado
+            $id_mesa_invitado = $this->findModel($id)->mesaInvitado->id;
+            $mesa_invitado = MesaInvitado::findOne(['id' => $id_mesa_invitado]);
+            $mesa_invitado->id_mesa = $model->mesaInvitado->id_mesa;
+            $mesa_invitado->save();
             //return $this->redirect(['view', 'id' => $model->id]);
            // return $this->redirect(['index']);
         } else {

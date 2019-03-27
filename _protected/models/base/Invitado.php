@@ -12,14 +12,17 @@ use Yii;
  * @property string $nombre
  * @property integer $id_confirmacion
  * @property string $mensaje
+ * @property integer $despues_doce
  *
- * @property \app\models\Confirmacion $confirmacion
  * @property \app\models\Boda $boda
+ * @property \app\models\Confirmacion $confirmacion
  * @property \app\models\MesaInvitado $mesaInvitado
+ * @property \app\models\Trafic[] $trafics
  */
 class Invitado extends \yii\db\ActiveRecord
 {
     use \mootensai\relation\RelationTrait;
+
 
 
     /**
@@ -29,9 +32,10 @@ class Invitado extends \yii\db\ActiveRecord
     public function relationNames()
     {
         return [
-            'confirmacion',
             'boda',
-            'mesaInvitado'
+            'confirmacion',
+            'mesaInvitado',
+            'trafics'
         ];
     }
 
@@ -41,9 +45,8 @@ class Invitado extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'id_boda', 'nombre'], 'required'],
-            [['id', 'id_boda', 'id_confirmacion'], 'integer'],
-            //[['id', 'message'=>'Invitado ya usado.']],
+            [['id_boda', 'nombre'], 'required'],
+            [['id_boda', 'id_confirmacion', 'despues_doce'], 'integer'],
             [['mensaje'], 'string'],
             [['nombre'], 'string', 'max' => 255]
         ];
@@ -68,17 +71,10 @@ class Invitado extends \yii\db\ActiveRecord
             'nombre' => 'Nombre',
             'id_confirmacion' => 'Id Confirmacion',
             'mensaje' => 'Mensaje',
+            'despues_doce' => 'Despues Doce',
         ];
     }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getConfirmacion()
-    {
-        return $this->hasOne(\app\models\Confirmacion::className(), ['id' => 'id_confirmacion']);
-    }
-
+    
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -86,7 +82,15 @@ class Invitado extends \yii\db\ActiveRecord
     {
         return $this->hasOne(\app\models\Boda::className(), ['id' => 'id_boda']);
     }
-
+        
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getConfirmacion()
+    {
+        return $this->hasOne(\app\models\Confirmacion::className(), ['id' => 'id_confirmacion']);
+    }
+        
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -94,7 +98,15 @@ class Invitado extends \yii\db\ActiveRecord
     {
         return $this->hasOne(\app\models\MesaInvitado::className(), ['id_invitado' => 'id']);
     }
-
+        
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTrafics()
+    {
+        return $this->hasMany(\app\models\Trafic::className(), ['id_invitado' => 'id']);
+    }
+    
 
     /**
      * @inheritdoc
