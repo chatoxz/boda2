@@ -22,7 +22,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@themes';
 
     public $css = [
-        'css/bootstrap.min.css',
+        //'css/bootstrap.min.css',
         //'css/style.css',
         'css/loaders_spinners.css',
         'css/animations.css',
