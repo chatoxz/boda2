@@ -10,11 +10,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;*/
 }
-.loader_grande{
-    border-top-color: #5bc0de;
-}
-.loader_chico{
-    border-top-color: #5bc0de;
+.loader_grande, .loader_chico, .loader_muy_grande, .loader{
+    border-color: #02010110 !important;
+    border-top-color: black !important;
 }
 
 .breadcrumb{
