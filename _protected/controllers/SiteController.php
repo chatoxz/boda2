@@ -34,14 +34,14 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            /*[
+            [
                 'class' => 'yii\filters\PageCache',
                 'only' => ['index'],
-                'duration' => 345600,
+                'duration' => 60,
                 'variations' => [
                     \Yii::$app->language,
                 ],
-            ],*/
+            ],
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
@@ -109,7 +109,6 @@ class SiteController extends Controller
      */
     public function actionAngelycarla()
     {
-
         $this->layout = 'angelycarla';
         return $this->render('index');
     }

@@ -71,9 +71,9 @@ $id_boda = 4;
     </div>
     <div class="seccion animatedParent width_70">
         <div class="titulo_nombres slowest animated bounceInDown">Belen & Sergio &ensp; </div>
-        <div class="nos_casamos slowest animated bounceInDown">Nos Casamos</div>
+        <!--<div class="nos_casamos slowest animated bounceInDown">Nos Casamos</div>-->
         <div class="texto_nos_casamos slowest  animated bounceInDown">
-            Hoy luego de una hermosa relación y gracias al amor que nos une, lo decidimos ¡NOS CASAMOS!
+            Hoy luego de una hermosa relación y gracias al amor que nos une, lo decidimos <br> <b> ¡NOS CASAMOS!</b><br>
             Nos gustaría compartir este momento ÚNICO con las personas que queremos.
         </div>
     </div>
