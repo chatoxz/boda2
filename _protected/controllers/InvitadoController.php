@@ -94,7 +94,7 @@ class InvitadoController extends Controller
         $id_boda = Yii::$app->user->id;
         if ($model->loadAll(Yii::$app->request->post())) {
             $model->saveAll();
-        //return $this->redirect(['index']);
+            //return $this->redirect(['index']);
         } else {
             $last_id = Invitado::find()->orderBy(['id' => SORT_DESC])->one()->id + 1;
             $model->id = $last_id;
@@ -116,14 +116,22 @@ class InvitadoController extends Controller
         $model = $this->findModel($id);
 
         if ($model->loadAll(Yii::$app->request->post()) && $model->save()) {
-            //actualizo la mesa del invitado en mesainvitado
-            $id_mesa_invitado = $this->findModel($id)->mesaInvitado->id;
-            $mesa_invitado = MesaInvitado::findOne(['id' => $id_mesa_invitado]);
-            $mesa_invitado->id_mesa = $model->mesaInvitado->id_mesa;
+            //actualizo o creo la entrada en mesainvitado.
+            if($this->findModel($id)->mesaInvitado){
+                $id_mesa_invitado = $this->findModel($id)->mesaInvitado->id;
+                $mesa_invitado = MesaInvitado::findOne(['id' => $id_mesa_invitado]);
+            }else{
+                $mesa_invitado = new MesaInvitado();
+            }
+            $mesa_invitado->id_mesa = $model->id_mesa;
+            $mesa_invitado->id_invitado = $model->id;
             $mesa_invitado->save();
             //return $this->redirect(['view', 'id' => $model->id]);
-           // return $this->redirect(['index']);
+            // return $this->redirect(['index']);
         } else {
+            if($this->findModel($id)->mesaInvitado){
+                $model->id_mesa = $this->findModel($id)->mesaInvitado->id_mesa;
+            }
             return $this->renderAjax('update', [
                 'model' => $model,
             ]);
