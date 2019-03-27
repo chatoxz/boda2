@@ -33,7 +33,9 @@ $id_boda = 4;
                     <li data-target="#myCarousel" data-slide-to="3"></li>
                     <li data-target="#myCarousel" data-slide-to="4"></li>-->
                 </ol>
-
+                <div class="item" style=" ">
+                    <img src="<?= $carpeta ?>/slider/slider4.jpg" alt="" style="width:100%;">
+                </div>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                    <!-- <div class="item active">
@@ -44,16 +46,17 @@ $id_boda = 4;
                     </div>
                     <div class="item">
                         <img src="<?= $carpeta ?>/slider/slider3.jpg" alt="" style="width:100%;">
-                    </div>-->
+                    </div>
                     <div class="item active">
                         <img src="<?= $carpeta ?>/slider/slider4.jpg" alt="" style="width:100%;">
                     </div>
                     <div class="item">
                         <img src="<?= $carpeta ?>/slider/slider5.jpg" alt="" style="width:100%;">
-                    </div>
+                    </div>-->
                 </div>
 
                 <!-- Left and right controls -->
+                <!--
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                     <span class="sr-only">Previous</span>
@@ -62,6 +65,7 @@ $id_boda = 4;
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
+                -->
             </div>
         </div>
     </div>

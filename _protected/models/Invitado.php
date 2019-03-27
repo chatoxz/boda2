@@ -10,19 +10,20 @@ use \app\models\base\Invitado as BaseInvitado;
  */
 class Invitado extends BaseInvitado
 {
+    public $mesa_nombre;
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return array_replace_recursive(parent::rules(),
-            [
-                [['id', 'id_boda', 'nombre'], 'required'],
-                [['id', 'id_boda', 'id_confirmacion'], 'integer'],
-                [['mensaje'], 'string'],
-                [['nombre'], 'string', 'max' => 255]
-            ]);
+	    [
+            [['id_boda', 'nombre'], 'required'],
+            [['id_boda', 'id_confirmacion', 'despues_doce'], 'integer'],
+            [['mensaje','mesa_nombre'], 'string'],
+            [['nombre'], 'string', 'max' => 255]
+        ]);
     }
-
-
+	
 }

@@ -77,6 +77,18 @@ $this->title = 'Invitado';
             ],
             'filterInputOptions' => ['placeholder' => 'Confirmacion', 'id' => 'grid-invitado-search-id_confirmacion']
         ],
+        //'mesa_nombre',
+        [
+            'attribute' => 'mesa_nombre',
+            'label' => 'Mesa',
+            'value' => function ($model) {
+                if ($model->mesaInvitado) {
+                    return $model->mesaInvitado->mesa->nombre;
+                } else {
+                    return 'Sin mesa.';
+                }
+            },
+        ],/*
         [
             'attribute' => 'mesaInvitado.id_mesa',
             'width' => '50px',
@@ -88,8 +100,14 @@ $this->title = 'Invitado';
                     return '';
                 }
             },
+        ],*/
+        [
+            'attribute' => 'despues_doce',
+            'label' => 'Despues de 12',
+            'value' => function ($model) {
+                return $model->despues_doce== 0 ? 'No': 'Si';
+            },
         ],
-        //'id_confirmacion',
         'mensaje:ntext',
         [
             'class' => 'yii\grid\ActionColumn',

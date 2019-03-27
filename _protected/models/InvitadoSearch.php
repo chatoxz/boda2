@@ -12,6 +12,8 @@ use app\models\Invitado;
  */
  class InvitadoSearch extends Invitado
 {
+
+
     /**
      * @inheritdoc
      */
@@ -46,7 +48,10 @@ use app\models\Invitado;
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
+        $dataProvider->getSort()->attributes['mesa_nombre'] = [
+            'asc'=>['mesa.numero'=>SORT_ASC],
+            'desc'=>['mesa.numero'=>SORT_DESC],
+        ];
         $this->load($params);
 
         if (!$this->validate()) {
@@ -54,15 +59,18 @@ use app\models\Invitado;
             // $query->where('0=1');
             return $dataProvider;
         }
+        $query->joinWith('mesaInvitado')->join('LEFT JOIN','mesa','mesa_invitado.id_mesa = mesa.id');
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'id_boda' => $this->id_boda,
+            'invitado.id_boda' => $this->id_boda,
             'id_confirmacion' => $this->id_confirmacion,
         ]);
 
-        $query->andFilterWhere(['like', 'nombre', $this->nombre])
-            ->andFilterWhere(['like', 'mensaje', $this->mensaje]);
+        $query->andFilterWhere(['like', 'invitado.nombre', $this->nombre])
+            ->andFilterWhere(['like', 'mensaje', $this->mensaje])
+            ->andFilterWhere(['like', 'mesa.nombre', $this->mesa_nombre])
+            ->andFilterWhere(['like', 'mesa.nombre', $this->mesa_nombre]);
         //$query->orderBy(['nombre'=>SORT_ASC]);
 
         return $dataProvider;
