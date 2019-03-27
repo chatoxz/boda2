@@ -11,6 +11,7 @@ use \app\models\base\Invitado as BaseInvitado;
 class Invitado extends BaseInvitado
 {
     public $mesa_nombre;
+    public $id_mesa;
 
     /**
      * @inheritdoc
@@ -22,7 +23,8 @@ class Invitado extends BaseInvitado
             [['id_boda', 'nombre'], 'required'],
             [['id_boda', 'id_confirmacion', 'despues_doce'], 'integer'],
             [['mensaje','mesa_nombre'], 'string'],
-            [['nombre'], 'string', 'max' => 255]
+            [['nombre'], 'string', 'max' => 255],
+            [['id_mesa'], 'safe']
         ]);
     }
 	
