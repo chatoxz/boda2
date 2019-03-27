@@ -50,14 +50,26 @@ $config = [
                 'baseUrl' => '@web/themes/light',
             ],
         ],
-        /*'assetManager' => [
+        'assetManager' => [
+            'class' => 'yii\web\AssetManager',
             'bundles' => [
-                // we will use bootstrap css from our theme
-                'yii\bootstrap\BootstrapAsset' => [
-                    'css' => [], // do not use yii default one
+                'yii\web\JqueryAsset' => [
+                    'js' => [
+                        YII_ENV_DEV ? 'jquery.js' : 'jquery.min.js'
+                    ]
                 ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [
+                        YII_ENV_DEV ? 'css/bootstrap.css' : 'css/bootstrap.min.css',
+                    ]
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js' => [
+                        YII_ENV_DEV ? 'js/bootstrap.js' : 'js/bootstrap.min.js',
+                    ]
+                ]
             ],
-        ],*/
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
