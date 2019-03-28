@@ -43,21 +43,25 @@ class InvitadoController extends Controller
      * Lists all Invitado models.
      * @return mixed
      */
-    public function actionIndex($id_confirmacion = 3)
+    public function actionIndex($id_confirmacion = 3, $id_despues_doce = 3)
     {
         $id_boda = Yii::$app->user->id;
         $searchModel = new InvitadoSearch();
         $searchModel->id_boda = $id_boda;
-        if ($id_confirmacion == 3) {
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        } else {
+        if ($id_confirmacion != 3) {
             $searchModel->id_confirmacion = $id_confirmacion;
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         }
-        $sin_confirmar = Invitado::find()->where(['id_boda' => $id_boda, 'id_confirmacion' => '0'])->count();
-        $confirmados = Invitado::find()->where(['id_boda' => $id_boda,'id_confirmacion' => '1'])->count();
-        $no_iran = Invitado::find()->where(['id_boda' => $id_boda,'id_confirmacion' => '2'])->count();
-        $todos = Invitado::find()->where(['id_boda' => $id_boda])->count();
+        if ($id_despues_doce != 3) {
+            $searchModel->despues_doce = $id_despues_doce;
+        }
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        $invitados = Invitado::find();
+        $sin_confirmar = $invitados->where(['id_boda' => $id_boda, 'id_confirmacion' => '0'])->count();
+        $confirmados = $invitados->where(['id_boda' => $id_boda,'id_confirmacion' => '1'])->count();
+        $no_iran = $invitados->where(['id_boda' => $id_boda,'id_confirmacion' => '2'])->count();
+        $despues_doce = $invitados->where(['id_boda' => $id_boda,'despues_doce' => '1'])->count();
+        $todos = $invitados->where(['id_boda' => $id_boda])->count();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -65,8 +69,8 @@ class InvitadoController extends Controller
             'confirmados' => $confirmados,
             'sin_confirmar' => $sin_confirmar,
             'no_iran' => $no_iran,
+            'despues_doce' => $despues_doce,
             'todos' => $todos,
-            'id_boda' => $id_boda,
         ]);
     }
 

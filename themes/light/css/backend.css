@@ -3,18 +3,15 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     padding: 15px !important;
-    /*height: 100%;*/
-    /*background-color: black;
-    color: white;*/
-   /* background-image: url(/themes/light/img/fondo01.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
 }
 .loader_grande, .loader_chico, .loader_muy_grande, .loader{
     border-color: #02010110 !important;
     border-top-color: black !important;
 }
-
+a:hover, a:focus, a:active {
+    color: white !important;
+    text-decoration: none !important;
+}
 .breadcrumb{
     display: none !important;
 }
@@ -26,11 +23,12 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 20px 0px;
 }
-.wrap_invitados_buttons a{
-    margin: 0px 15px;
-    font-size: 16px;
+.wrap_invitados_buttons a, .wrap_invitados_buttons button{
+    margin: 20px 0px;
 }
+
 .glyphicon{
     font-size: 20px;
 }
@@ -170,4 +168,17 @@ div.required label:after {
 .navbar-default {
     height: 50px;
     background: white !important;
+}
+
+.boton_backend{
+    height: 50px;
+    width: 150px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-around;
+    color: inherit !important;
 }
