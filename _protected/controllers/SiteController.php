@@ -34,14 +34,14 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-           /* [
-                'class' => 'yii\filters\PageCache',
-                'only' => ['index'],
-                'duration' => 60,
-                'variations' => [
-                    \Yii::$app->language,
-                ],
-            ],*/
+            /* [
+                 'class' => 'yii\filters\PageCache',
+                 'only' => ['index'],
+                 'duration' => 60,
+                 'variations' => [
+                     \Yii::$app->language,
+                 ],
+             ],*/
             'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'signup'],
@@ -101,7 +101,19 @@ class SiteController extends Controller
         return $this->render('belenysergio');
     }
 
- /**
+    /**
+     * Displays the index (home) page.
+     * Use it in case your home page contains static content.
+     *
+     * @return string
+     */
+    public function actionBelenysergiod12()
+    {
+        $this->layout = 'belenysergio';
+        return $this->render('belenysergiod12');
+    }
+
+    /**
      * Displays the index (home) page.
      * Use it in case your home page contains static content.
      *
@@ -125,7 +137,7 @@ class SiteController extends Controller
     {
         return $this->renderAjax('regalos');
     }
-     /**
+    /**
      * Displays the regalos page.
      * Use it in case your home page contains static content.
      *
@@ -163,42 +175,42 @@ class SiteController extends Controller
             }
         }
     }
-     /**
-         * Displays the confirmar asistencia page.
-         * Use it in case your home page contains static content.
-         *
-         * @return string
-         */
-        public function actionTrafic()
-        {
-            $id_boda = 2;
-            $request = Yii::$app->request;
-            $model = new Invitado();
-            $model->id = 0;
-            $model->id_boda = $id_boda;
-            $invitados = ArrayHelper::map(Invitado::find()->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
+    /**
+     * Displays the confirmar asistencia page.
+     * Use it in case your home page contains static content.
+     *
+     * @return string
+     */
+    public function actionTrafic()
+    {
+        $id_boda = 2;
+        $request = Yii::$app->request;
+        $model = new Invitado();
+        $model->id = 0;
+        $model->id_boda = $id_boda;
+        $invitados = ArrayHelper::map(Invitado::find()->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
 
-            //var_dump($model);
-            if ($request->isGet) {
-                return $this->renderAjax('trafic', ['model' => $model, 'invitados' => $invitados]);
-            } else {
-                if ($model->load(Yii::$app->request->post())) {
+        //var_dump($model);
+        if ($request->isGet) {
+            return $this->renderAjax('trafic', ['model' => $model, 'invitados' => $invitados]);
+        } else {
+            if ($model->load(Yii::$app->request->post())) {
+                $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda ]);
+                if(sizeof($trafic) == 0){
+                    $trafic = new Trafic();
+                    $trafic->telefono = $model->mensaje;
+                    $trafic->id_boda = $id_boda;
+                    $trafic->id_invitado = $model->id;
+                    $trafic->save();
+                }else{
                     $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda ]);
-                    if(sizeof($trafic) == 0){
-                        $trafic = new Trafic();
-                        $trafic->telefono = $model->mensaje;
-                        $trafic->id_boda = $id_boda;
-                        $trafic->id_invitado = $model->id;
-                        $trafic->save();
-                    }else{
-                        $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda ]);
-                        $trafic->telefono = $model->mensaje;
-                        $trafic->save();
-                    }
-                    echo "Te esperamos!";
+                    $trafic->telefono = $model->mensaje;
+                    $trafic->save();
                 }
+                echo "Te esperamos!";
             }
         }
+    }
 
     /**
      * Displays the about static page.
@@ -210,19 +222,19 @@ class SiteController extends Controller
         return $this->redirect('index');
     }
     /**
-         * Displays the about static page.
-         *
-         * @return string
-         */
+     * Displays the about static page.
+     *
+     * @return string
+     */
     public function actionPagoProceso()
     {
         return $this->redirect('index');
     }
     /**
-         * Displays the about static page.
-         *
-         * @return string
-         */
+     * Displays the about static page.
+     *
+     * @return string
+     */
     public function actionAbout()
     {
         return $this->render('about');
@@ -475,9 +487,9 @@ class SiteController extends Controller
 
         if (!$user->activateAccount()) {
             Yii::$app->session->setFlash('error', Html::encode($user->username). Yii::t(
-                'app',
+                    'app',
                     ' your account could not be activated, please contact us!'
-            ));
+                ));
             return $this->goHome();
         }
 

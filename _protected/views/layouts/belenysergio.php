@@ -34,6 +34,8 @@ AppAsset::register($this);
         <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
               crossorigin="anonymous">
+        <?php $this->registerJsFile('@web/themes/light/js/timer.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
+        <?php $this->registerJsFile('@web/themes/light/js/css3-animate-it-min.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
         <?php $this->head() ?>
     </head>
     <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
