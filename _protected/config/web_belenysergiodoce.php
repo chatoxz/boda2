@@ -154,7 +154,7 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
-    'defaultRoute' => 'site/belenysergiod',
+    'defaultRoute' => 'site/belenysergiodoce',
 ];
 
 if (YII_ENV_DEV) {
