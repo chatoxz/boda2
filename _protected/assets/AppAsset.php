@@ -30,8 +30,7 @@ class AppAsset extends AssetBundle
 
     public $js = [
         'js/main.js',
-        'js/timer.js',
-        'js/css3-animate-it-min.js',
+
     ];
 
     public $depends = [

@@ -1,14 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: chatoxz
- * Date: 21/3/2019
- * Time: 15:40
- */
-?>
-<?php
-/* @var $this yii\web\View */
-
 /*
 colores
 #C7B38A
