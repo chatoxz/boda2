@@ -38,8 +38,6 @@ AppAsset::register($this);
         <?= Html::csrfMetaTags() ?>
         <title><?= Html::encode($this->title) ?></title>
         <link href='/themes/light/css/backend.css' rel='stylesheet'>
-        <link href='/themes/light/css/common.css' rel='stylesheet'>
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">
         <?php $this->head() ?>
     </head>
     <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>

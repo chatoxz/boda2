@@ -26,13 +26,13 @@
         Banco Nación
     </div>
     <!--<div class="item_regalo">
-        <img src="/themes/light/img/death_star.png" width="30" height="30">
+        <img src="/themes/light/img/belenysergio/como llegar.png" width="40" height="40">
         <span> N° de Cuenta </span>
         <span> 462-321144/9</span>
         </span>
     </div>-->
     <div class="item_regalo">
-        <!--<img src="/themes/light/img/.png" width="30" height="30">-->
+        <img src="/themes/light/img/belenysergio/como llegar.png" width="40" height="40">
         <span> N° de CBU </span>
         <span> 0110405330040514704101</span>
     </div>
@@ -42,16 +42,16 @@
         <span> CARRERAS.SEBASTIAN </span>
     </div>-->
     <div class="item_regalo">
-        <!--<img src="/themes/light/img/.png" width="30" height="30">-->
+        <img src="/themes/light/img/belenysergio/como llegar.png" width="40" height="40">
         <span> Titular</span>
         <span> Castillo Ana Belén</span>
     </div>
     <!--<div class="item_regalo">
-        <img src="/themes/light/img/.png" width="30" height="30">
+        <img src="/themes/light/img/belenysergio/como llegar.png" width="40" height="40">
         <span> CUIL/CUIT </span>
         <span> 23-31254260-9 </span>
     </div>-->
-    <div style="padding-bottom: 0px;margin-bottom: 20px;font-size:26px">
+    <div style="padding-bottom: 0px;margin-top: 40px;font-size:26px">
         * Podes llevar la plata el dia del casamiento tendremos lista una urna.
     </div>
 </div>

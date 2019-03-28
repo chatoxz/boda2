@@ -12,11 +12,12 @@ use kartik\select2\Select2;
 
 ?>
 
-<div class="invitado-update" style="font-family: textoIntermedioTitPpalFont;font-size: 18px ">
-    <?php //var_dump($model) ;?>
+<div class="invitado-update" style="font-size: 18px ">
 
-    <div class="titulo_2_black" > Confirmanos y dejanos un saludo </div>
-
+    <div class="titulo_2_black animatedParent" style="margin-bottom: 30px">
+        <img class="slowest animated slideInLeft" src="/themes/light/img/belenysergio/compromiso.png" alt="" width="%" height="33">
+        Confirmanos y dejanos un saludo
+    </div>
     <?php $form = ActiveForm::begin(['type' => ActiveForm::TYPE_INLINE,'options' => ['enctype' => 'multipart/form-data', 'id' => 'id_form_confirmar']]); ?>
 
     <div style="display: none">
@@ -49,7 +50,6 @@ use kartik\select2\Select2;
             <?= Html::submitButton('Confirmar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
         </div>
     </div>
-
 
     <?php ActiveForm::end(); ?>
 

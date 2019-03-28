@@ -20,7 +20,7 @@ use app\models\Invitado;
     public function rules()
     {
         return [
-            [['id', 'id_boda', 'id_confirmacion'], 'integer'],
+            [['id', 'id_boda', 'id_confirmacion','despues_doce'], 'integer'],
             [['nombre', 'mensaje'], 'safe'],
         ];
     }
@@ -49,8 +49,8 @@ use app\models\Invitado;
             'query' => $query,
         ]);
         $dataProvider->getSort()->attributes['mesa_nombre'] = [
-            'asc'=>['mesa.numero'=>SORT_ASC],
-            'desc'=>['mesa.numero'=>SORT_DESC],
+            'asc'=>['mesa.nombre'=>SORT_ASC],
+            'desc'=>['mesa.nombre'=>SORT_DESC],
         ];
         $this->load($params);
 
@@ -65,12 +65,12 @@ use app\models\Invitado;
             'id' => $this->id,
             'invitado.id_boda' => $this->id_boda,
             'id_confirmacion' => $this->id_confirmacion,
+            'despues_doce' => $this->despues_doce,
+            'mesa.id' => $this->mesa_nombre,
         ]);
 
         $query->andFilterWhere(['like', 'invitado.nombre', $this->nombre])
-            ->andFilterWhere(['like', 'mensaje', $this->mensaje])
-            ->andFilterWhere(['like', 'mesa.nombre', $this->mesa_nombre])
-            ->andFilterWhere(['like', 'mesa.nombre', $this->mesa_nombre]);
+            ->andFilterWhere(['like', 'mensaje', $this->mensaje]);
         //$query->orderBy(['nombre'=>SORT_ASC]);
 
         return $dataProvider;
