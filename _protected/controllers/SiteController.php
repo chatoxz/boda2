@@ -153,21 +153,25 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionConfirmar($id = 2)
+    public function actionConfirmar()
     {
-        $id_boda = $id;
+        $id_boda = 4;
         $request = Yii::$app->request;
         $model = new Invitado();
-        $model->id = 0;
+        //$model->id = 0;
         $model->id_boda = $id_boda;
-        $invitados = ArrayHelper::map(Invitado::find()->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
+        $invitados = ArrayHelper::map(Invitado::find()
+			->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
 
         //var_dump($model);
         if ($request->isGet) {
+	    $model->id = 0;
             return $this->renderAjax('confirmar', ['model' => $model, 'invitados' => $invitados]);
         } else {
             if ($model->load(Yii::$app->request->post())) {
-                $invitado = Invitado::findOne(['id' => $model->id ]);
+	//	var_dump(Yii::$app->request->post()["Invitado"]["id"]);
+                $invitado = Invitado::findOne(['id' => Yii::$app->request->post()["Invitado"]["id"] ]);
+	//	var_dump($model);
                 $invitado->mensaje = $model->mensaje;
                 $invitado->id_confirmacion = $model->id_confirmacion;
                 $invitado->save();

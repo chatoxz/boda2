@@ -24,12 +24,12 @@ $id_boda = 4;
 
     <div style="background-color: rgba(255, 255, 255, 0.41); width: 100%">
         <div class="container container_carrousel" style="">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                   <!-- <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
                     <li data-target="#myCarousel" data-slide-to="3"></li>
                     <li data-target="#myCarousel" data-slide-to="4"></li>-->
                 </ol>
@@ -177,7 +177,7 @@ $id_boda = 4;
         <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>compromiso.png" height="133" width="%" alt="">
         <div class="slowest  animated bounceInDown">
             <div class="titulo_nombres" style="font-size:60px">¡Te esperamos para compartir!</div>
-            <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title="<?= $titulo ?>" value="confirmar?id=<?= $id_boda?>">
+            <button class="btn btn-como-llegar  modalButton" style="margin-top: 30px;" title="<?= $titulo ?>" value="confirmar">
                 <i class="fas fa-star"></i><span> Confirmar asistencia</span>
             </button>
         </div>
