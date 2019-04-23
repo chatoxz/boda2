@@ -89,7 +89,7 @@ AppAsset::register($this);
     </div>
     <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
     <footer class="footer">
-        <div class="container" style="display: flex;justify-content: space-around">
+        <div class="container" style="padding-top: 10px;font-size: 26px;">
             <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?>
                 <?= date('Y') ?>
             </p>
