@@ -312,7 +312,7 @@ body {
     background-image: url("/themes/light/img/walteryvaleria/background.png");
     background-size: initial 110vh;
     background-position: top;
-    background-position-x: 741px;
+    /*background-position-x: 741px;*/
   }
 }
 
