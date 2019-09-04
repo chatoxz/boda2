@@ -1,0 +1,365 @@
+/* background-image: repeating-linear-gradient(-45deg,#fff,#000 16px) */
+colores {
+  color: #2e9093;
+  color: #a0dce1;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.loader_muy_grande,
+.loader_chico,
+.loader {
+  border-top-color: #a0dce1 !important;
+}
+
+/* INICIO NAV DE LA PAGINA DE INICIO INICIO NAV DE LA PAGINA DE INICIO INICIO NAV DE LA PAGINA DE INICIO */
+.navbar-default {
+  height: 50px;
+  background: white !important;
+}
+
+.titulo_modal {
+  color: #2e9093 !important;
+}
+
+.wrap_contenido_pagina {
+  /*margin-top: 50px;*/
+  z-index: -1;
+}
+.fix_nav_bar {
+  height: 50px;
+  position: fixed;
+  width: 100vw;
+  padding: 15px 30px;
+  background-color: white;
+  z-index: 999;
+  opacity: 0.8;
+  font-size: 16px;
+  /*top: 0;
+    right: 0;*/
+}
+.wrap_nav_items {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+}
+.wrap_nav_items a {
+  margin: 0px 15px;
+}
+#nombre_pareja {
+  margin-right: auto; /* no funcionan los "-self" pero si este margin-rigth: auto...
+    de este link saque la info https://stackoverflow.com/questions/49658425/flexbox-justify-self-flex-end-not-working*/
+  /*align-self: flex-start;
+    justify-content: flex-start;*/
+}
+
+.compartir {
+  float: right;
+  z-index: 999;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  display: none;
+  height: 80px;
+  padding-top: 20px;
+}
+
+#st_gdpr_iframe {
+  display: none;
+}
+
+/* FIN NAV DE LA PAGINA DE INICIO FIN NAV DE LA PAGINA DE INICIO FIN NAV DE LA PAGINA DE INICIO FIN NAV DE LA PAGINA DE INICIO */
+body {
+  font-size: 24px;
+  background-size: 100vw auto;
+  background-attachment: initial;
+  font-family: "PT Serif", serif !important;
+}
+
+.container_carrousel {
+  margin: auto !important;
+  padding: 0px !important;
+  width: 80%;
+  height: 800px;
+  overflow-y: hidden;
+}
+/*flechas del slider, las saco xq no son imagenes del mismo tamaño */
+.glyphicon-chevron-right,
+.glyphicon-chevron-left {
+  display: none !important;
+}
+
+.imagen_separadora {
+  background-color: rgba(255, 255, 255, 0.41);
+}
+
+.titulo_nombres {
+  font-family: "Great Vibes", cursive !important;
+  font-size: 80px;
+}
+
+.nos_casamos {
+  font-size: 48px;
+  margin: 20px;
+  font-weight: 300;
+}
+
+.texto_nos_casamos {
+  font-weight: 300;
+  margin: auto;
+}
+
+.time_up {
+  display: block !important;
+  font-size: 36px;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-style: normal;
+  flex-wrap: wrap;
+}
+
+.number-wrap {
+  width: 100px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: none;
+  letter-spacing: -2px;
+  word-spacing: 0;
+  line-height: 1.3;
+  color: #28262b;
+  font-family: "Great Vibes", cursive !important;
+  font-family: "PT Serif", serif !important;
+}
+
+.period {
+  font-weight: 400;
+}
+
+.separador-number-wrap {
+  width: 30px;
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anillos,
+.brindis {
+  max-width: 550px;
+}
+
+.btn-como-llegar span {
+  /*font-family: 'Rubik', sans-serif !important;*/
+  font-family: "Great Vibes", cursive !important;
+}
+
+.btn-como-llegar {
+  background: none !important;
+  background-color: #ffffff !important;
+  border-color: #efe9da !important;
+  /*color: #2C2C31;
+    color: #EFE9DA;
+    color: #8B6F45 !important;*/
+  color: #8b6f45 !important;
+
+  border-radius: 30px !important;
+  border-width: 2px !important;
+  font-size: 30px !important;
+  padding: 5px 40px !important;
+  font-weight: 500 !important;
+}
+
+.btn-como-llegar:hover {
+  color: #efe9da !important;
+  background-color: #2c2c31 !important;
+  /*border-color: #A0DCE1 !important;*/
+  box-shadow: 0 10px 40px 0 #8b6f45 !important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  -moz-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;
+  opacity: 1 !important;
+}
+
+.fas,
+.far {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.wrap_dress_code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.width_70 {
+  width: 70%;
+}
+
+.wrap_testigos_padrinos {
+  background-color: rgba(255, 255, 255, 0.41);
+  /*background-color: rgb(248, 248, 250);
+    background-color: #C7B38A;
+    background-color: #FFE8B2;
+    background-color: #8B7D62;*/
+  padding: 40px 15%;
+}
+
+.wrap_imagenes_padrinos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.div_foto_padrinx {
+  border-radius: 100%;
+  width: 220px;
+  overflow: hidden;
+  height: 220px;
+  margin: auto;
+}
+
+.div_foto_padrinx img {
+  position: absolute;
+  left: -58px;
+  top: -1%;
+  transition-duration: 500ms;
+}
+
+.wrap_card {
+  width: 50%;
+  margin: auto;
+  /*padding: 40px;*/
+  line-height: 0px;
+}
+
+.wrap_card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item_regalo {
+  font-size: 26px;
+}
+.wrap_regalo {
+  display: block;
+  font-size: 26px;
+}
+.wrap_regalo:focus,
+.wrap_regalo:active,
+.wrap_regalo:hover {
+  text-decoration: none;
+}
+
+.texto_padrinos {
+  font-size: 18px;
+}
+
+/* mobile version mobile version mobile version mobile version mobile version mobile version mobile version mobile version mobile version */
+/*result;ado del modal*/
+.resultado {
+  margin: 10px 30px;
+  color: #8b7d62 !important;
+  background-color: transparent !important;
+  border-color: #8b7d62 !important;
+  margin-top: 30px !important;
+}
+.footer {
+  font-family: "Great Vibes", cursive;
+  padding-top: 15px;
+  font-size: 24px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #8b6f45 !important;
+  color: white;
+  /*color: #2C2C31;
+    color: #EFE9DA;
+    color: #8B6F45 !important;*/
+}
+
+@media (max-width: 1400px) {
+  .container_carrousel {
+    width: 100% !important;
+  }
+}
+@media (max-width: 800px) {
+  .container_carrousel {
+    max-height: 500px;
+    height: auto !important;
+  }
+}
+@media (min-width: 601px) {
+  body {
+    background-image: url("/themes/light/img/walteryvaleria/background.png");
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("/themes/light/img/walteryvaleria/background.png");
+    background-size: initial 110vh;
+    background-position: top;
+    background-position-x: 741px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container_carrousel {
+    width: 100% !important;
+  }
+  .titulo_nombres {
+    font-size: 50px !important;
+  }
+
+  .nos_casamos {
+    font-size: 35px !important;
+  }
+
+  .seccion {
+    font-size: 20px !important;
+  }
+  .width_70 {
+    width: 95% !important;
+  }
+  .number-wrap {
+    width: 100% !important;
+  }
+
+  .texto_padrinx {
+    margin: 20px 0px !important;
+    font-size: 30px !important;
+  }
+  .btn-como-llegar {
+    max-width: 315px !important;
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-evenly !important;
+    margin: auto !important;
+  }
+  .footer {
+    font-size: 14px !important;
+    color: white !important;
+    height: 50px;
+  }
+}
+@media (max-width: 680px) {
+  .separador-number-wrap {
+    display: none !important;
+  }
+  .number-wrap {
+    width: 40% !important;
+  }
+}
