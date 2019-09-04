@@ -21,10 +21,10 @@ class InvitadoController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'view', 'update', 'create','delete'],
+                'only' => ['index', 'view', 'update', 'create', 'delete'],
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'update', 'create','delete'],
+                        'actions' => ['index', 'view', 'update', 'create', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -58,9 +58,9 @@ class InvitadoController extends Controller
 
         $invitados = Invitado::find();
         $sin_confirmar = $invitados->where(['id_boda' => $id_boda, 'id_confirmacion' => '0'])->count();
-        $confirmados = $invitados->where(['id_boda' => $id_boda,'id_confirmacion' => '1'])->count();
-        $no_iran = $invitados->where(['id_boda' => $id_boda,'id_confirmacion' => '2'])->count();
-        $despues_doce = $invitados->where(['id_boda' => $id_boda,'despues_doce' => '1'])->count();
+        $confirmados = $invitados->where(['id_boda' => $id_boda, 'id_confirmacion' => '1'])->count();
+        $no_iran = $invitados->where(['id_boda' => $id_boda, 'id_confirmacion' => '2'])->count();
+        $despues_doce = $invitados->where(['id_boda' => $id_boda, 'despues_doce' => '1'])->count();
         $todos = $invitados->where(['id_boda' => $id_boda])->count();
 
         return $this->render('index', [
@@ -121,10 +121,10 @@ class InvitadoController extends Controller
 
         if ($model->loadAll(Yii::$app->request->post()) && $model->save()) {
             //actualizo o creo la entrada en mesainvitado.
-            if($this->findModel($id)->mesaInvitado){
+            if ($this->findModel($id)->mesaInvitado) {
                 $id_mesa_invitado = $this->findModel($id)->mesaInvitado->id;
                 $mesa_invitado = MesaInvitado::findOne(['id' => $id_mesa_invitado]);
-            }else{
+            } else {
                 $mesa_invitado = new MesaInvitado();
             }
             $mesa_invitado->id_mesa = $model->id_mesa;
@@ -133,7 +133,7 @@ class InvitadoController extends Controller
             //return $this->redirect(['view', 'id' => $model->id]);
             // return $this->redirect(['index']);
         } else {
-            if($this->findModel($id)->mesaInvitado){
+            if ($this->findModel($id)->mesaInvitado) {
                 $model->id_mesa = $this->findModel($id)->mesaInvitado->id_mesa;
             }
             return $this->renderAjax('update', [

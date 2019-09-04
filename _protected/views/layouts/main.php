@@ -6,43 +6,34 @@ use app\assets\AppAsset;
 use app\models\Instancia;
 use app\models\InstanciaUser;
 use app\models\Torneo;
-use app\widgets\Alert;
 use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Url;
-use yii\web\View;
-use yii\widgets\Breadcrumbs;
 
+if (empty($message)) {
+    $message = '';
+}
+//Yii::trace($message, $category = application);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-    <!DOCTYPE html>
-    <html lang="<?= Yii::$app->language ?>">
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
 
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <link rel="shortcut icon" href="/themes/light/img/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <link href='/themes/light/css/backend.css' rel='stylesheet'>
+    <?php $this->head() ?>
+</head>
+<?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
 
-<?php
-
-//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
-//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
-//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
-//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
-//LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND LAYOUT DEL BACKEND
-
-?>
-    <head>
-        <meta charset="<?= Yii::$app->charset ?>">
-        <link rel="shortcut icon" href="/themes/light/img/favicon.png" type="image/png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
-        <link href='/themes/light/css/backend.css' rel='stylesheet'>
-        <?php $this->head() ?>
-    </head>
-    <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
-
-    <body id="id_body">
+<body id="id_body">
     <?php $this->beginBody() ?>
     <?php
     if (!Yii::$app->user->isGuest) {
@@ -60,7 +51,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => Yii::t('app', 'Mesas'), 'url' => ['/mesa/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['/trafic/index']];
         $subMenuItemsUsuario[] = [
-            'label' => Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
+            'label' => Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
             'linkOptions' => ['data-method' => 'post']
         ];
@@ -70,21 +61,29 @@ AppAsset::register($this);
             'label' => 'Usuario',
             'items' => $subMenuItemsUsuario
         ];
+        //GII
+        if (Yii::$app->user->can('theCreator')) {
+            $menuItems[] = ['label' => Yii::t('app', 'Gii'), 'url' => '../gii'];
+        }
+
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => $menuItems,
         ]);
         NavBar::end();
         //$this->registerCss(".wrap { background: white !important; }");
-        $this->registerCss(".navbar-default { height: 50px; background: white !important; }");
+        //$this->registerCss(".navbar-default { height: 50px; background: white !important; }");
 
     } ?>
 
 
-    <?php//contenido de la pagina?>
+    <? php //contenido de la pagina
+    ?>
     <div class="wrap_contenido_pagina">
-        <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],]) ?>
-        <?php //Alert::widget() ?>
+        <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],])
+        ?>
+        <?php //Alert::widget()
+        ?>
         <?= $content ?>
     </div>
     <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
@@ -102,8 +101,8 @@ AppAsset::register($this);
 
     <?php
     // MODAL PARA USARASE EN TODOS LAS VISTAS
-    Modal::begin([ 'options' => [
-        'id' => 'modal','style' => 'color:black',
+    Modal::begin(['options' => [
+        'id' => 'modal', 'style' => 'color:black',
         'tabindex' => false // important for Select2 to work properly
     ], 'id' => 'modal', 'header' => '<div class="titulo_nombres">Boda</div>', 'size' => '']);
     echo '<div id="modalContent" ></div>';
@@ -112,8 +111,8 @@ AppAsset::register($this);
     ?>
 
     <?php $this->endBody() ?>
-    </body>
+</body>
 
-    </html>
+</html>
 <?php $this->endPage() ?>
 <?php //echo include_once(dirname(__FILE__) . '/../../../pa_antiadblock_1738158.php');

@@ -1,17 +1,36 @@
 html,
 body {
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    padding: 15px !important;
+    padding: 0px 15px !important;
+    overflow-x: hidden;
 }
+
+.navbar-header{
+    overflow: hidden;
+    max-height: 50px;
+}
+
+.wrap_contenido_pagina{
+    padding: 40px 15px 20px;
+    resize: horizontal;
+    overflow: hidden;
+}
+
 .loader_grande, .loader_chico, .loader_muy_grande, .loader{
     border-color: #02010110 !important;
     border-top-color: black !important;
 }
 a:hover, a:focus, a:active {
-    color: white !important;
+    /*color: white !important;*/
     text-decoration: none !important;
 }
+nav a:hover, nav a:focus, nav a:active,
+footer a:hover, footer a:focus, footer a:active {
+    color: initial !important;
+}
+.wrap_contenido_pagina {
+    min-height: calc(100vh - 60px);
+}
+
 .breadcrumb{
     display: none !important;
 }
@@ -34,13 +53,17 @@ a:hover, a:focus, a:active {
 }
 
 .footer {
-    font-family: Ubuntu,"Times New Roman",Times,serif;
-    width: 100%;
-    margin-top: 50px;
+    width: 100vw;
+    height: 60px;
+    padding-top: 15px;
     font-size: 18px;
-    position: relative;
-    left: 0;
-    bottom: 0px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    /*color: #ababab;*/
+    border-top: 1px solid #ababab ;
+    position: absolute;
+    left: 0px;
 }
 .footer .container{
     margin-bottom: 0px !important;

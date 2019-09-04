@@ -1,54 +1,50 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: chatoxz
  * Date: 21/3/2019
  * Time: 16:34
- */?>
+ */ ?>
 
 <?php
 /* @var $this \yii\web\View */
 /* @var $content string */
 
 use app\assets\AppAsset;
-use app\models\Instancia;
-use app\models\InstanciaUser;
-use app\models\Torneo;
-use app\widgets\Alert;
 use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\helpers\Url;
 use yii\web\View;
-use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-    <!DOCTYPE html>
-    <html lang="<?= Yii::$app->language ?>">
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
 
-    <head>
-        <meta charset="<?= Yii::$app->charset ?>">
-        <link rel="shortcut icon" href="/themes/light/img/favicon.png" type="image/png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?>
-        </title>
-        <link href='/themes/light/css/common.css' rel='stylesheet'>
-        <link href='/themes/light/css/beto.css' rel='stylesheet' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500|Rubik" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-	      crossorigin="anonymous">
-        <?php $this->registerJsFile('@web/themes/light/js/timer.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
-        <?php $this->registerJsFile('@web/themes/light/js/css3-animate-it-min.js',['depends' => [\yii\web\JqueryAsset::className()]]); ?>
-        <?php $this->head() ?>
-    </head>
-    <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <link rel="shortcut icon" href="/themes/light/img/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?>
+    </title>
+    <link href='/themes/light/css/common.css' rel='stylesheet'>
+    <link href='/themes/light/css/beto.css' rel='stylesheet' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500|Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <?php $this->registerJs("var d = new Date();var countDownDate = new Date('Mar 16, '+d.getFullYear()+' 21:30:00').getTime();", View::POS_HEAD); ?>
+    <?php $this->registerJsFile('@web/themes/light/js/timer.js', ['depends' => [\yii\web\JqueryAsset::className()]]); ?>
+    <?php $this->registerJsFile('@web/themes/light/js/css3-animate-it-min.js', ['depends' => [\yii\web\JqueryAsset::className()]]); ?>
+    <?php $this->head() ?>
+</head>
+<?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
 
-    <body id="id_body">
+<body id="id_body">
     <?php $this->beginBody() ?>
     <?php
     if (!Yii::$app->user->isGuest) {
@@ -65,7 +61,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => Yii::t('app', 'Mesas'), 'url' => ['/mesa/index']];
         $menuItems[] = ['label' => Yii::t('app', 'Trafic'), 'url' => ['/trafic/index']];
         $subMenuItemsUsuario[] = [
-            'label' => Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
+            'label' => Yii::t('app', 'Logout') . ' (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
             'linkOptions' => ['data-method' => 'post']
         ];
@@ -83,7 +79,8 @@ AppAsset::register($this);
     } ?>
 
 
-    <?php//contenido de la pagina?>
+    <? php //contenido de la pagina
+    ?>
     <div class="wrap_contenido_pagina">
         <?= $content ?>
     </div>
@@ -102,8 +99,8 @@ AppAsset::register($this);
 
     <?php
     // MODAL PARA USARASE EN TODOS LAS VISTAS
-    Modal::begin([ 'options' => [
-        'id' => 'modal','style' => 'color:black',
+    Modal::begin(['options' => [
+        'id' => 'modal', 'style' => 'color:black',
         'tabindex' => false // important for Select2 to work properly
     ], 'id' => 'modal', 'header' => '<div class="titulo_nombres">Boda</div>', 'size' => '']);
     echo '<div id="modalContent" ></div>';
@@ -112,9 +109,8 @@ AppAsset::register($this);
     ?>
 
     <?php $this->endBody() ?>
-    </body>
+</body>
 
-    </html>
+</html>
 <?php $this->endPage() ?>
 <?php //echo include_once(dirname(__FILE__) . '/../../../pa_antiadblock_1738158.php');
-

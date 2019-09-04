@@ -1,4 +1,5 @@
 <?php
+
 namespace app\controllers;
 
 use app\models\Invitado;
@@ -112,6 +113,17 @@ class SiteController extends Controller
         $this->layout = 'belenysergio';
         return $this->render('belenysergiod12');
     }
+    /**
+     * Displays the index (home) page.
+     * Use it in case your home page contains static content.
+     *
+     * @return string
+     */
+    public function actionBelenysergiorework()
+    {
+        $this->layout = 'belenysergiorework';
+        return $this->render('belenysergiorework');
+    }
 
     /**
      * Displays the index (home) page.
@@ -122,7 +134,19 @@ class SiteController extends Controller
     public function actionAngelycarla()
     {
         $this->layout = 'angelycarla';
-        return $this->render('index');
+        return $this->render('angelycarla');
+    }
+
+    /**
+     * Displays the index (home) page.
+     * Use it in case your home page contains static content.
+     *
+     * @return string
+     */
+    public function actionWalteryvaleria()
+    {
+        $this->layout = 'walteryvaleria';
+        return $this->render('walteryvaleria');
     }
 
 
@@ -137,6 +161,7 @@ class SiteController extends Controller
     {
         return $this->renderAjax('regalos');
     }
+
     /**
      * Displays the regalos page.
      * Use it in case your home page contains static content.
@@ -155,23 +180,22 @@ class SiteController extends Controller
      */
     public function actionConfirmar()
     {
-        $id_boda = 4;
+        $id_boda = 5;
         $request = Yii::$app->request;
         $model = new Invitado();
         //$model->id = 0;
         $model->id_boda = $id_boda;
         $invitados = ArrayHelper::map(Invitado::find()
-			->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
+            ->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
 
         //var_dump($model);
         if ($request->isGet) {
-	    $model->id = 0;
+            $model->id = 0;
             return $this->renderAjax('confirmar', ['model' => $model, 'invitados' => $invitados]);
         } else {
             if ($model->load(Yii::$app->request->post())) {
-	//	var_dump(Yii::$app->request->post()["Invitado"]["id"]);
-                $invitado = Invitado::findOne(['id' => Yii::$app->request->post()["Invitado"]["id"] ]);
-	//	var_dump($model);
+                //	var_dump(Yii::$app->request->post()["Invitado"]["id"]);
+                $invitado = Invitado::findOne(['id' => Yii::$app->request->post()["Invitado"]["id"]]);
                 $invitado->mensaje = $model->mensaje;
                 $invitado->id_confirmacion = $model->id_confirmacion;
                 $invitado->save();
@@ -199,15 +223,15 @@ class SiteController extends Controller
             return $this->renderAjax('trafic', ['model' => $model, 'invitados' => $invitados]);
         } else {
             if ($model->load(Yii::$app->request->post())) {
-                $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda ]);
-                if(sizeof($trafic) == 0){
+                $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda]);
+                if (sizeof($trafic) == 0) {
                     $trafic = new Trafic();
                     $trafic->telefono = $model->mensaje;
                     $trafic->id_boda = $id_boda;
                     $trafic->id_invitado = $model->id;
                     $trafic->save();
-                }else{
-                    $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda ]);
+                } else {
+                    $trafic = Trafic::findOne(['id_invitado' => $model->id, 'id_boda' => $id_boda]);
                     $trafic->telefono = $model->mensaje;
                     $trafic->save();
                 }
@@ -316,8 +340,7 @@ class SiteController extends Controller
         }
 
         // login was successful, let user go wherever he previously wanted
-        return $this->redirect('invitado/index');
-        ;
+        return $this->redirect('invitado/index');;
     }
 
     /**
@@ -436,7 +459,7 @@ class SiteController extends Controller
             Yii::$app->session->setFlash('warning', Yii::t('app', 'Please try to log in.'));
 
             // log this error, so we can debug possible problem easier.
-            Yii::error('Login after sign up failed! User '.Html::encode($user->username).' could not log in.');
+            Yii::error('Login after sign up failed! User ' . Html::encode($user->username) . ' could not log in.');
         }
 
         return $this->goHome();
@@ -459,12 +482,12 @@ class SiteController extends Controller
             ));
 
             // log this error, so we can debug possible problem easier.
-            Yii::error('Signup failed! User '.Html::encode($user->username).' could not sign up.
+            Yii::error('Signup failed! User ' . Html::encode($user->username) . ' could not sign up.
                 Possible causes: verification email could not be sent.');
         }
 
         // everything is OK
-        Yii::$app->session->setFlash('success', Yii::t('app', 'Hello').' '.Html::encode($user->username). '. ' .
+        Yii::$app->session->setFlash('success', Yii::t('app', 'Hello') . ' ' . Html::encode($user->username) . '. ' .
             Yii::t('app', 'To be able to log in, you need to confirm your registration.
                 Please check your email, we have sent you a message.'));
     }
@@ -490,15 +513,15 @@ class SiteController extends Controller
         }
 
         if (!$user->activateAccount()) {
-            Yii::$app->session->setFlash('error', Html::encode($user->username). Yii::t(
-                    'app',
-                    ' your account could not be activated, please contact us!'
-                ));
+            Yii::$app->session->setFlash('error', Html::encode($user->username) . Yii::t(
+                'app',
+                ' your account could not be activated, please contact us!'
+            ));
             return $this->goHome();
         }
 
-        Yii::$app->session->setFlash('success', Yii::t('app', 'Success! You can now log in.').' '.
-            Yii::t('app', 'Thank you').' '.Html::encode($user->username).' '.Yii::t('app', 'for joining us!'));
+        Yii::$app->session->setFlash('success', Yii::t('app', 'Success! You can now log in.') . ' ' .
+            Yii::t('app', 'Thank you') . ' ' . Html::encode($user->username) . ' ' . Yii::t('app', 'for joining us!'));
 
         return $this->redirect('login');
     }

@@ -21,8 +21,8 @@ class Invitado extends BaseInvitado
         return array_replace_recursive(parent::rules(),
 	    [
             [['id_boda', 'nombre'], 'required'],
-            [['id_boda', 'id_confirmacion', 'despues_doce'], 'integer'],
-            [['mensaje','mesa_nombre'], 'string'],
+            [['id_boda', 'id_confirmacion', 'despues_doce','id_comida'], 'integer'],
+            [['mensaje','mesa_nombre','comida_comentario'], 'string'],
             [['nombre'], 'string', 'max' => 255],
             [['id_mesa'], 'safe']
         ]);

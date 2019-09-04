@@ -20,8 +20,8 @@ use app\models\Invitado;
     public function rules()
     {
         return [
-            [['id', 'id_boda', 'id_confirmacion','despues_doce'], 'integer'],
-            [['nombre', 'mensaje'], 'safe'],
+            [['id', 'id_boda', 'id_confirmacion','despues_doce','id_comida'], 'integer'],
+            [['nombre', 'mensaje','comida_comentario'], 'safe'],
         ];
     }
 
@@ -65,12 +65,14 @@ use app\models\Invitado;
             'id' => $this->id,
             'invitado.id_boda' => $this->id_boda,
             'id_confirmacion' => $this->id_confirmacion,
+            'id_comida' => $this->id_comida,
             'despues_doce' => $this->despues_doce,
             'mesa.id' => $this->mesa_nombre,
         ]);
 
         $query->andFilterWhere(['like', 'invitado.nombre', $this->nombre])
-            ->andFilterWhere(['like', 'mensaje', $this->mensaje]);
+            ->andFilterWhere(['like', 'mensaje', $this->mensaje])
+            ->andFilterWhere(['like', 'comida_comentario', $this->comida_comentario]);
         //$query->orderBy(['nombre'=>SORT_ASC]);
 
         return $dataProvider;

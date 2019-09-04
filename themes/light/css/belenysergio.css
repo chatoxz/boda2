@@ -1,32 +1,79 @@
 
+/* background-image: repeating-linear-gradient(-45deg,#fff,#000 16px) */
 colores {
     color: #2E9093;
     color: #A0DCE1;
     color: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .loader_muy_grande, .loader_chico, .loader {
     border-top-color: #A0DCE1 !important;
+}
+
+/* INICIO NAV DE LA PAGINA DE INICIO INICIO NAV DE LA PAGINA DE INICIO INICIO NAV DE LA PAGINA DE INICIO */
+.navbar-default {
+    height: 50px;
+    background: white !important;
 }
 
 .titulo_modal{
     color: #2E9093!important;
 }
 
+.wrap_contenido_pagina{
+    /*margin-top: 50px;*/
+    z-index: -1;
+}
+.fix_nav_bar{
+    height: 50px;
+    position: fixed;
+    width: 100vw;
+    padding: 15px 30px;
+    background-color: white;
+    z-index: 999;
+    opacity: 0.8;
+    font-size: 16px;
+    /*top: 0;
+    right: 0;*/
+}
+.wrap_nav_items{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
+.wrap_nav_items a{
+    margin: 0px 15px;
+}
+#nombre_pareja{
+    margin-right: auto;/* no funcionan los "-self" pero si este margin-rigth: auto...
+    de este link saque la info https://stackoverflow.com/questions/49658425/flexbox-justify-self-flex-end-not-working*/
+    /*align-self: flex-start;
+    justify-content: flex-start;*/
+}
+
+.compartir{
+    float: right;
+    z-index: 999;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    display: none;
+    height: 80px;
+    padding-top: 20px;
+}
+
+#st_gdpr_iframe{
+    display: none;
+}
+
+/* FIN NAV DE LA PAGINA DE INICIO FIN NAV DE LA PAGINA DE INICIO FIN NAV DE LA PAGINA DE INICIO FIN NAV DE LA PAGINA DE INICIO */
 body {
-    margin: 0;
-    background-color: transparent !important;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: auto 150vh;
-    text-align: center;
-    font-family: 'Questrial', sans-serif !important;
-    font-display: auto;
     font-size: 24px;
-    overflow-x: hidden !important;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
 }
 
 .container_carrousel{
@@ -41,15 +88,7 @@ body {
     display: none !important;
 }
 
-.seccion {
-    display: block;
-    margin: auto;
-    text-align: center;
-    font-family: 'Questrial', sans-serif !important;
-    margin-top: 75px;
-    font-size: 28px;
-    overflow: hidden;
-}
+
 
 .imagen_separadora {
     background-color: rgba(255, 255, 255, 0.41);
@@ -69,6 +108,11 @@ body {
 .texto_nos_casamos {
     font-weight: 300;
     margin: auto;
+}
+
+.time_up{
+    display: block !important;
+    font-size: 36px;
 }
 
 .countdown {
@@ -188,13 +232,9 @@ body {
     position: absolute;
     left: -58px;
     top: -1%;
+    transition-duration: 500ms;
 }
 
-.seccion_background_gray {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    background-color: #efefef;
-}
 
 .wrap_card {
     width: 50%;
@@ -304,7 +344,8 @@ body {
     }
     .footer{
         font-size: 14px !important;
-        color: black !important;
+        color: white !important;
+        height: 50px;
     }
 }
 @media  (max-width: 680px) {

@@ -25,6 +25,7 @@ class AppAsset extends AssetBundle
         //'css/bootstrap.min.css',
         //'css/style.css',
         'css/loaders_spinners.css',
+        'css/loaders_spinners_v2.css',
         'css/animations.css',
     ];
 

@@ -13,6 +13,8 @@ use Yii;
  * @property integer $id_confirmacion
  * @property string $mensaje
  * @property integer $despues_doce
+ * @property integer $id_comida
+ * @property integer $comida_comentario
  *
  * @property \app\models\Boda $boda
  * @property \app\models\Confirmacion $confirmacion
@@ -46,8 +48,8 @@ class Invitado extends \yii\db\ActiveRecord
     {
         return [
             [['id_boda', 'nombre'], 'required'],
-            [['id_boda', 'id_confirmacion', 'despues_doce'], 'integer'],
-            [['mensaje'], 'string'],
+            [['id_boda', 'id_confirmacion', 'despues_doce','id_comida'], 'integer'],
+            [['mensaje','comida_comentario'], 'string'],
             [['nombre'], 'string', 'max' => 255]
         ];
     }
@@ -72,6 +74,8 @@ class Invitado extends \yii\db\ActiveRecord
             'id_confirmacion' => 'Id Confirmacion',
             'mensaje' => 'Mensaje',
             'despues_doce' => 'Despues Doce',
+            'id_comida' => 'Comida',
+            'comida_comentario' => 'Detalle de la comida',
         ];
     }
     
@@ -106,7 +110,15 @@ class Invitado extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\app\models\Trafic::className(), ['id_invitado' => 'id']);
     }
-    
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getComida()
+    {
+        return $this->hasOne(\app\models\Comida::className(), ['id' => 'id_comida']);
+    }
+
 
     /**
      * @inheritdoc

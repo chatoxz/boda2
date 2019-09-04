@@ -36,6 +36,17 @@ use kartik\widgets\ActiveForm;
             'allowClear' => true
         ],
     ])->label('Mesa'); ?>
+
+    <?= $form->field($model, 'id_comida')->widget(\kartik\widgets\Select2::classname(), [
+        'data' => \yii\helpers\ArrayHelper::map(\app\models\Comida::find()->orderBy('id')->asArray()->all(), 'id', 'nombre'),
+        'options' => ['placeholder' => 'Mesa'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ])->label('Comida'); ?>
+
+    <?= $form->field($model, 'comida_comentario')->textInput(['maxlength' => true, 'placeholder' => 'Detalle de la comida']) ?>
+
     <?= $form->field($model, 'mensaje')->textarea(['rows' => 2]) ?>
 
     <div class="form-group">

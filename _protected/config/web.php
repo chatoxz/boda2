@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
-    'name' => 'Administracion casamiento',
+    'name' => 'Administracion Casamiento',
     'language' => 'es',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\Aliases'],
@@ -110,11 +110,11 @@ $config = [
                 //'port' => '25',
                 'port' => '587',
                 'encryption' => 'tls',
-                'streamOptions'=>[
-                    'ssl'=>[
-                        'verify_peer'=>false,
-                        'verify_peer_name'=>false,
-                        'allow_self_signed'=>true
+                'streamOptions' => [
+                    'ssl' => [
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                        'allow_self_signed' => true
                     ]
                 ]
             ],
