@@ -22,6 +22,7 @@ a:active,
 .wrap_regalo:active,
 .wrap_regalo:hover {
   color: inherit !important;
+  color: inherit !important;
   text-decoration: none !important;
 }
 

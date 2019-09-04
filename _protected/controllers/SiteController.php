@@ -188,7 +188,7 @@ class SiteController extends Controller
         $invitados = ArrayHelper::map(Invitado::find()
             ->where(['id_boda' => $id_boda])->all(), 'id', 'nombre');
 
-        //var_dump($model);
+        //var_dump($invitados);
         if ($request->isGet) {
             $model->id = 0;
             return $this->renderAjax('confirmar', ['model' => $model, 'invitados' => $invitados]);
@@ -211,7 +211,7 @@ class SiteController extends Controller
      */
     public function actionTrafic()
     {
-        $id_boda = 2;
+        $id_boda = 5;
         $request = Yii::$app->request;
         $model = new Invitado();
         $model->id = 0;

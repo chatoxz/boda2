@@ -67,30 +67,23 @@ AppAsset::register($this);
             'items' => $menuItems,
         ]);
         NavBar::end();
-        //$this->registerCss(".wrap { background: white !important; }");
-        //$this->registerCss(".navbar-collapse { height: auto; background: white !important; }");
-        //$this->registerCss(".modal-body { color: black !important; }");
-        //$this->registerJs('$($(".big_container div")[0]).css("color","black").css("margin","30px");',View::POS_LOAD,"id_script");
     } ?>
 
-    <? php //contenido de la pagina
-    ?>
     <div class="wrap_contenido_pagina">
-        <?php //echo Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],])
-        ?>
-        <?php //Alert::widget()
-        ?>
         <?= $content ?>
     </div>
     <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
     <footer class="footer">
-        <div class="container" style="">
-            <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?>
+        <div class="container" style="font-size: 28px">
+            <p class="pull-left">
+                &copy; <?= Yii::t('app', Yii::$app->name) ?>
                 <?= date('Y') ?>
             </p>
             <p class=""><a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe
                     Studio</a> </p>
-            <!--<p class="pull-right"><?= Yii::powered() ?>
+            <!--<p class="pull-right">
+                <?php //echo Yii::powered()
+                ?>
             </p>-->
         </div>
     </footer>
@@ -111,4 +104,3 @@ AppAsset::register($this);
 
 </html>
 <?php $this->endPage() ?>
-<?php //echo include_once(dirname(__FILE__) . '/../../../pa_antiadblock_1738158.php');

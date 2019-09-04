@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params_walter.php');
 
 $config = [
     'id' => 'basic',
-    'name' => 'Walter y Alexandra',
+    'name' => 'Walter y Valeria',
     'language' => 'es',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\Aliases'],

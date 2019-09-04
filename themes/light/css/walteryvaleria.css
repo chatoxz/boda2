@@ -1,8 +1,10 @@
 /* background-image: repeating-linear-gradient(-45deg,#fff,#000 16px) */
-colores {
-  color: #2e9093;
-  color: #a0dce1;
-  color: #ffffff;
+:root {
+  --color1: #2c2c31;
+  --color2: #efe9da;
+  --color3: #8b6f45;
+  --fuente1: "Great Vibes", cursive;
+  --fuente2: "PT Serif", serif;
 }
 
 html {
@@ -19,10 +21,6 @@ html {
 .navbar-default {
   height: 50px;
   background: white !important;
-}
-
-.titulo_modal {
-  color: #2e9093 !important;
 }
 
 .wrap_contenido_pagina {
@@ -77,7 +75,7 @@ body {
   font-size: 24px;
   background-size: 100vw auto;
   background-attachment: initial;
-  font-family: "PT Serif", serif !important;
+  font-family: var(--fuente2) !important;
 }
 
 .container_carrousel {
@@ -98,8 +96,10 @@ body {
 }
 
 .titulo_nombres {
-  font-family: "Great Vibes", cursive !important;
+  font-family: var(--fuente1) !important;
   font-size: 80px;
+  width: 75%;
+  margin: auto;
 }
 
 .nos_casamos {
@@ -141,8 +141,8 @@ body {
   word-spacing: 0;
   line-height: 1.3;
   color: #28262b;
-  font-family: "Great Vibes", cursive !important;
-  font-family: "PT Serif", serif !important;
+  font-family: var(--fuente1) !important;
+  font-family: var(--fuente2) !important;
 }
 
 .period {
@@ -163,7 +163,7 @@ body {
 
 .btn-como-llegar span {
   /*font-family: 'Rubik', sans-serif !important;*/
-  font-family: "Great Vibes", cursive !important;
+  font-family: var(--fuente1) !important;
 }
 
 .btn-como-llegar {
@@ -185,7 +185,7 @@ body {
 .btn-como-llegar:hover {
   color: #efe9da !important;
   background-color: #2c2c31 !important;
-  /*border-color: #A0DCE1 !important;*/
+  border-color: #2c2c31 !important;
   box-shadow: 0 10px 40px 0 #8b6f45 !important;
   -webkit-transition: all 0.3s ease-in-out !important;
   -moz-transition: all 0.3s ease-in-out !important;
@@ -277,7 +277,7 @@ body {
   margin-top: 30px !important;
 }
 .footer {
-  font-family: "Great Vibes", cursive;
+  font-family: var(--fuente1);
   padding-top: 15px;
   font-size: 24px;
   height: 60px;
@@ -362,4 +362,48 @@ body {
   .number-wrap {
     width: 40% !important;
   }
+}
+
+.titulo_modal {
+  color: #efe9da !important;
+}
+
+.titulo_2_black {
+  font-family: var(--fuente1);
+  font-size: 40px;
+}
+input,
+select,
+.select2 *,
+label {
+  text-align: center;
+}
+.wrap_input_confirmacion {
+  font-family: var(--fuente2) !important;
+  text-align: center;
+  width: 60%;
+  font-size: 23px;
+  margin: auto;
+  color: var(--color1);
+}
+
+.wrap_input_confirmacion > select {
+  text-align: center !important;
+}
+
+.form-group.has-success .control-label {
+  color: var(--color1) !important;
+}
+.select2-container--krajee.select2-container--open .select2-selection,
+.select2-container--krajee .select2-selection:focus {
+  border-color: var(--color2) !important;
+}
+.btn-confirmar {
+  color: var(--color2);
+  background-color: var(--color3);
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: var(--color2) !important;
 }

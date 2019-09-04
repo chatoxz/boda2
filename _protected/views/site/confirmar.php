@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: chatoxz
@@ -12,13 +13,15 @@ use kartik\select2\Select2;
 
 ?>
 
-<div class="invitado-update" style="font-size: 18px ">
+<div class="invitado-update" style=" ">
 
     <div class="titulo_2_black animatedParent" style="margin-bottom: 30px">
-        <img class="slowest animated slideInLeft" src="/themes/light/img/belenysergio/compromiso.png" alt="" width="%" height="33">
         Confirmanos y dejanos un saludo
+        <img class="slowest animated slideInLeft" src="/themes/light/img/walteryvaleria/algo.png" height="60">
     </div>
-    <?php $form = ActiveForm::begin(['type' => ActiveForm::TYPE_INLINE,'options' => ['enctype' => 'multipart/form-data', 'id' => 'id_form_confirmar']]); ?>
+    <?php //$form = ActiveForm::begin(['type' => ActiveForm::TYPE_INLINE, 'options' => ['enctype' => 'multipart/form-data', 'id' => 'id_form_confirmar']]);
+    ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'id' => 'id_form_confirmar']]); ?>
 
     <div style="display: none">
         <?= $form->field($model, 'id_boda')->widget(\kartik\widgets\Select2::classname(), [
@@ -29,8 +32,8 @@ use kartik\select2\Select2;
             ],
         ])->label(false); ?>
     </div>
-    <div class="form-group" style="display: flex; justify-content: space-around;flex-wrap: wrap">
-        <div style="padding: 0px !important;" >
+    <div class="row" style="margin: auto; text-align: center;">
+        <div class="wrap_input_confirmacion" style="">
             <?= $form->field($model, 'id')->widget(Select2::classname(), [
                 'data' => $invitados,
                 'theme' => Select2::THEME_BOOTSTRAP,
@@ -40,17 +43,25 @@ use kartik\select2\Select2;
                 ],
             ])->label('Nombre')->error(false); ?>
         </div>
-        <div style="padding: 0px !important;">
-            <?php echo $form->field($model, 'id_confirmacion')->label('Confirmar Asistencia')->dropDownList(['1' => 'Alli estare!', '2' => 'No podre...']); ?>
+        <div class="wrap_input_confirmacion" style="">
+            <?= $form->field($model, 'id_confirmacion')->label('Confirmar Asistencia')->dropDownList(['1' => 'Alli estare!', '2' => 'No podre...']); ?>
         </div>
-        <div style="padding: 0px !important;">
+        <div class="wrap_input_confirmacion" style="">
             <?= $form->field($model, 'mensaje')->textInput() ?>
         </div>
-        <div style="padding: 0px !important;">
-            <?= Html::submitButton('Confirmar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <div class="wrap_input_confirmacion" style="margin-top: 20px">
+            <?= $form->field($model, 'id_comida')->widget(\kartik\widgets\Select2::classname(), [
+                'data' => \yii\helpers\ArrayHelper::map(\app\models\Comida::find()->orderBy('id')->asArray()->all(), 'id', 'nombre'),
+                'options' => ['placeholder' => ''],
+                'pluginOptions' => [
+                    'allowClear' => true,
+                ],
+            ])->label('Selecciona su comida'); ?>
+        </div>
+        <div class="wrap_input_confirmacion" style="">
+            <?= Html::submitButton('Confirmar', ['class' => 'btn btn-confirmar']) ?>
         </div>
     </div>
 
     <?php ActiveForm::end(); ?>
-
 </div>
