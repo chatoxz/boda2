@@ -24,7 +24,7 @@ html {
 }
 
 .wrap_contenido_pagina {
-  /*margin-top: 50px;*/
+  overflow: hidden;
   z-index: -1;
 }
 .fix_nav_bar {

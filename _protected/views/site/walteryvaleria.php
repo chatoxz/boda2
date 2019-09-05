@@ -1,12 +1,6 @@
 <?php
 /* @var $this yii\web\View */
 
-/*
-colores
-#C7B38A
-#FFE8B2
-#8B7D62
-*/
 
 $this->title = Yii::t('app', Yii::$app->name);
 $carpeta = '/themes/light/img/walteryvaleria/';
@@ -145,16 +139,16 @@ $id_boda = 5;
 <!-- IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO IMAGEN REGALO -->
 <!-- <div class="seccion animatedParent imagen_separadora" style="margin-top: 50px;">
     <img class="brindis slowest  animated bounceInDown" src="<?= $carpeta ?>regalo.png" height="133" width="%" alt="">
-</div> -->
+</div> --->
 <!-- ¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?¿Pensaste en regalos?-->
-<!-- <div class="seccion animatedParent width_70">
+<!--<div class="seccion animatedParent width_70">
     <div class="titulo_nombres slowest  animated bounceInDown">“Acompáñanos en el comienzo de nuestra nueva familia”</div>
-     <div class=" slowest  animated bounceInDown ">
+    <div class=" slowest  animated bounceInDown ">
         Si desean hacernos un regalo, podes ayudarnos con nuestra luna de miel.
     </div>
-</div> -->
+</div>-->
 <!-- BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS BOTON-REGALOS -->
-<!-- <div class="seccion animatedParent">
+<!--<div class="seccion animatedParent">
     <button class="btn btn-como-llegar slowest  animated bounceInDown modalButton" title="Regalos!" value="regalosbelenysergio">
         <i class="fas fa-gifts"></i><span> Regalar!</span>
     </button>
@@ -183,18 +177,3 @@ $id_boda = 5;
         </a>
     </div>
 </div>
-
-<?php /*
-        NOVIOS: Angel Alberto Varela y Carla Estefanía Cruz.
-        IGLESIA: Parroquia San Isidro Labrador, calle E Canton 216, 21.30hrs. 16/03/2019
-        SALÓN: Salón Narcizo Eventos, lules, 22hr a 5.30hr
-        VESTIMENTA: Formal.
-        o	Padrinos de Iglesia novia:
-            -	Roberto Walter Handl
-            -	Hilda Emilia Pérez
-        o	Padrinos de Iglesia novio:
-            -	Blanca Catalina Farhat de Naufe
-            -	Xxx (a confirmar)
-
-*/
-// usuario walter
