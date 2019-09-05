@@ -8,6 +8,7 @@ $this->title = Yii::t('app', Yii::$app->name);
 <link rel="stylesheet" href="/themes/light/css/animations.css" type="text/css">
 
 <div class="site-index">
+
     <!--
     <div class="wrap_first_img" >
         <img  class="first_img" src="/themes/light/img/chatoylou/chato_lou2.jpg" width="100%" alt="">
@@ -231,7 +232,8 @@ $this->title = Yii::t('app', Yii::$app->name);
             <a class="btn btn-default btn-como-llegar modalButton" title="Regalo!" value="regalos" size="">
                 <!--<img src="/themes/light/img/chatoylou/credito3.png" alt="" width="50">-->
                 <span class=" glyphicon glyphicon-bitcoin"></span>
-                <span class="btn-texto">Regalar!</span></a>
+                <span class="btn-texto">Regalar!</span>
+            </a>
         </div>
     </div>
 

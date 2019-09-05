@@ -28,6 +28,9 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='/themes/light/css/chatoylou.css' rel='stylesheet'>
+    <?php $this->registerJsFile('@web/themes/light/js/timer.js', ['depends' => [\yii\web\JqueryAsset::className()]]); ?>
+    <?php $this->registerJsFile('@web/themes/light/js/css3-animate-it-min.js', ['depends' => [\yii\web\JqueryAsset::className()]]); ?>
     <?php $this->head() ?>
 </head>
 <?php $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::to(['/themes/light/img/favicon.png'])]); ?>
@@ -102,10 +105,6 @@ AppAsset::register($this);
 
         <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
         <div class="container-fluid big_container">
-            <?php echo Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
             <?= $content ?>
         </div>
     </div>
@@ -134,5 +133,5 @@ AppAsset::register($this);
 
 </html>
 <?php $this->endPage() ?>
-<?php //echo include_once(dirname(__FILE__) . '/../../../pa_antiadblock_1738158.php'); 
+<?php //echo include_once(dirname(__FILE__) . '/../../../pa_antiadblock_1738158.php');
 ?>
