@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
-    'name' => 'Administracion casamiento',
+    'name' => 'Chato y Lou',
     'language' => 'es',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\Aliases'],
@@ -153,6 +153,7 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
+    'defaultRoute' => 'site/chatoylou',
 ];
 
 if (YII_ENV_DEV) {

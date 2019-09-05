@@ -7,6 +7,6 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 require(__DIR__ . '/_protected/vendor/autoload.php');
 require(__DIR__ . '/_protected/vendor/yiisoft/yii2/Yii.php');
 
-$config = require(__DIR__ . '/_protected/config/web.php');
+$config = require(__DIR__ . '/_protected/config/web_chatoylou.php');
 
 (new yii\web\Application($config))->run();

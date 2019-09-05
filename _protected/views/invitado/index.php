@@ -7,8 +7,14 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
+use app\models\Invitado;
+use app\models\Boda;
+use app\models\Confirmacion;
+use app\models\Mesa;
+use app\models\Comida;
 
 $this->title = 'Invitado';
 ?>
@@ -47,7 +53,26 @@ $this->title = 'Invitado';
         /*[
 
             ],*/
-        'nombre',
+        //'nombre',
+        [
+            'attribute' => 'nombre',
+            'label' => 'Nombre',
+            'value' => function ($model) {
+                return $model->nombre;
+            },
+            'filterType' => GridView::FILTER_SELECT2,
+            'filter' => ArrayHelper::map(
+                Invitado::find()->where([
+                    'id_boda' => Yii::$app->user->id
+                ])->asArray()->all(),
+                'id',
+                'nombre'
+            ),
+            'filterWidgetOptions' => [
+                'pluginOptions' => ['allowClear' => true],
+            ],
+            'filterInputOptions' => ['placeholder' => 'Confirmacion', 'id' => 'grid-invitado-search-nombre']
+        ],
         [
             'attribute' => 'id_confirmacion',
             'label' => 'Confirmacion',
@@ -55,7 +80,7 @@ $this->title = 'Invitado';
                 return $model->confirmacion->nombre;
             },
             'filterType' => GridView::FILTER_SELECT2,
-            'filter' => \yii\helpers\ArrayHelper::map(\app\models\Confirmacion::find()->asArray()->all(), 'id', 'nombre'),
+            'filter' => ArrayHelper::map(Confirmacion::find()->asArray()->all(), 'id', 'nombre'),
             'filterWidgetOptions' => [
                 'pluginOptions' => ['allowClear' => true],
             ],
@@ -72,7 +97,7 @@ $this->title = 'Invitado';
                 }
             },
             'filterType' => GridView::FILTER_SELECT2,
-            'filter' => \yii\helpers\ArrayHelper::map(\app\models\Mesa::find()
+            'filter' => ArrayHelper::map(Mesa::find()
                 ->where(['id_boda' => Yii::$app->user->id])->asArray()->all(), 'id', 'nombre'),
             'filterWidgetOptions' => [
                 'pluginOptions' => ['allowClear' => true],
@@ -100,13 +125,13 @@ $this->title = 'Invitado';
                 return $model->comida ? $model->comida->nombre : '';
             },
             'filterType' => GridView::FILTER_SELECT2,
-            'filter' => \yii\helpers\ArrayHelper::map(\app\models\Comida::find()->asArray()->all(), 'id', 'nombre'),
+            'filter' => ArrayHelper::map(Comida::find()->asArray()->all(), 'id', 'nombre'),
             'filterWidgetOptions' => [
                 'pluginOptions' => ['allowClear' => true],
             ],
-            'filterInputOptions' => ['placeholder' => 'Confirmacion', 'id' => 'grid-invitado-search-id_comida']
+            'filterInputOptions' => ['placeholder' => 'Tipo de menú', 'id' => 'grid-invitado-search-id_comida']
         ],
-        'comida_comentario:ntext',
+        //'comida_comentario:ntext',
         [
             'class' => 'yii\grid\ActionColumn',
             'template' => '{update} {delete}',
@@ -123,7 +148,7 @@ $this->title = 'Invitado';
                     return $model->boda->id;
                 },
                 'filterType' => GridView::FILTER_SELECT2,
-                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Boda::find()->asArray()->all(), 'id', 'id'),
+                'filter' => ArrayHelper::map(Boda::find()->asArray()->all(), 'id', 'id'),
                 'filterWidgetOptions' => [
                     'pluginOptions' => ['allowClear' => true],
                 ],
