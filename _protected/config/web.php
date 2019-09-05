@@ -153,6 +153,7 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
+    'defaultRoute' => 'site/chatoylou',
 ];
 
 if (YII_ENV_DEV) {
