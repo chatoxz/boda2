@@ -97,7 +97,7 @@ $this->title = 'Invitado';
             'attribute' => 'id_comida',
             'label' => 'Comida',
             'value' => function ($model) {
-                return $model->comida->nombre;
+                return $model->comida ? $model->comida->nombre : '';
             },
             'filterType' => GridView::FILTER_SELECT2,
             'filter' => \yii\helpers\ArrayHelper::map(\app\models\Comida::find()->asArray()->all(), 'id', 'nombre'),
