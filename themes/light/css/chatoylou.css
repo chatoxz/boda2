@@ -419,6 +419,14 @@ div.required label:after {
   width: 240px;
   margin-bottom: 40px;
 }
+.appe_link,
+.appe_link:hover,
+.appe_link:active,
+.appe_link:focus {
+  color: white !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
 
 /*
 
