@@ -53,7 +53,7 @@ $id_boda = 5;
 </div>
 */ ?>
 
-<div style="background-color: rgba(255, 255, 255, 0.41); width: 100%">
+<div style="background-color: rgba(255, 255, 255, 0.41); width: 100%; overflow-x: hidden;">
     <img src="<?= $carpeta ?>/slider/slider2.png" alt="" style="width:80%;">
 </div>
 <div class="seccion animatedParent width_70">
