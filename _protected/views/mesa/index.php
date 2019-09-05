@@ -18,17 +18,18 @@ $this->registerJs($search);
 ?>
 <div class="mesa-index">
 
-    <h1><?= Html::encode($this->title)." Cantidad: ".$dataProvider->count ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <h1><?= "Listado de mesas (" . $dataProvider->count . ")" ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]);
+    ?>
 
     <p>
-        <?= Html::a('Crear Mesa', ['create'], ['class' => 'btn btn-info']) ?>
-        <?= Html::a('Invitados con Mesa ('.$cant_con_mesa.')', ['invitado_mesa', 'tipo' => 1], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Invitados sin Mesa ('.$cant_sin_mesa.')', ['invitado_mesa', 'tipo' => 0], ['class' => 'btn btn-warning']) ?>
+        <?= Html::a('Nueva Mesa', ['create'], ['class' => 'btn btn-info']) ?>
+        <?= Html::a('Invitados con Mesa (' . $cant_con_mesa . ')', ['invitado_mesa', 'tipo' => 1], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Invitados sin Mesa (' . $cant_sin_mesa . ')', ['invitado_mesa', 'tipo' => 0], ['class' => 'btn btn-warning']) ?>
     </p>
     <?php
     $gridColumn = [
-       /* [
+        /* [
             'class' => 'yii\grid\SerialColumn',
             'contentOptions' => ['style' => 'width: 20px;'],
         ],*/
@@ -49,7 +50,7 @@ $this->registerJs($search);
             'attribute' => 'id_boda',
             'label' => 'Id Boda',
             'visible' => false,
-            'value' => function($model){
+            'value' => function ($model) {
                 return $model->boda->id;
             },
             'filterType' => GridView::FILTER_SELECT2,
@@ -117,7 +118,7 @@ $this->registerJs($search);
                 'exportConfig' => [
                     ExportMenu::FORMAT_PDF => false
                 ]
-            ]) ,
+            ]),
             '{toggleData}',
         ],
     ]); ?>
