@@ -40,23 +40,13 @@ $this->title = 'Invitado';
     </div>
     <div class="clearfix"></div>
     <?php
+
     $gridColumn = [
         ['class' => 'yii\grid\SerialColumn'],
         //['attribute' => 'id', 'visible' => false],
         /*[
-                'attribute' => 'id_boda',
-                'label' => 'Id Boda',
-                'value' => function($model){
-                    return $model->boda->id;
-                },
-                'filterType' => GridView::FILTER_SELECT2,
-                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Boda::find()->asArray()->all(), 'id', 'id'),
-                'filterWidgetOptions' => [
-                    'pluginOptions' => ['allowClear' => true],
-                ],
-                'filterInputOptions' => ['placeholder' => 'Boda', 'id' => 'grid-invitado-search-id_boda']
+
             ],*/
-        'id_boda',
         'nombre',
         [
             'attribute' => 'id_confirmacion',
@@ -122,6 +112,26 @@ $this->title = 'Invitado';
             'template' => '{update} {delete}',
         ],
     ];
+    ?>
+    <?php
+    if (Yii::$app->user->id == 1) {
+        $gridColumnsAdmin = [
+            'id', [
+                'attribute' => 'id_boda',
+                'label' => 'Id Boda',
+                'value' => function ($model) {
+                    return $model->boda->id;
+                },
+                'filterType' => GridView::FILTER_SELECT2,
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Boda::find()->asArray()->all(), 'id', 'id'),
+                'filterWidgetOptions' => [
+                    'pluginOptions' => ['allowClear' => true],
+                ],
+                'filterInputOptions' => ['placeholder' => 'Boda', 'id' => 'grid-invitado-search-id_boda']
+            ],
+        ];
+        $gridColumn = array_merge($gridColumnsAdmin, $gridColumn);
+    }
     ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

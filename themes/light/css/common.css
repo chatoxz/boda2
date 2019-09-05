@@ -30,6 +30,7 @@ a:active,
   display: flex;
   justify-content: space-around;
 }
+
 /* ANIMACIONES */
 
 .btn-como-llegar {
@@ -68,7 +69,7 @@ a:active,
   text-align: center;
   margin-top: 75px;
   font-size: 28px;
-  /*overflow: hidden;*/
+  overflow-x: hidden !important;
 }
 /* wrap de todo el bloque de padrinos y testigos*/
 .wrap_testigos_padrinos {
@@ -88,4 +89,13 @@ a:active,
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #efefef99;
+}
+
+/* PARA QUE EL FONDO DE LA BARRA DE ADMINISTRACION SE VEA BLANCA CUANDO SE DESPLIEGA  */
+#w0-collapse ul li {
+  background-color: white !important;
+  border-bottom: #efefef99 1px solid;
+}
+#w0 {
+  margin-bottom: 0px !important;
 }

@@ -198,6 +198,7 @@ class SiteController extends Controller
                 $invitado = Invitado::findOne(['id' => Yii::$app->request->post()["Invitado"]["id"]]);
                 $invitado->mensaje = $model->mensaje;
                 $invitado->id_confirmacion = $model->id_confirmacion;
+                $invitado->id_comida = $model->id_comida;
                 $invitado->save();
                 echo "Gracias por tu respuesta!";
             }

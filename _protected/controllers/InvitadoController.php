@@ -45,9 +45,12 @@ class InvitadoController extends Controller
      */
     public function actionIndex($id_confirmacion = 3, $id_despues_doce = 3)
     {
+        //es el id  de la tabla user NO EL DE PERSONA
         $id_boda = Yii::$app->user->id;
         $searchModel = new InvitadoSearch();
-        $searchModel->id_boda = $id_boda;
+        if (Yii::$app->user->id != 1) {
+            $searchModel->id_boda = $id_boda;
+        }
         if ($id_confirmacion != 3) {
             $searchModel->id_confirmacion = $id_confirmacion;
         }

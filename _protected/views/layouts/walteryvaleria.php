@@ -74,9 +74,9 @@ AppAsset::register($this);
     </div>
     <!-- FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER -->
     <footer class="footer">
-        <div class="container" style="font-size: 28px">
+        <div class="container" style="">
             <p class="pull-left">
-                &copy; <?= Yii::t('app', Yii::$app->name) ?>
+                <!-- &copy; --> <?= Yii::t('app', Yii::$app->name) ?>
                 <?= date('Y') ?>
             </p>
             <p class=""><a style="color: black;" target="_blank" href="http://www.appe.com.ar">Desarrollado por Appe
