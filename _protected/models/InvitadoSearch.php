@@ -66,7 +66,7 @@ class InvitadoSearch extends Invitado
         $query->joinWith('mesaInvitado')->join('LEFT JOIN', 'mesa', 'mesa_invitado.id_mesa = mesa.id');
 
         $query->andFilterWhere([
-            'id' => $this->id,
+            'invitado.id' => $this->id,
             'invitado.id_boda' => $this->id_boda,
             'invitado.id_confirmacion' => $this->id_confirmacion,
             'id_comida' => $this->id_comida,
