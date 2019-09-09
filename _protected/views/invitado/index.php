@@ -55,7 +55,7 @@ $this->title = 'Invitado';
             ],*/
         //'nombre',
         [
-            'attribute' => 'nombre',
+            'attribute' => 'id',
             'label' => 'Nombre',
             'value' => function ($model) {
                 return $model->nombre;
