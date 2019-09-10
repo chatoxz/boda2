@@ -14,7 +14,7 @@ html {
 .loader_muy_grande,
 .loader_chico,
 .loader {
-  border-top-color: #a0dce1 !important;
+  border-top-color: #8b6f45 !important;
 }
 
 /* INICIO NAV DE LA PAGINA DE INICIO INICIO NAV DE LA PAGINA DE INICIO INICIO NAV DE LA PAGINA DE INICIO */
@@ -403,4 +403,6 @@ label {
 .btn:focus,
 .btn.focus {
   color: var(--color2) !important;
+}
+.loader_walteryvaleria {
 }

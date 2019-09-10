@@ -65,7 +65,7 @@ $(document).on('ready', function () {
     //FUNCIONAMIENTO DEL formulario con AJAX
     $('body').on('beforeSubmit', 'form#id_form', function () {
         var form = $(this);
-        $('.resultado').removeClass('hidden').html('<div class="loader_chico" style="margin: auto;display: block"></div>');
+        $('.resultado').removeClass('hidden').html('<div class="loader_chico"></div>');
 
         $.ajax({
             url: form.attr('action'),
@@ -75,7 +75,7 @@ $(document).on('ready', function () {
             contentType: false,
         }).done(function (response) {
             if (!response || response.length === 0) {
-                $('.resultado').html('<span style="font-size: 16px;margin:auto" class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accion realizada.');
+                $('.resultado').html('Accion realizada.');
                 setTimeout(function () {
                     $('#modal').modal('hide');
                     $('.resultado').html('').addClass('hidden');
@@ -126,7 +126,7 @@ $(document).on('ready', function () {
                 }, 20000);
             }
             else {
-                $('.resultado').html('<span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="padding-right: 10px"></span>' + response).css({ 'width': '90  %', 'text-align': 'center' });
+                $('.resultado').html(response).css({ 'width': '90%', 'text-align': 'center' });
                 setTimeout(function () { $('.resultado').fadeOut(2000); }, 2000);
             }
         }).fail(function (xhr, ajaxOptions, thrownError) {
